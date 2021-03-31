@@ -24,12 +24,16 @@ python3 manage.py loaddata categories
 python3 manage.py loaddata products
 
 -----------------------------------------------------------
-CREATING PROJECTS
+CREATING BLACKBOLT PROJECT
 -----------------------------------------------------------
 pip3 install django
 django-admin startproject blackbolt_comics . 
 touch .gitignore (add what needs to be ignored)
+python3 manage.py migrate (do this after setting up new apps or changed models)
+pip3 install django-allauth (set up)
 python3 manage.py migrate
+pip3 freeze > requirements.txt
+
 
 
 
