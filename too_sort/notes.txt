@@ -1,0 +1,37 @@
+-------------------------------------------------------
+*** ON START UP OF PROJECT ***
+-------------------------------------------------------
+
+pip3 install django
+pip3 install django-allauth
+pip3 install pillow
+python3 manage.py migrate
+python3 manage.py loaddata categories
+python3 manage.py loaddata products
+python manage.py createsuperuser
+
+
+-------------------------------------------------------
+*** MIGRATION COMMANDS - IN ORDER OF USING THEM ***
+-------------------------------------------------------
+
+python3 manage.py makemigrations --dry-run
+python3 manage.py makemigrations
+python3 manage.py migrate --plan    <----- ( known a "plan flag"  )
+python3 manage.py migrate
+
+python3 manage.py loaddata categories
+python3 manage.py loaddata products
+
+
+-------------------------------------------------------
+*** OTHER NOTES ***
+-------------------------------------------------------
+pip3 freeze > requirements.txt
+
+cp -r ../.pip-modules/lib/python3.8/site-packages/allauth/templates/* ./templates/allauth
+
+python3 manage.py startapp home
+mkdir -p home/templates/home
+
+python3 manage.py shell <---- drops a command line configered using our settings.py file so we can write code in a view. import and and use any functionality our project, for operatons we want to do on the fly. like the database. 

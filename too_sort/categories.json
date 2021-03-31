@@ -1,0 +1,66 @@
+[
+	{
+		"pk": 1,
+		"model": "products.category",
+		"fields":{
+			"name": "marvel",
+			"friendly_name": "Marvel Comics"
+		}
+	},
+	{
+		"pk": 2,
+		"model": "products.category",
+		"fields":{
+			"name": "dc_comics",
+			"friendly_name": "DC Comics"
+		}
+	},
+	{
+		"pk": 3,
+		"model": "products.category",
+		"fields":{
+			"name": "dark_horse",
+			"friendly_name": "Dark Horse Comics"
+		}
+	},
+	{
+		"pk": 4,
+		"model": "products.category",
+		"fields":{
+			"name": "valiant",
+			"friendly_name": "Valiant"
+		}
+	},
+	{
+		"pk": 5,
+		"model": "products.category",
+		"fields":{
+			"name": "image",
+			"friendly_name": "Image Comics"
+		}
+	},
+	{
+		"pk": 6,
+		"model": "products.category",
+		"fields":{
+			"name": "2000_ad",
+			"friendly_name": "2000 AD"
+		}
+	},
+	{
+		"pk": 7,
+		"model": "products.category",
+		"fields":{
+			"name": "titan",
+			"friendly_name": "Titan Comics"
+		}
+	},
+	{
+		"pk": 8,
+		"model": "products.category",
+		"fields":{
+			"name": "idw_comics",
+			"friendly_name": "IDW"
+		}
+	},
+]
