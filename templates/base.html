@@ -1,18 +1,45 @@
-<!doctype html>
+{% load static %}
+
+<!DOCTYPE html>
 <html lang="en">
 
     <head>
-
+        {% block meta %}
         <meta http-equiv="X-UA-Compatible"  content="ie-edge">
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <meta name="Description" content="Online Comic Book Store">
+        {% endblock %}
 
-        <title>Black Bolt Comics</title>
+        {% block css %}
+        {% endblock %}
+
+        {% block js %}
+        {% endblock %}
+
+        <title>Black Bolt Comics {% block extra_title %}{% endblock %}</title>
 
     </head>
 
     <body>
+        
+        <header> Test </header>
+
         <h1>Black Bolt Comics</h1>
+
+        {% if messages %}
+            <div></div>
+        {% endif %}
+
+        {% block page_header%}
+        {% endblock %}
+
+        {% block content %}
+        {% endblock %}
+
+        {% block postloadjs %}
+        {% endblock %}
+
     </body>
 
 </html>
