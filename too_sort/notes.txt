@@ -33,7 +33,8 @@ python3 manage.py migrate (do this after setting up new apps or changed models)
 pip3 install django-allauth (set up)
 python3 manage.py migrate
 pip3 freeze > requirements.txt
-
+mkdir templates
+mkdir templates/allauth
 
 
 
