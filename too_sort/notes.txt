@@ -8,7 +8,7 @@ pip3 install pillow
 python3 manage.py migrate
 python3 manage.py loaddata categories
 python3 manage.py loaddata products
-python manage.py createsuperuser
+python3 manage.py createsuperuser
 
 
 -------------------------------------------------------
@@ -22,6 +22,16 @@ python3 manage.py migrate
 
 python3 manage.py loaddata categories
 python3 manage.py loaddata products
+
+-----------------------------------------------------------
+CREATING PROJECTS
+-----------------------------------------------------------
+pip3 install django
+django-admin startproject blackbolt_comics . 
+touch .gitignore (add what needs to be ignored)
+python3 manage.py migrate
+
+
 
 
 -------------------------------------------------------
