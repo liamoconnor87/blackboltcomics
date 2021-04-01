@@ -1,6 +1,6 @@
 {% load static %}
 
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 
     <head>
@@ -12,6 +12,7 @@
         {% endblock %}
 
         {% block css %}
+        <link rel="stylesheet" href="{% static 'css/base.css' %}">
         {% endblock %}
 
         {% block js %}
