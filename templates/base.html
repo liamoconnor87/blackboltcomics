@@ -24,9 +24,31 @@
 
     <body>
 
-        <header> Test </header>
+        <header>
+            <div class="head-nav">
 
-        <h1>This is the base html</h1>
+                <!-- Shop Logo -->
+                <a href="">
+                    <img src="{{MEDIA_URL}}media/blackbolt_comics.png" alt="Black Bolt Comics" id="logo">
+                </a>
+
+                <!--Navigation Menu -->
+                <nav>
+                    <ul id="navmenu">
+                        <li>
+                            <a href="">My Account</a>
+                        </li>
+                            
+                        <li>
+                            <a href="">Shopping Bag</a>
+                        </li>
+                    </ul>
+                </nav>
+                
+            </div>
+        </header>
+
+        
 
         {% if messages %}
             <div></div>

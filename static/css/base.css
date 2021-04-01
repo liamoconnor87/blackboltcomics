@@ -1,4 +1,22 @@
-h1, .header1 {
-    color: red;
-    background-color: green;
+*{
+  margin: 0;
+  padding: 0;
+  border:0;
+}
+
+.head-nav{
+    top: 0;
+    width: 100%;
+    background-color: rgba(0, 0, 0, .85);
+    position: fixed;
+}
+
+#logo{
+    width: 200px;
+    height: auto;
+    float: left;
+}
+
+#navmenu{
+    float: right;
 }
