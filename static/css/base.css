@@ -4,19 +4,40 @@
   border:0;
 }
 
+body{
+    background-color: black;
+    font-family: 'Cabin', sans-serif;
+}
+
 .head-nav{
     top: 0;
     width: 100%;
-    background-color: rgba(0, 0, 0, .85);
+    background-color: rgba(255, 255, 255, 0.85);
     position: fixed;
 }
 
 #logo{
-    width: 200px;
-    height: auto;
+    width: auto;
+    height: 100px;
     float: left;
+    padding: 10px 10px 10px 20px;
 }
 
-#navmenu{
+#navmenu {
     float: right;
+    padding: 10px;
+    margin-top: 35px;
+}
+
+#navmenu li{
+    float: left;
+    list-style-type: none;
+    padding-right: 30px;
+}
+
+#navmenu a{
+    text-decoration: none;
+    color: black;
+    font-weight: 600;
+    font-size: large;
 }
