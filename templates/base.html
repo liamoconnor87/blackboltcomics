@@ -30,33 +30,56 @@
         <header>
             <div class="head-nav">
 
-                <!-- Shop Logo 
-                <a href="">
-                    <img src="{{MEDIA_URL}}media/blackbolt_comics.png" alt="Black Bolt Comics" id="logo">
-                </a> -->
+                <!-- Shop Logo -->
+                <div class="logo-container">
+                    <a href="" class="logo-anchor">
+                        <img src="{{MEDIA_URL}}media/blackbolt_comics.png" alt="Black Bolt Comics" class="logo">
+                    </a>
+                </div>
 
-                <!--Navigation Menu
-                <nav>
+                <!--Navigation Menu -->
+                <div class="nav-container">
 
-                    <ul id="navmenu">
+                    <ul class="navmenu">
+
                         <li>
                             <a href="">
-                                <div><i class="fas fa-user"></i></div>
-                                <p>My Account</p>
+                                <div><i class="nav-icon fas fa-user"></i></div>
+                                <p class="nav-name">My Account</p>
                             </a>
                         </li>
                             
                         <li>
                             <a href="">
-                                <div><i class="fas fa-shopping-bag"></i></div>
-                                <p>Shopping Bag</p>
+                                <div><i class="nav-icon fas fa-shopping-bag"></i></div>
+                                <p class="nav-name">Shopping Bag</p>
                             </a>
                         </li>
+
+                        <li>
+                            <a href="">
+                                <div><i class="nav-icon fas fa-search"></i></div>
+                                <p class="nav-name">Search</p>
+                            </a>
+                        </li>
+
                     </ul>
                     
-                </nav> -->
+                </div>
                 
             </div>
+            
+            <form class="search-tool" action="" method="POST">
+                <div class="row srch-bar">
+                    <div class="column">
+                        <label for="" class=""></label>
+                        <input type="text" name="" id="" class="srch-box" placeholder="Search our Online Store...">
+                    </div>
+                    <div class="srch-btn-cont">
+                        <button type="submit" class="srch-btn">Search</button>
+                    </div>
+                </div>
+            </form>
         </header>
 
         

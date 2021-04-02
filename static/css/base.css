@@ -1,7 +1,8 @@
 *{
   margin: 0;
   padding: 0;
-  border:0;
+  border: 0;
+  box-sizing: border-box;
 }
 
 body{
@@ -9,35 +10,110 @@ body{
     font-family: 'Cabin', sans-serif;
 }
 
+/* Header - Navigation / Search */
+
 .head-nav{
-    top: 0;
     width: 100%;
-    background-color: rgba(255, 255, 255, 0.85);
-    position: fixed;
-}
-
-#logo{
-    width: auto;
+    background-color: rgba(255, 255, 255, .8);
     height: 100px;
-    float: left;
-    padding: 10px 10px 10px 20px;
+    position: fixed;
+    display: block;
 }
 
-#navmenu {
+.logo-container{
+    width: auto;
+    height: inherit;
+    float: left;
+}
+
+.logo{
+    position: inherit;
+    height: 90px;
+    padding: 5px;
+}
+
+.nav-container{
     float: right;
-    padding: 10px;
-    margin-top: 35px;
+    height: inherit;
+    display: block;
 }
 
-#navmenu li{
-    float: left;
+.navmenu{
     list-style-type: none;
-    padding-right: 30px;
+    height: inherit;
+    margin: auto;
 }
 
-#navmenu a{
+.navmenu li{
+    display: inline;
+    float: left;
+    padding: 30px 12px 39.6px 12px;
+    font-size: 25px;
+    /*
+    background-color: rgb(4, 50, 109);
+    color: white; 
+    */
+}
+
+.navmenu a{
     text-decoration: none;
-    color: black;
-    font-weight: 600;
-    font-size: large;
+    text-align: center;
+    color: inherit;
+    height: 100px;
+    background-color: rgb(4, 50, 109);
+}
+
+.nav-name{
+    display: none; /* change to inline or block for larger screens */
+}
+
+.search-tool{
+    display: block;
+    padding-top: 100px;
+    margin: 0 auto 15px auto;
+}
+.srch-bar{
+    background-color: rgb(4, 50, 109);
+}
+
+.row{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    margin-left: auto;
+    margin-right: auto;
+    width: 100%;
+}
+
+.column{
+    margin-left: auto;
+    margin-right: auto;
+    width: 80%;
+}
+
+.srch-box{
+    display: flex;
+    width: 100%;
+    height: 100%;
+    font: inherit;
+    font-size: 12px;
+    padding-left: 5px;
+}
+
+.srch-btn-cont{
+    margin-left: auto;
+    margin-right: auto;
+    width: 20%;
+}
+.srch-btn{
+    display: flex;
+    width: auto;
+    height: 100%;
+    padding: 3px 4px;
+    margin: auto;
+    font: inherit;
+    background-color: rgb(4, 50, 109);
+    color: white;
+    text-align: center;
+    cursor: pointer;
 }
