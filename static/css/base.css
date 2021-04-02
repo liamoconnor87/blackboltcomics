@@ -49,18 +49,24 @@ body{
     float: left;
     padding: 30px 12px 39.6px 12px;
     font-size: 25px;
-    /*
-    background-color: rgb(4, 50, 109);
-    color: white; 
-    */
+    cursor: pointer;
 }
 
-.navmenu a{
+.nav-button:hover{
+    background-color: rgb(4, 50, 109);
+    color: white;  
+}
+
+.srch-btn-click{
+    background-color: rgb(4, 50, 109);
+    color: white;
+}
+
+.navmenu a, .navmenu span{
     text-decoration: none;
     text-align: center;
     color: inherit;
     height: 100px;
-    background-color: rgb(4, 50, 109);
 }
 
 .nav-name{
@@ -68,10 +74,11 @@ body{
 }
 
 .search-tool{
-    display: block;
+    display: none; /* change to block */
     padding-top: 100px;
     margin: 0 auto 15px auto;
 }
+
 .srch-bar{
     background-color: rgb(4, 50, 109);
 }

@@ -14,11 +14,12 @@
         {% block css %}
         <link rel="preconnect" href="https://fonts.gstatic.com">
         <link href="https://fonts.googleapis.com/css2?family=Cabin:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&display=swap" rel="stylesheet">
-        <script src="https://kit.fontawesome.com/fd5b45d410.js" crossorigin="anonymous"></script>
         <link rel="stylesheet" href="{% static 'css/base.css' %}">
         {% endblock %}
 
         {% block js %}
+        <script src="https://kit.fontawesome.com/fd5b45d410.js" crossorigin="anonymous"></script>
+        <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
         {% endblock %}
 
         <title>Black Bolt Comics {% block extra_title %}{% endblock %}</title>
@@ -42,25 +43,25 @@
 
                     <ul class="navmenu">
 
-                        <li>
-                            <a href="">
-                                <div><i class="nav-icon fas fa-user"></i></div>
+                        <li href="" class="nav-button">
+                            <span>
+                                <i class="nav-icon fas fa-user"></i>
                                 <p class="nav-name">My Account</p>
-                            </a>
+                            </span>
                         </li>
                             
-                        <li>
-                            <a href="">
-                                <div><i class="nav-icon fas fa-shopping-bag"></i></div>
+                        <li href="" class="nav-button">
+                            <span>
+                                <i class="nav-icon fas fa-shopping-bag"></i>
                                 <p class="nav-name">Shopping Bag</p>
-                            </a>
+                            </span>
                         </li>
 
-                        <li>
-                            <a href="">
-                                <div><i class="nav-icon fas fa-search"></i></div>
+                        <li class="nav-button srch-click">
+                            <span>
+                                <i class="nav-icon fas fa-search"></i>
                                 <p class="nav-name">Search</p>
-                            </a>
+                            </span>
                         </li>
 
                     </ul>
@@ -95,6 +96,12 @@
         {% endblock %}
 
         {% block postloadjs %}
+        <script type="text/javascript">
+            $(".srch-click").click(function(){
+                $(this).toggleClass("srch-btn-click");
+                $(".search-tool").toggle();
+            })
+        </script>
         {% endblock %}
 
     </body>
