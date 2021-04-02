@@ -92,7 +92,7 @@
             </form>
 
             <div class="account-menu">
-                <div class="acc-menu-cont">
+                <div class="acc-menu-drop">
                     {% if request.user.is_authenticated %}
                         {% if request.user.is_superuser %}
                             <a href="{% url 'add_product' %}" class="acc-btn">Product Management</a>
@@ -146,7 +146,7 @@
                 }
 
             })
-            
+
         </script>
         {% endblock %}
 

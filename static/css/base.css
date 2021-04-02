@@ -80,7 +80,7 @@ body{
     margin: 0 auto 0 auto;
 }
 
-.srch-bar, .acc-menu-cont{
+.srch-bar, .acc-menu-drop{
     background-color: rgb(4, 50, 109);
     height: 50px;
 }
@@ -117,14 +117,14 @@ body{
     height: 0px;
 }
 
-.acc-menu-cont{
+.acc-menu-drop{
     float: right;
     text-align: right;
     padding-top: 15px;
     width: 140px;
 }
 
-.acc-menu-cont a{
+.acc-menu-drop a{
     text-decoration: none;
     color: white;
     padding-right: 15px;
