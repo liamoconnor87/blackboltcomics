@@ -43,26 +43,34 @@
 
                     <ul class="navmenu">
 
-                        <li href="" class="nav-button">
-                            <span>
-                                <i class="nav-icon fas fa-user"></i>
-                                <p class="nav-name">My Account</p>
-                            </span>
-                        </li>
-                            
-                        <li href="" class="nav-button">
-                            <span>
-                                <i class="nav-icon fas fa-shopping-bag"></i>
-                                <p class="nav-name">Shopping Bag</p>
-                            </span>
-                        </li>
-
-                        <li class="nav-button srch-click">
+                        <li class="nav-button srch-btn">
                             <span>
                                 <i class="nav-icon fas fa-search"></i>
                                 <p class="nav-name">Search</p>
                             </span>
                         </li>
+                        
+                        <li class="nav-button acc-btn">
+                            <span>
+                                <i class="nav-icon fas fa-user"></i>
+                                <p class="nav-name">My Account</p>
+                            </span>
+                        </li>
+
+                        <a href="">   
+                            <li class="nav-button">
+                                <span>
+                                    <i class="nav-icon fas fa-shopping-bag"></i>
+                                    <p class="nav-name">
+                                        {% if grand_total %}
+                                            ${{ grand_total|floatformat:2 }}
+                                        {% else %}
+                                            $0.00
+                                        {% endif %}
+                                    </p>
+                                </span>
+                            </li>
+                        </a>
 
                     </ul>
                     
@@ -76,11 +84,28 @@
                         <label for="" class=""></label>
                         <input type="text" name="" id="" class="srch-box" placeholder="Search our Online Store...">
                     </div>
-                    <div class="srch-btn-cont">
-                        <button type="submit" class="srch-btn">Search</button>
+                    <!-- Search Button Hidden  -->
+                    <div class="hide-btn">
+                        <button type="submit" class="">Search</button>
                     </div>
                 </div>
             </form>
+
+            <div class="account-menu">
+                <div class="acc-menu-cont">
+                    {% if request.user.is_authenticated %}
+                        {% if request.user.is_superuser %}
+                            <a href="{% url 'add_product' %}" class="acc-btn">Product Management</a>
+                        {% endif %}
+                        <a href="{% url 'profile' %}" class="acc-btn">My Profile</a>
+                        <a href="{% url 'account_logout' %}" class="acc-btn">Logout</a>
+                    {% else %}
+                        <a href="{% url 'account_signup' %}" class="acc-btn">Register</a>
+                        <a href="{% url 'account_login' %}" class="acc-btn">Login</a>
+                    {% endif %}
+                </div>
+            </div>
+
         </header>
 
         
@@ -97,10 +122,31 @@
 
         {% block postloadjs %}
         <script type="text/javascript">
-            $(".srch-click").click(function(){
+
+            $(".srch-btn").click(function(){
+
                 $(this).toggleClass("srch-btn-click");
                 $(".search-tool").toggle();
+                $(".account-menu").hide();
+
+                if ($(".acc-btn").hasClass("acc-btn-click")){
+                    $(".acc-btn").toggleClass("acc-btn-click");
+                }
+
             })
+
+            $(".acc-btn").click(function(){
+
+                $(this).toggleClass("acc-btn-click");
+                $(".account-menu").toggle();
+                $(".search-tool").hide();
+
+                if ($(".srch-btn").hasClass("srch-btn-click")){
+                    $(".srch-btn").toggleClass("srch-btn-click");
+                }
+
+            })
+            
         </script>
         {% endblock %}
 

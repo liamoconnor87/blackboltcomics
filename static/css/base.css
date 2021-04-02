@@ -57,7 +57,8 @@ body{
     color: white;  
 }
 
-.srch-btn-click{
+/* toggleClass ".srch-btn" */
+.srch-btn-click, .acc-btn-click{
     background-color: rgb(4, 50, 109);
     color: white;
 }
@@ -73,14 +74,15 @@ body{
     display: none; /* change to inline or block for larger screens */
 }
 
-.search-tool{
-    display: none; /* change to block */
+.search-tool, .account-menu{
+    display: none;
     padding-top: 100px;
-    margin: 0 auto 15px auto;
+    margin: 0 auto 0 auto;
 }
 
-.srch-bar{
+.srch-bar, .acc-menu-cont{
     background-color: rgb(4, 50, 109);
+    height: 50px;
 }
 
 .row{
@@ -93,34 +95,41 @@ body{
 }
 
 .column{
-    margin-left: auto;
-    margin-right: auto;
-    width: 80%;
+    width: 90%;
+    margin: auto;
 }
 
 .srch-box{
     display: flex;
     width: 100%;
-    height: 100%;
+    height: calc(30px - 4px);
     font: inherit;
     font-size: 12px;
     padding-left: 5px;
+    margin: auto;
 }
 
-.srch-btn-cont{
-    margin-left: auto;
-    margin-right: auto;
-    width: 20%;
+.hide-btn{
+    position: absolute;
+    top: -999px;
+    left: -999px;
+    width: 0px;
+    height: 0px;
 }
-.srch-btn{
-    display: flex;
-    width: auto;
-    height: 100%;
-    padding: 3px 4px;
-    margin: auto;
-    font: inherit;
-    background-color: rgb(4, 50, 109);
+
+.acc-menu-cont{
+    float: right;
+    text-align: right;
+    padding-top: 15px;
+    width: 140px;
+}
+
+.acc-menu-cont a{
+    text-decoration: none;
     color: white;
-    text-align: center;
-    cursor: pointer;
+    padding-right: 15px;
+}
+
+.acc-btn:hover{
+    text-decoration: underline;
 }
