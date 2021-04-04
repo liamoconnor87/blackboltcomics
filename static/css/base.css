@@ -76,16 +76,16 @@ body{
 
 .search-tool, .account-menu{
     display: none;
-    padding-top: 100px;
     margin: 0 auto 0 auto;
 }
 
 .srch-bar, .acc-menu-drop{
     background-color: rgb(4, 50, 109);
     height: 50px;
+    border-top: 1px solid white;
 }
 
-.row{
+.srch-row{
     display: flex;
     flex-wrap: wrap;
     flex-direction: row;
@@ -94,7 +94,7 @@ body{
     width: 100%;
 }
 
-.column{
+.srch-column{
     width: 90%;
     margin: auto;
 }
@@ -121,7 +121,7 @@ body{
     float: right;
     text-align: right;
     padding-top: 15px;
-    width: 140px;
+    width: 100%;
 }
 
 .acc-menu-drop a{
@@ -130,6 +130,42 @@ body{
     padding-right: 15px;
 }
 
-.acc-btn:hover{
+.acc-btn, .prod-menu-col p:hover{
     text-decoration: underline;
+}
+
+.prod-menu-cont{
+    padding-top: 100px;
+}
+
+.prod-menu-row{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    margin-left: auto;
+    margin-right: auto;
+    width: 100%;
+    background-color: rgb(4, 50, 109);
+    color: white;
+    height: 50px;
+}
+
+.prod-menu-col{
+    margin: auto;
+    cursor: pointer;
+    background-color: rgb(4, 50, 109);
+    color: white;
+    height: inherit;
+    width: 25%;
+}
+
+.prod-menu-col p{
+    font-size: 12px;
+    text-align: center;
+    padding-top: 15px;
+}
+
+.prod-menu-col:hover{
+    color: rgb(4, 50, 109);
+    background-color: white;
 }
