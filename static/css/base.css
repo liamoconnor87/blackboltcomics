@@ -8,6 +8,9 @@
 body{
     background-color: black;
     font-family: 'Cabin', sans-serif;
+    background: url('/media/comics-495258_1920.jpg') no-repeat center center fixed;
+    background-size: cover;
+    height: 100vh;
 }
 
 /* Header - Navigation / Search */
@@ -54,13 +57,14 @@ body{
 
 .nav-button:hover{
     background-color: rgb(4, 50, 109);
-    color: white;  
+    color: white;
 }
 
 /* toggleClass ".srch-btn" */
 .srch-btn-click, .acc-btn-click{
     background-color: rgb(4, 50, 109);
     color: white;
+    border-bottom: 1px solid white;
 }
 
 .navmenu a, .navmenu span{
