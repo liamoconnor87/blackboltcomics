@@ -77,31 +77,101 @@
                 </div>
                 
             </div>
-
+            
+            <!-- Product Navigation -->
             <div class="prod-menu-cont">
 
                 <div class="prod-menu-row">
 
-                    <div class="prod-menu-col">
+                    <div class="prod-menu-col all-prod-click">
                         <p>All Products</p>
                     </div>
 
-                    <div class="prod-menu-col">
-                        <p>Comics</p>
+                    <div class="prod-menu-col comic-book-click">
+                        <p>Comic Books</p>
                     </div>
 
-                    <div class="prod-menu-col">
+                    <div class="prod-menu-col access-click">
                         <p>Accessories</p>
                     </div>
 
-                    <div class="prod-menu-col">
+                    <div class="prod-menu-col offer-click">
                         <p>Special Offers</p>
                     </div>
 
                 </div>
 
             </div>
+
+            <!-- All Product Menu -->
+            <div class="all-prod-menu">
+
+                <a href="">
+                    <p>By Price</p>
+                </a>
+
+                <a href="">
+                    <p>By Category</p>
+                </a>
+
+                <a href="">
+                    <p>All Products</p>
+                </a>
+                
+            </div>
+
+            <!-- Comic Books Menu -->
+            <div class="comic-menu">
+
+                <a href="">
+                    <p>Marvel</p>
+                </a>
+
+                <a href="">
+                    <p>DC Comics</p>
+                </a>
+
+                <a href="">
+                    <p>All Comics</p>
+                </a>
+                
+            </div>
+
+            <!-- Accessories Menu -->
+            <div class="access-menu">
+
+                <a href="">
+                    <p>Boxes</p>
+                </a>
+
+                <a href="">
+                    <p>Sleeves</p>
+                </a>
+
+                <a href="">
+                    <p>Backing Boards</p>
+                </a>
+
+                <a href="">
+                    <p>All Accessories</p>
+                </a>
+                
+            </div>
+
+            <!-- Special Offers Menu -->
+            <div class="spec-off-menu">
+
+                <a href="">
+                    <p>Deals</p>
+                </a>
+
+                <a href="">
+                    <p>Clearance</p>
+                </a>
+                
+            </div>
             
+            <!-- Search Tool -->
             <form class="search-tool" action="" method="POST">
                 <div class="srch-row srch-bar">
                     <div class="srch-column">
@@ -115,6 +185,7 @@
                 </div>
             </form>
 
+            <!-- Account Menu -->
             <div class="account-menu">
                 <div class="acc-menu-drop">
                     {% if request.user.is_authenticated %}
@@ -150,11 +221,17 @@
             $(".srch-btn").click(function(){
 
                 $(this).toggleClass("srch-btn-click");
+
                 $(".search-tool").toggle();
+
                 $(".account-menu").hide();
+                $(".all-prod-menu").hide();
+                $(".comic-menu").hide();
+                $(".access-menu").hide();
+                $(".spec-off-menu").hide();
 
                 if ($(".acc-btn").hasClass("acc-btn-click")){
-                    $(".acc-btn").toggleClass("acc-btn-click");
+                    $(".acc-btn").removeClass("acc-btn-click");
                 }
 
             })
@@ -162,12 +239,98 @@
             $(".acc-btn").click(function(){
 
                 $(this).toggleClass("acc-btn-click");
+
                 $(".account-menu").toggle();
+
                 $(".search-tool").hide();
+                $(".all-prod-menu").hide();
+                $(".comic-menu").hide();
+                $(".access-menu").hide();
+                $(".spec-off-menu").hide();
+
+                if ($(".srch-btn").hasClass("srch-btn-click")){
+                    $(".srch-btn").removeClass("srch-btn-click");
+                }
+
+            })
+
+            $(".all-prod-click").click(function(){
+                
+                if ($(".acc-btn").hasClass("acc-btn-click")){
+                    $(".acc-btn").removeClass("acc-btn-click");
+                }
+
+                if ($(".srch-btn").hasClass("srch-btn-click")){
+                    $(".srch-btn").removeClass("srch-btn-click");
+                }
+
+                $(".all-prod-menu").toggle();
+
+                $(".comic-menu").hide();
+                $(".access-menu").hide();
+                $(".spec-off-menu").hide();
+                $(".search-tool").hide();
+                $(".account-menu").hide();
+
+            })
+
+            $(".comic-book-click").click(function(){
+
+                if ($(".acc-btn").hasClass("acc-btn-click")){
+                    $(".acc-btn").removeClass("acc-btn-click");
+                }
+
+                if ($(".srch-btn").hasClass("srch-btn-click")){
+                    $(".srch-btn").removeClass("srch-btn-click");
+                }
+
+                $(".comic-menu").toggle();
+
+                $(".all-prod-menu").hide();
+                $(".access-menu").hide();
+                $(".spec-off-menu").hide();
+                $(".search-tool").hide();
+                $(".account-menu").hide();
+
+            })
+
+            $(".access-click").click(function(){
+
+                if ($(".acc-btn").hasClass("acc-btn-click")){
+                    $(".acc-btn").removeClass("acc-btn-click");
+                }
+
+                if ($(".srch-btn").hasClass("srch-btn-click")){
+                    $(".srch-btn").removeClass("srch-btn-click");
+                }
+
+                $(".access-menu").toggle();
+
+                $(".all-prod-menu").hide();
+                $(".comic-menu").hide();
+                $(".spec-off-menu").hide();
+                $(".search-tool").hide();
+                $(".account-menu").hide();
+
+            })
+
+            $(".offer-click").click(function(){
+
+                if ($(".acc-btn").hasClass("acc-btn-click")){
+                    $(".acc-btn").toggleClass("acc-btn-click");
+                }
 
                 if ($(".srch-btn").hasClass("srch-btn-click")){
                     $(".srch-btn").toggleClass("srch-btn-click");
                 }
+
+                $(".spec-off-menu").toggle();
+
+                $(".all-prod-menu").hide();
+                $(".access-menu").hide();
+                $(".comic-menu").hide();
+                $(".search-tool").hide();
+                $(".account-menu").hide();
 
             })
 

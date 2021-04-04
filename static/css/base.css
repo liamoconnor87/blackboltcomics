@@ -130,7 +130,7 @@ body{
     padding-right: 15px;
 }
 
-.acc-btn, .prod-menu-col p:hover{
+.acc-btn:hover{
     text-decoration: underline;
 }
 
@@ -168,4 +168,38 @@ body{
 .prod-menu-col:hover{
     color: rgb(4, 50, 109);
     background-color: white;
+    text-decoration: underline;
+}
+
+.all-prod-menu, .comic-menu, .access-menu, .spec-off-menu{
+    background-color: rgb(4, 50, 109);
+    height: auto;
+    border-top: 1px solid white;
+    display: none;
+}
+
+.all-prod-menu a, .comic-menu a, .access-menu a, .spec-off-menu a{
+    text-decoration: none;
+    color: white;
+}
+
+.all-prod-menu p, .comic-menu p, .access-menu p, .spec-off-menu p{
+    padding: 5px 2px 5px 5px;
+    font-size: 11px;
+}
+
+.all-prod-menu p:hover{
+    text-decoration: underline;
+}
+
+.comic-menu p:hover{
+    text-decoration: underline;
+}
+
+.access-menu p:hover{
+    text-decoration: underline;
+}
+
+.spec-off-menu p:hover{
+    text-decoration: underline;
 }
