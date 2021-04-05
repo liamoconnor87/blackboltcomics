@@ -15,6 +15,7 @@ body{
     background-size: cover;
     height: 100vh;
     opacity: .3;
+    display: block;
 }
 
 /* Header - Navigation / Search */
@@ -36,8 +37,8 @@ body{
 
 .logo{
     position: inherit;
-    height: 90px;
-    padding: 5px;
+    width: 150px;
+    margin: 15px 5px 5px 5px;
 }
 
 .nav-container{
@@ -237,9 +238,31 @@ body{
 /* Footer */
 
 footer{
-    height: 200px;
+    height: auto;
     background-color: rgb(4, 50, 109);
     color: white;
+    padding-bottom: 10px;
+    display: inline-block;
+    width: 100%;
+}
+
+.contact-info{
+    width: 100%;
+    padding: 10px;
+    color: rgb(150, 194, 255);
+}
+
+.contact-info img{
+    width: 80px;
+}
+
+.contact-info p{
+    font-size: 10px;
+}
+
+.contact-info p a{
+    text-decoration: none;
+    color: inherit;
 }
 
 /* Smart Device Layout */
@@ -272,6 +295,11 @@ footer{
 }
 
 @media screen and (min-width: 414px){
+
+    .logo{
+        width: 180px;
+        margin: 5px 5px 5px 5px;
+    }
 
     .prod-menu-col p{
         font-size: 16px;
