@@ -242,18 +242,21 @@ footer{
     background-color: rgb(4, 50, 109);
     color: white;
     padding-bottom: 10px;
-    display: inline-block;
     width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
 }
 
 .contact-info{
-    width: 100%;
+    width: 50%;
     padding: 10px;
     color: rgb(150, 194, 255);
+    float: left;
 }
 
-.contact-info img{
-    width: 80px;
+.contact-info h3{
+    text-decoration: underline;
 }
 
 .contact-info p{
@@ -261,6 +264,21 @@ footer{
 }
 
 .contact-info p a{
+    text-decoration: none;
+    color: inherit;
+}
+
+.social-container{
+    float: right;
+    width: 50%;
+    color: rgb(150, 194, 255);
+}
+
+.social-networks{
+    list-style-type: none;
+}
+
+.social-networks a{
     text-decoration: none;
     color: inherit;
 }
