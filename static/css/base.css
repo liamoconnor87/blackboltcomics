@@ -324,4 +324,8 @@ footer{
     .all-prod-menu p, .comic-menu p, .access-menu p, .spec-off-menu p{
         font-size: 20px;
     }
+
+    .contact-info p {
+        font-size: 14px;
+    }
 }
