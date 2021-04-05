@@ -6,11 +6,15 @@
 }
 
 body{
-    background-color: black;
+    background-color: white;
     font-family: 'Cabin', sans-serif;
-    background: url('/media/comics-495258_1920.jpg') no-repeat center center fixed;
+}
+
+.bg-image{
+    background: url('/media/comics-495258_1920.jpg') no-repeat center center;
     background-size: cover;
     height: 100vh;
+    opacity: .3;
 }
 
 /* Header - Navigation / Search */
@@ -61,6 +65,10 @@ body{
     color: white;
 }
 
+.nav-name{
+    display: none;
+}
+
 /* toggleClass for JS */
 .srch-btn-click, .acc-btn-click{
     background-color: rgb(4, 50, 109);
@@ -76,14 +84,17 @@ body{
 }
 
 .nav-name{
-    display: none; /* change to inline or block for larger screens */
+    font-size: 14px;
 }
+
+/* Search Bar & Account Menu */
 
 .search-tool, .account-menu{
     position: fixed;
     width: 100%;
     display: none;
     margin: 150px auto 0 auto;
+    z-index: 998;
 }
 
 .srch-bar, .acc-menu-drop{
@@ -141,10 +152,13 @@ body{
     text-decoration: underline;
 }
 
+/* Product Menu Navigation Bar */
+
 .prod-menu-cont{
     position: fixed;
     width: 100%;
     padding-top: 100px;
+    z-index: 998;
 }
 
 .prod-menu-row{
@@ -178,6 +192,9 @@ body{
     color: rgb(4, 50, 109);
     background-color: white;
     text-decoration: underline;
+    font-weight: 700;
+    border-top: 1px solid rgb(4, 50, 109);
+    height: calc(inherit - 1px);
 }
 
 .all-prod-menu, .comic-menu, .access-menu, .spec-off-menu{
@@ -188,6 +205,7 @@ body{
     height: auto;
     border-top: 1px solid white;
     display: none;
+    z-index: 998;
 }
 
 .all-prod-menu a, .comic-menu a, .access-menu a, .spec-off-menu a{
@@ -216,12 +234,20 @@ body{
     text-decoration: underline;
 }
 
+/* Footer */
+
+footer{
+    height: 200px;
+    background-color: rgb(4, 50, 109);
+    color: white;
+}
+
 /* Smart Device Layout */
 
 @media screen and (min-width: 280px){
 
     .navmenu li{
-        padding-top: 32px;
+        padding: 34.3px 8px;
     }
 
     .prod-menu-col p{
