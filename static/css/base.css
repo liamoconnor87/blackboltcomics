@@ -272,10 +272,14 @@ footer{
     float: right;
     width: 50%;
     color: rgb(150, 194, 255);
+    text-align: center;
+    padding: 10px;
+    margin: auto 0;
 }
 
 .social-networks{
     list-style-type: none;
+    font-size: 30px;
 }
 
 .social-networks a{
@@ -346,4 +350,5 @@ footer{
     .contact-info p {
         font-size: 14px;
     }
+
 }
