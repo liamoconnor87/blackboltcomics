@@ -250,12 +250,12 @@ footer{
 
 .contact-info{
     width: 50%;
-    padding: 10px;
+    padding: 10px 15px;
     color: rgb(150, 194, 255);
     float: left;
 }
 
-.contact-info h3{
+.contact-info h3, .social-container h5{
     text-decoration: underline;
 }
 
@@ -282,9 +282,23 @@ footer{
     font-size: 30px;
 }
 
+.social-networks li{
+    padding-top: 5px;
+    padding-bottom: 5px;
+    text-align: center;
+}
+
 .social-networks a{
     text-decoration: none;
     color: inherit;
+}
+
+.social-container h5{
+    display: none;
+}
+
+.social-networks a:hover{
+    color: white;
 }
 
 /* Smart Device Layout */
@@ -349,6 +363,16 @@ footer{
 
     .contact-info p {
         font-size: 14px;
+    }
+
+    .social-networks li{
+        display: inline;
+        padding: 20px;
+        font-size: 45px;
+    }
+
+    .social-container h5{
+        display: block;
     }
 
 }
