@@ -1,0 +1,393 @@
+[
+	{
+		"pk": 1,
+		"model": "products.product",
+		"fields":{
+			"sku": "",
+			"name": "Comic Book Storage Box (Long)",
+			"category": 2,
+			"manufacturer": "Comic Care",
+			"publisher": null,
+			"writer": null,
+			"artist": null,
+			"description": "Store your comic books in this handy long size comic box! Boxes feature double walled bottoms with single-walled box lids. Sturdy enough for stacking. Dimensions are approximately 73 x 21 x 30 cm (L x W x H) including the lid. One box holds approximately 300 comics.",
+			"price": 6.80,
+			"image_url": "https://www.dropbox.com/s/ts6zl68upnm4sxn/cb_long_box.jpg?raw=1",
+			"image": "cb_long_box.jpg"
+		}
+	},
+	{
+		"pk": 2,
+		"model": "products.product",
+		"fields":{
+			"sku": "",
+			"name": "Comic Book Storage Box (Short)",
+			"category": 2,
+			"manufacturer": "Diamond",
+			"publisher": null,
+			"writer": null,
+			"artist": null,
+			"description": "Don’t let your comic books sit around unprotected. Keep them in these boxes with lids where you know they’ll be safe! Boxes feature double-walled bottoms with single-walled box lids. 15' x 8 15/16' x 11 1/2'. Holds up to 100 magazines.",
+			"price": 5.50,
+			"image_url": "https://www.dropbox.com/s/nztez4lkbr7ezw7/cb_short_box.jpg?raw=1",
+			"image": "cb_short_box.jpg"
+		}
+	},
+	{
+		"pk": 3,
+		"model": "products.product",
+		"fields":{
+			"sku": "",
+			"name": "Comic Book Backing Boards",
+			"category": 2,
+			"manufacturer": "Ultimate Guard",
+			"publisher": null,
+			"writer": null,
+			"artist": null,
+			"description": "Calcium Buffered Backer Boards that “mop-up” the acids emitted from comics, thus maintaining a neutral pH environment. Comic Size: 178 x 264 mm. Pack of 50.",
+			"price": 12.50,
+			"image_url": "https://www.dropbox.com/s/jwxngpfdkwrl280/backing_board.jpg?raw=1",
+			"image": "backing_board.jpg"
+		}
+	},
+	{
+		"pk": 4,
+		"model": "products.product",
+		"fields":{
+			"sku": "",
+			"name": "Comic Book Bags",
+			"category": 2,
+			"manufacturer": "Ultra Pro",
+			"publisher": null,
+			"writer": null,
+			"artist": null,
+			"description": "Made of 250 gauge, high clarity, low density polyethylene. Size - 7 1/8' x 10½' + 1 ½' flap. Pack of 100",
+			"price": 7.50,
+			"image_url": "https://www.dropbox.com/s/4s4d77lboa3u9ko/cb_sleeves.jpg?raw=1",
+			"image": "cb_sleeves.jpg"
+		}
+	},
+	{
+		"pk": 5,
+		"model": "products.product",
+		"fields":{
+			"sku": "",
+			"name": "Avengers #44",
+			"category": 1,
+			"manufacturer": null,
+			"publisher": "Marvel",
+			"writer": "Jason Aaron",
+			"artist": "Javi Garron, Leinil Francis Yu",
+            "description": "Enter The Phoenix. THE FIERY FINALE! As the greatest heroes and villains of the Marvel Universe are trapped within the battle to decide the all-new Phoenix – a bloody battle that has narrowed to a handful of desperate combatants. Thor leads the rest of the Avengers in the fight to contain the Phoenix Force on Earth, in a quest complicated by the Thunder God’s own mysterious connection to the cosmic firebird.",
+            "price": 3.99,
+			"image_url": "https://www.dropbox.com/s/7hwfde4q5o2xf5o/avengers_44.jpg?raw=1",
+			"image": "avengers_44.jpg"
+		}
+	},
+	{
+		"pk": 6,
+		"model": "products.product",
+		"fields":{
+			"sku": "",
+			"name": "Ms. Marvel #27",
+			"category": 1,
+			"manufacturer": null,
+			"publisher": "Marvel",
+			"writer": "G. Willow Wilson",
+			"artist": "Nico Leon, Valerio Schiti",
+			"description": "ZOE, MIKE, GABE and NAKIA are all-in! The MS. MARVELS? The MS’s? Whatever you call them, this group is holding up the legacy of Ms. Marvel and taking the fight to the INVENTOR! But RED DAGGER is going to have his hands full if he wants to lead this ragtag bunch to victory!",
+			"price": 3.00,
+			"image_url": "https://www.dropbox.com/s/i0lpsqmmf5ec6rp/ms_marvel_27.jpg?raw=1",
+			"image": "ms_marvel_27.jpg"
+		}
+	},
+	{
+		"pk": 7,
+		"model": "products.product",
+		"fields":{
+			"sku": "",
+			"name": "Immortal Hulk #45",
+			"category": 1,
+			"manufacturer": null,
+			"publisher": "Marvel",
+			"writer": "Al Ewing",
+			"artist": "Joe Bennett, Alex Ross",
+			"description": "The Hulk is at his lowest point. His strength is gone. His friends cannot reach him. Gamma itself has turned against him. What hope is there now? What hope is left... for THE WEAKEST THERE IS?",
+			"price": 3.90,
+			"image_url": "https://www.dropbox.com/s/06zwypo10q81efw/immortal_hulk_45.jpg?raw=1",
+			"image": "immortal_hulk_45.jpg"
+		}
+	},
+	{
+		"pk": 8,
+		"model": "products.product",
+		"fields":{
+			"sku": "",
+			"name": "Sensational Wonder Woman #14",
+			"category": 1,
+			"manufacturer": null,
+			"publisher": "DC Comics",
+			"writer": "Sanya Anwar",
+			"artist": "Sanya Anwar, Eva de la Cruz, Tula Lotay",
+			"description": "Wonder Woman’s search for missing socialite Natalia Close has taken a dark turn—can Wonder Woman convince the troubled mother to choose her real life over her villainous new persona…or was that life just a mask all along?",
+			"price": 3.99,
+			"image_url": "https://www.dropbox.com/s/c6g5kstz5iy9bqf/sen_wonder_woman_14.jpg?raw=1",
+			"image": "sen_wonder_woman_14.jpg"
+		}
+	},
+	{
+		"pk": 9,
+		"model": "products.product",
+		"fields":{
+			"sku": "",
+			"name": "Batman #107",
+			"category": 1,
+			"manufacturer": null,
+			"publisher": "DC Comics",
+			"writer": "James Tynion IV",
+			"artist": "Jorge Jimenez, Ricardo Lopez Ortiz, Tomeu Morey",
+			"description": "Tensions are sky-high in Gotham City following the events at Arkham Asylum, and public opinion and unrest are starting to boil over. The Dark Knight has his hands full juggling the investigation of the reappearance of an old enemy and the rise of a new gang in Gotham called the Unsanity Collective...Gotham City is getting more dangerous by the minute! Plus, in part one of “Legend of the Ghost-Maker,” James Tynion IV and Ricardo Lopez Ortiz tell the most insane tale of action and adventure featuring Batman’s frenemy Ghost-Maker! This one is not to be missed!",
+			"price": 4.99,
+			"image_url": "https://www.dropbox.com/s/e0i0hrs2tly05l7/batman_107.jpg?raw=1",
+			"image": "batman_107.jpg"
+		}
+	},
+	{
+		"pk": 10,
+		"model": "products.product",
+		"fields":{
+			"sku": "",
+			"name": "Batman: White Knight Presents: Harley Quinn #6",
+			"category": 1,
+			"manufacturer": null,
+			"publisher": "DC Comics",
+			"writer": "Katana Collins",
+			"artist": "Matteo Scalera, Dave Stewart",
+			"description": "Gotham City’s fate hangs in the balance in this conclusion to Harley Quinn’s quest to catch a serial killer! Harley knew the risks when she agreed to help the GTO capture Gotham’s most savage new criminals and all her fears have come to pass. Her pursuit of Starlet and the Producer has magnified the overwhelming responsibilities of motherhood, endangered her life and loved ones and forced her to revisit the most painful memories of her own criminal past. Now, on the eve of Starlet’s final spectacular act at the Gotham Film Festival, the case has become personal. As Harley grieves a shocking personal loss, she prepares to risk everything to prove she can deliver on her commitments and bring the case to a close. With one final assist from Bruce, Harley heads to center stage for a showdown that will make or break Gotham’s future—and determine Harley’s role within it.",
+			"price": 4.99,
+			"image_url": "https://www.dropbox.com/s/130wsn6c0vyi6f0/bat_wk_harleyq_6.jpg?raw=1",
+			"image": "bat_wk_harleyq_6.jpg"
+		}
+	},
+	{
+		"pk": 11,
+		"model": "products.product",
+		"fields":{
+			"sku": "",
+			"name": "G.I. Joe: A Real American Hero: Serpentor Uncoiled",
+			"category": 1,
+			"manufacturer": null,
+			"publisher": "IDW",
+			"writer": "Larry Hama",
+			"artist": "Rod Whigham, SL Gallant, Andy Mushynsky, George Roussos",
+			"description": "Relive the classic era of G.I. Joe: A Real American Hero in this very special reprint of G.I. Joe: A Real American Hero #49 and #50! From the prolific imagination of Living Legend Larry Hama, and featuring the origin of fan-favorite villain Serpentor, “Serpentor Uncoiled” is a must-have for long-time collectors and new fans alike. Includes a brand-new cover by superstar G.I. Joe artist SL Gallant!",
+			"price": 5.99,
+			"image_url": "https://www.dropbox.com/s/v8q1p54hibuobou/gi_joe_am_hero.jpg?raw=1",
+			"image": "gi_joe_am_hero.jpg"
+		}
+	},
+	{
+		"pk": 12,
+		"model": "products.product",
+		"fields":{
+			"sku": "",
+			"name": "TMNT: Urban Legends #23",
+			"category": 1,
+			"manufacturer": null,
+			"publisher": "IDW",
+			"writer": "Gary Carlson",
+			"artist": "Frank Fosco, Adam Guzowski",
+			"description": "The last issue of the original run is here! It’s been a full year since the events that set in motion the Turtles’ journey, and as they gather together to celebrate their birthdays, they get disturbing news from Pimiko—the Foot Clan has turned on Raph! Will they be able to rescue their brother from the clutches of the mysterious new Shredder in time?",
+			"price": 3.99,
+			"image_url": "https://www.dropbox.com/s/8eetootedeifjgg/tmnt_urb_23.jpg?raw=1",
+			"image": "tmnt_urb_23.jpg"
+		}
+	},
+	{
+		"pk": 13,
+		"model": "products.product",
+		"fields":{
+			"sku": "",
+			"name": "Hellboy and the B.P.R.D.: Her Fatal Hour One-Shot",
+			"category": 1,
+			"manufacturer": null,
+			"publisher": "Dark Horse",
+			"writer": "Mike Mignola",
+			"artist": "Tiernan Trevallion, Dave Stewart",
+			"description": "Gone, but not forgotten! Years after Hellboy's ill-fated tangle with the Beast of Vargu, the Romani women who helped him need that debt repaid. Claimed by a demon in a romance gone wrong, the younger woman reaches out to Hellboy through the power of a familiar old puppet, and a supernatural confrontation full of magic and mayhem ensues! In a second short story, Hellboy goes head to head with a phantom who is looking for an object completely unknown to the living people the ghost is terrorizing. Master of horror Mike Mignola is joined by artist extraordinaire Tiernen Trevallion and award-winning colorist Dave Stewart to bring you the follow-up to smash Hellboy hit The Beast of Vargu!",
+			"price": 3.19,
+			"image_url": "https://www.dropbox.com/s/43t3xdtc01u7nsw/hellboy_fatal.jpg?raw=1",
+			"image": "hellboy_fatal.jpg"
+		}
+	},
+	{
+		"pk": 14,
+		"model": "products.product",
+		"fields":{
+			"sku": "",
+			"name": "Hellboy and the B.P.R.D.: The Seven Wives Club One-Shot",
+			"category": 1,
+			"manufacturer": null,
+			"publisher": "Dark Horse",
+			"writer": "Mike Mignola",
+			"artist": "Adam Hughes, Dave Stewart",
+			"description": "Mignola! Hughes! The team behind the Eisner Award-winning one-shot Hellboy: Krampusnacht spins a new ghostly yarn! Hellboy comes to the aid of a young girl whose ghost hunt goes wrong, and a visit to an abandoned medical school reveals sinister layers to a grisly, long-ago murder. Stolen cadavers, vengeful spirits, and more abound in this one-shot. Hellboy creator Mike Mignola reunites with fan-favorite artist Adam Hughes for a spirit-fueled scream fest sure to excite old and new fans alike!",
+			"price": 3.99,
+			"image_url": "https://www.dropbox.com/s/va0hjbsiz9zkko7/hellboy_7_wives.jpg?raw=1",
+			"image": "hellboy_7_wives.jpg"
+		}
+	},
+	{
+		"pk": 15,
+		"model": "products.product",
+		"fields":{
+			"sku": "",
+			"name": "Hellboy and The B.P.R.D.: Saturn Returns #3", 
+			"category": 1,
+			"manufacturer": null,
+			"publisher": "Dark Horse",
+			"writer": "Mike Mignola, Scott Allie",
+			"artist": "Chirstopher Mitten, Brennan Wagner",
+			"description": "Theories and threads are coming up cold, but the bodies are still piling up in the terrified New Hampshire town. How many more will die before the creature is contained? Agent Kinsley and the local authorities must race to stop the bloodthirsty body-snatcher without Hellboy, who has been urgently pulled in another direction. An explosive conclusion to this three-issue scare–fest.",
+			"price": 2.99,
+			"image_url": "https://www.dropbox.com/s/393k8xhzlyi46zw/hellboy_saturn_3.jpg?raw=1",
+			"image": "hellboy_saturn_3.jpg"
+		}
+	},
+	{
+		"pk": 16,
+		"model": "products.product",
+		"fields":{
+			"sku": "",
+			"name": "FAITH #8", 
+			"category": 1,
+			"manufacturer": null,
+			"publisher": "Valiant",
+			"writer": "Jody Houser",
+			"artist": "Pere Perez, Marguerite Sauvage",
+			"description": "From Hollywood’s darkest shadows, an old enemy rises to extract revenge on Faith! A superhero’s work is never done…and, now, one of Faith’s former adversaries has returned for a fateful rematch that will put the life of Los Angeles’ greatest hero into a tailspin. And when this familiar assailant finally shows their true face, will the high flying psiot have the strength to put them down for good?",
+			"price": 2.99,
+			"image_url": "https://www.dropbox.com/s/48wf1acf3jgwton/faith_8.jpg?raw=1",
+			"image": "faith_8.jpg"
+		}
+	},
+	{
+		"pk": 17,
+		"model": "products.product",
+		"fields":{
+			"sku": "",
+			"name": "Bloodshot #24", 
+			"category": 1,
+			"manufacturer": null,
+			"publisher": "Valiant",
+			"writer": "B. Clay Moore",
+			"artist": "Will Rosado",
+			"description": "Russian super-spies don't die easy! Deep in the biting cold of a former Soviet state, a mysterious cell of sleeper agents – their minds clouded, but their bodies genetically enhanced – are wreaking havoc and inching the region toward war. Forced into a ﬁght he never wanted, Bloodshot is about to discover the shocking secret of their agenda…and, when faced with the might of their unstoppable power, will meet an enemy eerily similar to himself…",
+			"price": 2.99,
+			"image_url": "https://www.dropbox.com/s/e3ux5pd86tp4y70/bloodshot_24.jpg?raw=1",
+			"image": "bloodshot_24.jpg"
+		}
+	},
+	{
+		"pk": 18,
+		"model": "products.product",
+		"fields":{
+			"sku": "",
+			"name": "The Walking Dead Deluxe #12", 
+			"category": 1,
+			"manufacturer": null,
+			"publisher": "Image Comics",
+			"writer": "Robert Kirkman",
+			"artist": "Charlie Adlard, Dave McCaig",
+			"description": "The Greene Family Farm was supposed to be the start of something new, or at least a place to end the survivors’ petty squabbles. But no. It's never that simple. Now Rick has a gun to his head. This deluxe presentation in STUNNING FULL COLOR also features another installment of Cutting Room Floor and creator commentary.",
+			"price": 3.99,
+			"image_url": "https://www.dropbox.com/s/ch3swzzn0por5xm/walking_dead_dlx_12.jpg?raw=1",
+			"image": "walking_dead_dlx_12.jpg"
+		}
+	},
+	{
+		"pk": 19,
+		"model": "products.product",
+		"fields":{
+			"sku": "",
+			"name": "Blackbird #5", 
+			"category": 1,
+			"manufacturer": null,
+			"publisher": "Image Comics",
+			"writer": "Sam Humphries",
+			"artist": "Jen Bartel",
+			"description": "After taking out her anger on the Paragon cabals in a big way, there’s nowhere in Los Angeles’ four magical territories that Nina can hide. Good thing she’s done hiding. It’s time to throw down.",
+			"price": 1.99,
+			"image_url": "https://www.dropbox.com/s/4gn03229cuo7kso/blackbird_5.jpg?raw=1",
+			"image": "blackbird_5.jpg"
+		}
+	},
+	{
+		"pk": 20,
+		"model": "products.product",
+		"fields":{
+			"sku": "",
+			"name": "Blade Runner 2029 #4", 
+			"category": 1,
+			"manufacturer": null,
+			"publisher": "Titan Comics",
+			"writer": "Michael Green, Mike Johnson",
+			"artist": "Andres Guinaldo, Marco Lesko",
+			"description": "For Ash the hunt is nearly over. She finds her loyalties challenged by two Replicants, one offering salvation, the other possible damnation. Will she have the strength to survive?",
+			"price": 3.99,
+			"image_url": "https://www.dropbox.com/s/fol3uj4o50l4enr/blade_runner_2029_4.jpg?raw=1",
+			"image": "blade_runner_2029_4.jpg"
+		}
+	},
+	{
+		"pk": 21,
+		"model": "products.product",
+		"fields":{
+			"sku": "",
+			"name": "Horizon Zero Dawn #1", 
+			"category": 1,
+			"manufacturer": null,
+			"publisher": "Titan Comics",
+			"writer": "Anne Toole",
+			"artist": "Ann Maulina",
+			"description": "ALOY AND TALANAH RETURN IN A NEW STORY SET AFTER THE EVENTS OF THE GAME! Nature has reclaimed the planet. Awe-inspiring machines dominate the land, as humanity fights for survival on this new Earth",
+			"price": 2.99,
+			"image_url": "https://www.dropbox.com/s/fnya5vpct0idrk9/horizon_0_dawn_1.jpg?raw=1",
+			"image": "horizon_0_dawn_1.jpg"
+		}
+	},
+	{
+		"pk": 22,
+		"model": "products.product",
+		"fields":{
+			"sku": "",
+			"name": "3 Guns #1", 
+			"category": 1,
+			"manufacturer": null,
+			"publisher": "BOOM! Studios",
+			"writer": "Steven Grant",
+			"artist": "Emilio Laiso",
+			"description": "Trench was a deep-cover DEA agent. Steadman was an undercover Naval Intelligence officer. Now, after racing headlong across the Southwest, desperately outrunning Feds and mobsters alike while trying to clear their names, Trench and Steadman are pulled into another impossible situation: brokering gun deals between the Russians and anti-government revolutionaries...from opposite sides. And little do they know, a Third Gun has her eyes set on the ultimate prize--and she won't go down without a fight.",
+			"price": 1.59,
+			"image_url": "https://www.dropbox.com/s/9cjea3hiogwwxhf/3_guns_1.jpg?raw=1",
+			"image": "3_guns_1.jpg"
+		}
+	},
+	{
+		"pk": 23,
+		"model": "products.product",
+		"fields":{
+			"sku": "",
+			"name": "Abbott #5", 
+			"category": 1,
+			"manufacturer": null,
+			"publisher": "BOOM! Studios",
+			"writer": "Sami Kivela",
+			"artist": "Jason Wordie",
+			"description": "Captured by the maniacal villain who has been wreaking havoc on Detroit, it’ll take all of Abbott’s gumption and latent abilities to escape his clutches and save the city from the encroaching darkness.",
+			"price": 1.59,
+			"image_url": "https://www.dropbox.com/s/m0tceeyia640zhp/abbott_5.jpg?raw=1",
+			"image": "abbott_5.jpg"
+		}
+	}	
+]

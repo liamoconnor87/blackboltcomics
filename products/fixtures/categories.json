@@ -1,0 +1,18 @@
+[
+	{
+		"pk": 1,
+		"model": "products.category",
+		"fields":{
+			"name": "comic_book",
+			"friendly_name": "Comic Book"
+		}
+	},
+	{
+		"pk": 2,
+		"model": "products.category",
+		"fields":{
+			"name": "accessory",
+			"friendly_name": "Accessory"
+		}
+	}
+]
