@@ -15,6 +15,7 @@ body{
 
 
 .test{
+    padding-top: 150px;
     height: 100vh; /* templates > home > index.html */
 }
 
