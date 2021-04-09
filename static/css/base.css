@@ -16,7 +16,13 @@ body{
 
 .test{
     padding-top: 150px;
-    height: 100vh; /* templates > home > index.html */
+    height: 100%; /* templates > home > index.html */
+    width: 100%;
+    z-index: -1;
+}
+
+.test2{
+    background-color: white; 
 }
 
 
