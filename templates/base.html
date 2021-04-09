@@ -201,7 +201,12 @@
 
         </header>
 
-        <div class="bg-image"></div>
+        {% if messages %}
+            <div></div>
+        {% endif %}
+
+        {% block content %}
+        {% endblock %}
 
         <footer>
 
@@ -286,16 +291,6 @@
             </div>
 
         </footer>
-
-        {% if messages %}
-            <div></div>
-        {% endif %}
-
-        {% block page_header%}
-        {% endblock %}
-
-        {% block content %}
-        {% endblock %}
 
         {% block postloadjs %}
         <script type="text/javascript">

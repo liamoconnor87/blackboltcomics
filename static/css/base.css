@@ -8,15 +8,16 @@
 body{
     background-color: white;
     font-family: 'Cabin', sans-serif;
-}
-
-.bg-image{
-    background: url('/media/comics-495258_1920.jpg') no-repeat center center;
+    background: url('/media/comics-495258_1920.jpg') no-repeat center center fixed;
     background-size: cover;
     height: 100vh;
-    opacity: .3;
-    display: block;
 }
+
+
+.test{
+    height: 100vh; /* templates > home > index.html */
+}
+
 
 /* Header - Navigation / Search */
 
