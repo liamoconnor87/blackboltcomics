@@ -3,6 +3,22 @@
 
 {% block content %}
 
-    <div class="test test2">{{ products }}</div>
+    <div class="main-container products-page">
+        <div class="products-container">
+            {% for product in products %}
+            <div class="product">
+                <a href="">
+                    <img src="{{ product.image.url }}" alt="{{ product.name }}">
+                </a>
+                <div class="product-title">
+                    <p>{{ product.name }}</p>
+                </div>
+                <div class="product-info">
+                    <p>{{ product.price }}</p>
+                </div>
+            </div>
+            {% endfor %}
+        </div>
+    </div>
     
 {% endblock %}

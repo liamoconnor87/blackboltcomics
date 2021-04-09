@@ -14,15 +14,19 @@ body{
 }
 
 
-.test{
+.main-container{
     padding-top: 150px;
-    height: 100%; /* templates > home > index.html */
     width: 100%;
     z-index: -1;
 }
 
-.test2{
-    background-color: white; 
+.index-page{
+    height: 100%; /* templates > home > index.html */
+}
+
+.products-page{
+    height: auto;
+    background-color: white;
 }
 
 
@@ -308,6 +312,8 @@ footer{
 .social-networks a:hover{
     color: white;
 }
+
+/* Products */
 
 /* Smart Device Layout */
 
