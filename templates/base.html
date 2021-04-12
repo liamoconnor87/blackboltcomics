@@ -33,7 +33,7 @@
 
                 <!-- Shop Logo -->
                 <div class="logo-container">
-                    <a href="" class="logo-anchor">
+                    <a href="{% url 'home' %}" class="logo-anchor">
                         <img src="{% static 'logo/blackbolt_comics.png' %}" alt="Black Bolt Comics" class="logo">
                     </a>
                 </div>
@@ -112,7 +112,7 @@
                     <p>By Category</p>
                 </a>
 
-                <a href="">
+                <a href="{% url 'products' %}">
                     <p>All Products</p>
                 </a>
                 

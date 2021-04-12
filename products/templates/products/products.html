@@ -7,13 +7,13 @@
         <div class="products-container">
             {% for product in products %}
             <div class="product">
-                <a href="">
+                <a href="{% url 'product_detail' product.id %}">
                     <img src="{{ product.image.url }}" alt="{{ product.name }}">
                 </a>
                 <div class="product-title">
                     <p>{{ product.name }}</p>
                 </div>
-                <div class="product-info">
+                <div class="product-price">
                     <p>{{ product.price }}</p>
                 </div>
             </div>

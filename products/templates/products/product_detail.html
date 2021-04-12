@@ -1,0 +1,55 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block content %}
+
+    <div class="main-container products-page">
+        <div class="products-container">
+            
+            <div class="product">
+                <a href="{{ product.image.url }}" target="_blank">
+                    <img src="{{ product.image.url }}" alt="{{ product.name }}">
+                </a>
+
+                <div class="product-title">
+                    <p>{{ product.name }}</p>
+                </div>
+
+                <div class="product-price">
+                    <p>{{ product.price }}</p>
+                </div>
+
+                {% if product.manufacturer %}
+                    <div class="product-manufacturer">
+                        <p>{{ product.manufacturer }}</p>
+                    </div>
+                {% endif %}
+
+                {% if product.publisher %}
+                    <div class="product-publisher">
+                        <p>{{ product.publisher }}</p>
+                    </div>
+                {% endif %}
+
+                {% if product.writer %}
+                    <div class="product-writer">
+                        <p>{{ product.writer }}</p>
+                    </div>
+                {% endif %}
+
+                {% if product.artist %}
+                    <div class="product-artist">
+                        <p>{{ product.artist }}</p>
+                    </div>
+                {% endif %}
+
+                <div class="product-description">
+                    <p>{{ product.description }}</p>
+                </div>
+
+            </div>
+            
+        </div>
+    </div>
+    
+{% endblock %}
