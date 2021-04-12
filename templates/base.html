@@ -170,11 +170,11 @@
             </div>
             
             <!-- Search Tool -->
-            <form class="search-tool" action="" method="POST">
+            <form class="search-tool" action="{% url 'products' %}" method="GET">
                 <div class="srch-row srch-bar">
                     <div class="srch-column">
                         <label for="" class=""></label>
-                        <input type="text" name="" id="" class="srch-box" placeholder="Search our Online Store...">
+                        <input type="text" name="search-query" id="" class="srch-box" placeholder="Search our Online Store...">
                     </div>
                     <!-- Search Button Hidden  -->
                     <div class="hide-btn">
@@ -188,7 +188,7 @@
                 <div class="acc-menu-drop">
                     {% if request.user.is_authenticated %}
                         {% if request.user.is_superuser %}
-                            <a href="{% url 'add_product' %}" class="acc-btn">Product Management</a>
+                            <a href="" class="acc-btn"><!-- href="{% url 'add_product' %}" --> Product Management</a>
                         {% endif %}
                         <a href="{% url 'profile' %}" class="acc-btn">My Profile</a>
                         <a href="{% url 'account_logout' %}" class="acc-btn">Logout</a>
