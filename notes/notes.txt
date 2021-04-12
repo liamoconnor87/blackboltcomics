@@ -17,7 +17,7 @@ python3 manage.py createsuperuser
 
 python3 manage.py makemigrations --dry-run
 python3 manage.py makemigrations
-python3 manage.py migrate --plan    <----- ( known a "plan flag"  )
+python3 manage.py migrate --plan    <----- ( known as "plan flag"  )
 python3 manage.py migrate
 
 python3 manage.py loaddata categories

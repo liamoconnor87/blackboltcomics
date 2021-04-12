@@ -82,7 +82,7 @@
                 <div class="prod-menu-row">
 
                     <div class="prod-menu-col all-prod-click">
-                        <p>All Products</p>
+                        <p>Products</p>
                     </div>
 
                     <div class="prod-menu-col comic-book-click">
@@ -93,9 +93,9 @@
                         <p>Accessories</p>
                     </div>
 
-                    <div class="prod-menu-col offer-click">
+                    <!-- <div class="prod-menu-col offer-click">
                         <p>Special Offers</p>
-                    </div>
+                    </div>> -->
 
                 </div>
 
@@ -104,15 +104,15 @@
             <!-- All Product Menu -->
             <div class="all-prod-menu">
 
-                <a href="">
-                    <p>By Price</p>
+                <a href="{% url 'products' %}?category=comic_book">
+                    <p>Comic Books</p>
                 </a>
 
-                <a href="">
-                    <p>By Category</p>
+                <a href="{% url 'products' %}?category=accessory">
+                    <p>Accessories</p>
                 </a>
 
-                <a href="{% url 'products' %}">
+                <a href="{% url 'products' %}?category=comic_book,accessory">
                     <p>All Products</p>
                 </a>
                 
@@ -121,7 +121,7 @@
             <!-- Comic Books Menu -->
             <div class="comic-menu">
 
-                <a href="">
+                <a href="{% url 'products' %}?category=Marvel"><!-- Doesnt work, re look at tutorial -->
                     <p>Marvel</p>
                 </a>
 
@@ -130,7 +130,27 @@
                 </a>
 
                 <a href="">
-                    <p>All Comics</p>
+                    <p>Image Comics</p>
+                </a>
+
+                <a href="">
+                    <p>Dark Horse</p>
+                </a>
+
+                <a href="">
+                    <p>IDW</p>
+                </a>
+
+                <a href="">
+                    <p>Valiant</p>
+                </a>
+
+                <a href="">
+                    <p>Titan Comics</p>
+                </a>
+
+                <a href="">
+                    <p>BOOM! Studios</p>
                 </a>
                 
             </div>
@@ -149,14 +169,10 @@
                 <a href="">
                     <p>Backing Boards</p>
                 </a>
-
-                <a href="">
-                    <p>All Accessories</p>
-                </a>
                 
             </div>
 
-            <!-- Special Offers Menu -->
+            <!-- Special Offers Menu 
             <div class="spec-off-menu">
 
                 <a href="">
@@ -167,7 +183,7 @@
                     <p>Clearance</p>
                 </a>
                 
-            </div>
+            </div> -->
             
             <!-- Search Tool -->
             <form class="search-tool" action="{% url 'products' %}" method="GET">
