@@ -4,21 +4,45 @@
 {% block content %}
 
     <div class="main-container products-page">
+
+        <div class="prod-ctgry-cont">
+            <h3>Products</h3>
+            {% for categories in current_categories %}
+                <a href="{% url 'products' %}?category={{ categories.name }}">
+                    <span>{{ categories.friendly_name }}</span><br>
+                </a>
+            {% endfor %}
+        </div>
+
         <div class="products-container">
             {% for product in products %}
             <div class="product">
                 <a href="{% url 'product_detail' product.id %}">
                     <img src="{{ product.image.url }}" alt="{{ product.name }}">
                 </a>
+
+                {% if product.publisher %}
+                    <div class="product-title">
+                        <p>{{ product.publisher }}</p>
+                    </div>
+                {% endif %}
+
+                {% if product.manufacturer %}
+                    <div class="product-title">
+                        <p>{{ product.manufacturer }}</p>
+                    </div>
+                {% endif %}
+
                 <div class="product-title">
                     <p>{{ product.name }}</p>
                 </div>
                 <div class="product-price">
-                    <p>{{ product.price }}</p>
+                    <p>£{{ product.price }}</p>
                 </div>
             </div>
             {% endfor %}
         </div>
+        
     </div>
     
 {% endblock %}
