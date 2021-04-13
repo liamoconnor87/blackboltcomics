@@ -29,7 +29,9 @@ def all_products(request):
                 sortkey = 'category__name'
 
             if 'direction' in request.GET:
-                sortkey = f'-{sortkey}'
+                direction = request.GET['direction']
+                if direction == 'desc':
+                    sortkey = f'-{sortkey}'
 
             products = products.order_by(sortkey)
 

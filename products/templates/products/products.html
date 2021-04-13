@@ -7,9 +7,9 @@
 
         <div class="prod-ctgry-cont">
             <h3>Products</h3>
-            {% for categories in current_categories %}
+            {% for cat in current_categories %}
                 <a href="{% url 'products' %}?category={{ categories.name }}">
-                    <span>{{ categories.friendly_name }}</span><br>
+                    <span>{{ cat.friendly_name }}</span><br>
                 </a>
             {% endfor %}
         </div>
