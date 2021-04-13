@@ -117,7 +117,7 @@ $(document).ready(function() {
 
     })
 
-    // Sort Selection Box
+    // Sort Selector.
     $('#sort-selector').change(function() {
         var selector = $(this);
         var currentUrl = new URL(window.location);
