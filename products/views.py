@@ -12,34 +12,31 @@ def all_products(request):
     categories = None
 
     if request.GET:
-        
+
         # Products Menu.
         if 'category' in request.GET:
+
             categories = request.GET['category'].split(',')
             products = products.filter(category__name__in=categories)
             categories = Category.objects.filter(name__in=categories)
 
         if 'product-query' in request.GET:
-            query = request.GET['product-query']
-            if not query:
-                # messages.error(request, "you didnt enter any search criteria!")
-                return redirect(reverse('index'))
 
+            query = request.GET['product-query']
             queries = Q(publisher__icontains=query)
             products = products.filter(queries)
 
         if 'accessory-query' in request.GET:
+            
             query = request.GET['accessory-query']
-            if not query:
-                # messages.error(request, "you didnt enter any search criteria!")
-                return redirect(reverse('index'))
-
             queries = Q(name__icontains=query)
             products = products.filter(queries)
 
         # Search Bar.
         if 'search-query' in request.GET:
+
             query = request.GET['search-query']
+
             if not query:
                 # messages.error(request, "you didnt enter any search criteria!")
                 return redirect(reverse('index'))
