@@ -3,9 +3,20 @@
 
 {% block content %}
 
-    <div class="main-container index-page"><!-- index-page placehold styling -->
+    <div class="main-container shopping-bag-page">
 
+        <div class="shop-bag-cont">
+            <h3>Shopping Bag</h3>
+            <br>
+            <div class="bag-items">
+                {% if bag_items %}
+                {% else %}
+                    <p>Your Shopping Bag is empty.</p>
+                    <a href="{% url 'products' %}"> < Keep Shopping?</a>
+                {% endif %}
+            </div>
 
+        </div>
 
     </div>
     

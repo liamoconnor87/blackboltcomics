@@ -24,9 +24,13 @@ body{
     height: 100%; /* templates > home > index.html */
 }
 
-.products-page{
+.products-page, .shopping-bag-page{
     height: auto;
     background-color: white;
+}
+
+.shopping-bag-page{
+    height: 100%;
 }
 
 
