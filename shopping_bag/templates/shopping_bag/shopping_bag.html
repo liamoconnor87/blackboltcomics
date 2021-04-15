@@ -38,7 +38,41 @@
                                         <p class="">£{{ item.product.price }}</p>
                                     </td>
                                     <td class="">
-                                        <p class="">{{ item.quantity }}</p>
+                                        <form class="" action="POST" action="{% url 'adjust_quantity' item.item_id %}">
+                                            {% csrf_token %}
+                                            <div class="">
+                                            
+                                                <div class="">
+                                                    <p class=""><strong>Quantity:</strong></p>
+                                                    <div class="">
+                                                        <div class="">
+                                                            <div class="">
+                                                                <button class="decrement-qty" data-item_id="{{ item.item_id }}" id="decrement-qty_{{ item.item_id }}">
+                                                                    <span class="">
+                                                                        <i class="fas fa-minus"></i>
+                                                                    </span>
+                                                                </button>
+                                                            </div>
+                                                            <input class="qty_input" type="number" name="quantity" value="{{ item.quantity }}" min="1" max="99"
+                                                                data-item_id="{{ item.item_id }}" id="id_qty_{{ item.item_id }}">
+                                                            <div class="">
+                                                                <button class="increment-qty" data-item_id="{{ item.item_id }}" id="increment-qty_{{ item.item_id }}">
+                                                                    <span class="">
+                                                                        <i class="fas fa-plus"></i>
+                                                                    </span>
+                                                                </button>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            
+                                                <input type="hidden" name="redirect_url" value="{{ request.path }}">
+                                            
+                                            </div>
+
+                                        </form>
+                                        <a class="update-link text-info"><small>Update</small></a>
+                                        <a class="remove-item" id="remove_{{ item.item_id }}" data-product_size="{{ item.size }}"><small>Remove</small></a>
                                     </td>
                                     <td class="">
                                         <p class="">£{{ item.product.price }}</p>
