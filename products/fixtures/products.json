@@ -3,7 +3,7 @@
 		"pk": 1,
 		"model": "products.product",
 		"fields":{
-			"sku": "",
+			"sku": "Sto-Com-Acc-680",
 			"name": "Comic Book Storage Box (Long)",
 			"category": 2,
 			"manufacturer": "Comic Care",
@@ -20,7 +20,7 @@
 		"pk": 2,
 		"model": "products.product",
 		"fields":{
-			"sku": "",
+			"sku": "Sto-Dia-Acc-550",
 			"name": "Comic Book Storage Box (Short)",
 			"category": 2,
 			"manufacturer": "Diamond",
@@ -37,7 +37,7 @@
 		"pk": 3,
 		"model": "products.product",
 		"fields":{
-			"sku": "",
+			"sku": "Bac-Ult-Acc-125",
 			"name": "Comic Book Backing Boards",
 			"category": 2,
 			"manufacturer": "Ultimate Guard",
@@ -54,7 +54,7 @@
 		"pk": 4,
 		"model": "products.product",
 		"fields":{
-			"sku": "",
+			"sku": "Boo-Ult-Acc-750",
 			"name": "Comic Book Bags",
 			"category": 2,
 			"manufacturer": "Ultra Pro",
@@ -71,7 +71,7 @@
 		"pk": 5,
 		"model": "products.product",
 		"fields":{
-			"sku": "",
+			"sku": "Ave-Mar-Com-399",
 			"name": "Avengers #44",
 			"category": 1,
 			"manufacturer": null,
@@ -88,7 +88,7 @@
 		"pk": 6,
 		"model": "products.product",
 		"fields":{
-			"sku": "",
+			"sku": "Ms.-Mar-Com-300",
 			"name": "Ms. Marvel #27",
 			"category": 1,
 			"manufacturer": null,
@@ -105,7 +105,7 @@
 		"pk": 7,
 		"model": "products.product",
 		"fields":{
-			"sku": "",
+			"sku": "Imm-Mar-Com-390",
 			"name": "Immortal Hulk #45",
 			"category": 1,
 			"manufacturer": null,
@@ -122,7 +122,7 @@
 		"pk": 8,
 		"model": "products.product",
 		"fields":{
-			"sku": "",
+			"sku": "Won-DCC-Com-399",
 			"name": "Sensational Wonder Woman #14",
 			"category": 1,
 			"manufacturer": null,
@@ -139,7 +139,7 @@
 		"pk": 9,
 		"model": "products.product",
 		"fields":{
-			"sku": "",
+			"sku": "Bat-DCC-Com-499",
 			"name": "Batman #107",
 			"category": 1,
 			"manufacturer": null,
@@ -156,7 +156,7 @@
 		"pk": 10,
 		"model": "products.product",
 		"fields":{
-			"sku": "",
+			"sku": "Har-DCC-Com-499",
 			"name": "Batman: White Knight Presents: Harley Quinn #6",
 			"category": 1,
 			"manufacturer": null,
@@ -173,7 +173,7 @@
 		"pk": 11,
 		"model": "products.product",
 		"fields":{
-			"sku": "",
+			"sku": "GIJ-IDW-Com-599",
 			"name": "G.I. Joe: A Real American Hero: Serpentor Uncoiled",
 			"category": 1,
 			"manufacturer": null,
@@ -190,7 +190,7 @@
 		"pk": 12,
 		"model": "products.product",
 		"fields":{
-			"sku": "",
+			"sku": "TMN-IDW-Com-399",
 			"name": "TMNT: Urban Legends #23",
 			"category": 1,
 			"manufacturer": null,
@@ -207,7 +207,7 @@
 		"pk": 13,
 		"model": "products.product",
 		"fields":{
-			"sku": "",
+			"sku": "Hel-Dar-Com-319",
 			"name": "Hellboy and the B.P.R.D.: Her Fatal Hour One-Shot",
 			"category": 1,
 			"manufacturer": null,
@@ -224,7 +224,7 @@
 		"pk": 14,
 		"model": "products.product",
 		"fields":{
-			"sku": "",
+			"sku": "Hel-Dar-Com-399",
 			"name": "Hellboy and the B.P.R.D.: The Seven Wives Club One-Shot",
 			"category": 1,
 			"manufacturer": null,
@@ -241,7 +241,7 @@
 		"pk": 15,
 		"model": "products.product",
 		"fields":{
-			"sku": "",
+			"sku": "Hel-Dar-Com-299",
 			"name": "Hellboy and The B.P.R.D.: Saturn Returns #3", 
 			"category": 1,
 			"manufacturer": null,
@@ -258,7 +258,7 @@
 		"pk": 16,
 		"model": "products.product",
 		"fields":{
-			"sku": "",
+			"sku": "Fai-Val-Com-299",
 			"name": "FAITH #8", 
 			"category": 1,
 			"manufacturer": null,
@@ -275,7 +275,7 @@
 		"pk": 17,
 		"model": "products.product",
 		"fields":{
-			"sku": "",
+			"sku": "Blo-Val-Com-299",
 			"name": "Bloodshot #24", 
 			"category": 1,
 			"manufacturer": null,
@@ -292,7 +292,7 @@
 		"pk": 18,
 		"model": "products.product",
 		"fields":{
-			"sku": "",
+			"sku": "The-Ima-Com-399",
 			"name": "The Walking Dead Deluxe #12", 
 			"category": 1,
 			"manufacturer": null,
@@ -309,7 +309,7 @@
 		"pk": 19,
 		"model": "products.product",
 		"fields":{
-			"sku": "",
+			"sku": "Bla-Ima-Com-199",
 			"name": "Blackbird #5", 
 			"category": 1,
 			"manufacturer": null,
@@ -326,7 +326,7 @@
 		"pk": 20,
 		"model": "products.product",
 		"fields":{
-			"sku": "",
+			"sku": "Bla-Tit-Com-399",
 			"name": "Blade Runner 2029 #4", 
 			"category": 1,
 			"manufacturer": null,
@@ -343,7 +343,7 @@
 		"pk": 21,
 		"model": "products.product",
 		"fields":{
-			"sku": "",
+			"sku": "Hor-Tit-Com-299",
 			"name": "Horizon Zero Dawn #1", 
 			"category": 1,
 			"manufacturer": null,
@@ -360,7 +360,7 @@
 		"pk": 22,
 		"model": "products.product",
 		"fields":{
-			"sku": "",
+			"sku": "3Gu-BOO-Com-159",
 			"name": "3 Guns #1", 
 			"category": 1,
 			"manufacturer": null,
@@ -377,7 +377,7 @@
 		"pk": 23,
 		"model": "products.product",
 		"fields":{
-			"sku": "",
+			"sku": "Abb-BOO-Com-159",
 			"name": "Abbott #5", 
 			"category": 1,
 			"manufacturer": null,
