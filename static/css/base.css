@@ -104,6 +104,10 @@ body{
     font-size: 14px;
 }
 
+.items-in-bag{
+    color: rgb(0, 174, 255);
+}
+
 /* Search Bar & Account Menu */
 
 .search-tool, .account-menu{

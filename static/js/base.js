@@ -182,24 +182,4 @@ $(document).ready(function() {
         handleEnableDisable(itemId);
     });
 
-    // Shopping Bag Update Quantity.
-    // Updates Quantity.
-    $('.update-link').click(function(e) {
-        var form = $(this).prev('.update-form');
-        form.submit();
-    })
-
-    // Removes Item and reloads page.
-    $('.remove-item').click(function(e) {
-        var csrfToken = "{{ csrf_token }}";
-        var itemId = $(this).attr('id').split('remove_')[1];
-        var url = `/shopping_bag/remove/${itemId}/`;
-        var data = {'csrfmiddlewaretoken': csrfToken};
-
-        $.post(url, data)
-         .done(function() {
-             location.reload();
-         });
-    })
-
 });

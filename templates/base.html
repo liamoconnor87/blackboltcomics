@@ -56,9 +56,9 @@
                         </li>
 
                         <a href="{% url 'view_bag' %}">   
-                            <li class="nav-button">
+                            <li class="nav-button shop-btn">
                                 <span>
-                                    <i class="nav-icon fas fa-shopping-bag"></i>
+                                    <i class="nav-icon fas fa-shopping-bag{% if grand_total %} items-in-bag{% endif %}"></i>
                                     <p class="nav-name">
                                         {% if grand_total %}
                                             ${{ grand_total|floatformat:2 }}
