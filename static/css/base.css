@@ -17,6 +17,8 @@ body{
 
 
 
+
+
 /* --------------- Temporary Stylings. --------------- */
 
 .message-container{
@@ -33,6 +35,12 @@ body{
 
 .toast-capper{
     height: 2px;
+}
+
+.bag-notification-wrapper{
+    height: 100px;
+    overflow-y: auto;
+    overflow-x: hidden;
 }
 
 .update-link, .remove-item, .decrement-qty, .increment-qty{
