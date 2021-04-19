@@ -1,5 +1,6 @@
 {% extends "base.html" %}
 {% load static %}
+{% load shopping_bag_tool %}
 
 {% block content %}
 
@@ -77,7 +78,7 @@
                                 <a href="{% url 'remove_from_bag' item.item_id %}" class="remove-item"><small>Remove</small></a>
                             </td>
                             <td class="">
-                                <p class="">£{{ item.product.price }}</p>
+                                <p class="">£{{ item.product.price | calc_subtotal:item.quantity }}</p>
                             </td>
                         </tr>
 
