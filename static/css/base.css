@@ -13,6 +13,28 @@ body{
     height: 100vh;
 }
 
+
+
+
+
+/* --------------- Temporary Stylings. --------------- */
+
+.message-container{
+    position: fixed;
+    top: 72px;
+    right: 15px;
+    z-index: 9999999999;
+    background-color: orange;
+}
+
+.custom-toast{
+    overflow: visible;
+}
+
+.toast-capper{
+    height: 2px;
+}
+
 .update-link, .remove-item, .decrement-qty, .increment-qty{
     cursor: pointer;
 }
@@ -35,6 +57,14 @@ body{
 .shopping-bag-page{
     height: 100%;
 }
+
+/* --------------- Temporary Stylings. --------------- */
+
+
+
+
+
+
 
 
 /* Header - Navigation / Search */

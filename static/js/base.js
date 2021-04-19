@@ -188,4 +188,7 @@ $(document).ready(function() {
         form.submit();
     })
 
+    // Toast Message.
+    $(".toast").toast("show");
+
 });
