@@ -41,7 +41,7 @@ def adjust_quantity(request, item_id):
     return redirect(reverse('view_bag'))
 
 
-def remove_product_from_bag(request, item_id):
+def remove_from_bag(request, item_id):
     # Removes Product from Shopping Bag. 
 
     try:
@@ -49,12 +49,10 @@ def remove_product_from_bag(request, item_id):
         # Retrieves bag items if it exist, if not creates it. 
         bag = request.session.get('bag', {})
 
-        if quantity > 0:
-            bag[item_id]= quantity
-        else:
-            bag.pop(item_id)
+        bag.pop(item_id)
 
         request.session['bag'] = bag
         return HttpResponse(status=200)
+        
     except Exception as e:
         return HttpResponse(Status=500)

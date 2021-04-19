@@ -3,113 +3,130 @@
 
 {% block content %}
 
-    <div class="main-container shopping-bag-page">
+<div class="main-container shopping-bag-page">
 
-        <div class="shop-bag-cont">
-            <h3>Shopping Bag</h3>
-            <br>
-            <div class="bag-items">
+    <div class="shop-bag-cont">
+        <h3>Shopping Bag</h3>
+        <br>
+        <div class="bag-items">
 
-                {% if bag_items %}
-                    <table class="s">
-                        <thead class="">
-                            <tr>
-                                <th scope="">Product Info</th>
-                                <th scope=""></th>
-                                <th scope="">Price</th>
-                                <th scope="">Qty</th>
-                                <th scope="">Subtotal</th>
-                            </tr>
-                        </thead>
+            {% if bag_items %}
+            <table class="s">
+                <thead class="">
+                    <tr>
+                        <th scope="">Product Info</th>
+                        <th scope=""></th>
+                        <th scope="">Price</th>
+                        <th scope="">Qty</th>
+                        <th scope="">Subtotal</th>
+                    </tr>
+                </thead>
 
-                        {% for item in bag_items %}
+                {% for item in bag_items %}
 
-                        <tr>
-                            <td class="">
-                                <img src="" alt="{{ item.product.name }}"><!-- src = "{{ item.product.image.url }}" -->
-                            </td>
-                            <td class="">
-                                <p class="">{{ item.product.name }}</p>
-                                <p class="">SKU: {{ item.product.sku|upper }}</p>
-                            </td>
-                            <td class="">
-                                <p class="">£{{ item.product.price }}</p>
-                            </td>
-                            <td class="">
-                                <form class="" action="POST" action="{% url 'adjust_quantity' item.item_id %}">
-                                    {% csrf_token %}
-                                    <p class=""><strong>Quantity:</strong></p>
+                <tr>
+                    <td class="">
+                        <img src="" alt="{{ item.product.name }}"><!-- src = "{{ item.product.image.url }}" -->
+                    </td>
+                    <td class="">
+                        <p class="">{{ item.product.name }}</p>
+                        <p class="">SKU: {{ item.product.sku|upper }}</p>
+                    </td>
+                    <td class="">
+                        <p class="">£{{ item.product.price }}</p>
+                    </td>
+                    <td class="">
+                        <form class="" method="POST" action="{% url 'adjust_quantity' item.item_id %}">
+                            {% csrf_token %}
+                            <div class="qunt-tool-cont">
 
-                                    <button class="decrement-qty" data-item_id="{{ item.item_id }}" id="decrement-qty_{{ item.item_id }}">
-                                        <span class="">
-                                            <i class="fas fa-minus"></i>
-                                        </span>
-                                    </button>
+                                <div class="quantity-tool">
+                                    <div class="">
+                                        <button class="decrement-qty" 
+                                            data-item_id="{{ item.item_id }}" 
+                                            id="decrement-qty_{{ item.item_id }}">
 
-                                    <input class="qty_input" type="number" name="quantity" value="{{ item.quantity }}" min="1" max="99"
-                                    data-item_id="{{ item.item_id }}" id="id_qty_{{ item.item_id }}">
+                                            <span class="">
+                                                <i class="fas fa-minus fa-sm"></i>
+                                            </span>
 
-                                    <button class="increment-qty" data-item_id="{{ item.item_id }}" id="increment-qty_{{ item.item_id }}">
-                                        <span class="">
-                                            <i class="fas fa-plus"></i>
-                                        </span>
-                                    </button>
+                                        </button>
+                                    </div>
+                                    <input class="qty_input" type="number" name="quantity" 
+                                        value="{{ item.quantity }}" min="1" max="99" 
+                                        data-item_id="{{ item.item_id }}" 
+                                        id="id_qty_{{ item.item_id }}">
 
-                                    <input type="hidden" name="redirect_url" value="{{ request.path }}">
+                                    <div class="">
+                                        <button class="increment-qty" 
+                                            data-item_id="{{ item.item_id }}" 
+                                            id="increment-qty_{{ item.item_id }}">
 
-                                </form>
-                                <a class="update-link text-info"><small>Update</small></a>
-                                <a class="remove-item" id="remove_{{ item.item_id }}"><small>Remove</small></a>
-                            </td>
-                            <td class="">
-                                <p class="">£{{ item.product.price }}</p>
-                            </td>
-                        </tr>
+                                            <span class="">
+                                                <i class="fas fa-plus fa-sm"></i>
+                                            </span>
 
-                        {% endfor %}
+                                        </button>
+                                    </div>
+                                </div>
 
-                        <tr>
-                            <td colspan="5" class="">
-                                <h6><strong>Bag Total: £{{ total|floatformat:2 }}</strong></h6>
-                                <h6>Delivery: £{{ delivery|floatformat:2 }}</h6>
-                                <h4 class=""><strong>Grand Total: £{{ grand_total|floatformat:2 }}</strong></h4>
+                            </div>
 
-                                {% if for_free_delivery > 0 %}
-                                <p class="">
-                                    If you spend <strong>£{{ for_free_delivery }}</strong>, you can get free delivery!
-                                </p>
-                                {% endif %}
-                            </td>
-                        </tr>
-                        <tr>
-                            <td colspan="5" class="">
-                                <a href="{% url 'products' %}" class="">
-                                    <span class="">
-                                        <i class="fas fa-chevron-left"></i>
-                                    </span>
-                                    <span class="">Keep Shopping</span>
-                                </a>
-                                <a href="" class="">
-                                    <span class="">Secure Checkout</span>
-                                    <span class="">
-                                        <i class="fas fa-lock"></i>
-                                    </span>
-                                </a>
-                            </td>
-                        </tr>
-                    </table>
+                        </form>
+                        <a class="update-link text-info"><small>Update</small></a>
+                        <a class="remove-item" id="remove_{{ item.item_id }}"><small>Remove</small></a>
+                    </td>
+                    <td class="">
+                        <p class="">£{{ item.product.price }}</p>
+                    </td>
+                </tr>
 
-                {% else %}
+                {% endfor %}
 
-                    <p>Your Shopping Bag is empty.</p>
-                    <a href="{% url 'products' %}"> < Keep Shopping?</a>
+                <tr>
+                    <td colspan="5" class="">
+                        <h6><strong>Bag Total: £{{ total|floatformat:2 }}</strong></h6>
+                        <h6>Delivery: £{{ delivery|floatformat:2 }}</h6>
+                        <h4 class=""><strong>Grand Total: £{{ grand_total|floatformat:2 }}</strong></h4>
 
-                {% endif %}
+                        {% if for_free_delivery > 0 %}
+                        <p class="">
+                            If you spend <strong>£{{ for_free_delivery }}</strong>, you can get free delivery!
+                        </p>
+                        {% endif %}
+                    </td>
+                </tr>
+                <tr>
+                    <td colspan="5" class="">
+                        <a href="{% url 'products' %}" class="">
+                            <span class="">
+                                <i class="fas fa-chevron-left"></i>
+                            </span>
+                            <span class="">Keep Shopping</span>
+                        </a>
+                        <a href="" class="">
+                            <span class="">Secure Checkout</span>
+                            <span class="">
+                                <i class="fas fa-lock"></i>
+                            </span>
+                        </a>
+                    </td>
+                </tr>
+            </table>
 
-            </div>
+            {% else %}
+
+            <p>Your Shopping Bag is empty.</p>
+            <a href="{% url 'products' %}">
+                < Keep Shopping?
+            </a>
+
+            {% endif %}
 
         </div>
 
     </div>
-    
+
+</div>
+
 {% endblock %}
