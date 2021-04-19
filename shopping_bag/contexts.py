@@ -10,6 +10,7 @@ def bag_contents(request):
     product_count = 0
     bag = request.session.get('bag', {})
 
+    # possibly quantity to item_data
     for item_id, quantity in bag.items():
         product = get_object_or_404(Product, pk=item_id)
         total += quantity * product.price

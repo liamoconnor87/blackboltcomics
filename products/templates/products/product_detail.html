@@ -53,28 +53,41 @@
 
             {% csrf_token %}
             <div class="">
-                
-                <div class="">
+
+                <div class="qunt-tool-cont">
+                    
                     <p class=""><strong>Quantity:</strong></p>
-                    <div class="">
+
+                    <div class="quantity-tool">
                         <div class="">
-                            <div class="">
-                                <button class="decrement-qty" data-item_id="{{ product.id }}" id="decrement-qty_{{ product.id }}">
-                                    <span class="">
-                                        <i class="fas fa-minus"></i>
-                                    </span>
-                                </button>
-                            </div>
-                            <input class="qty_input" type="number" name="quantity" value="1" min="1" max="99" data-item_id="{{ product.id }}" id="id_qty_{{ product.id }}">
-                            <div class="">
-                                <button class="increment-qty" data-item_id="{{ product.id }}" id="increment-qty_{{ product.id }}">
-                                    <span class="">
-                                        <i class="fas fa-plus"></i>
-                                    </span>
-                                </button>
-                            </div>
+                            <button class="decrement-qty" 
+                                data-item_id="{{ product.id }}" 
+                                id="decrement-qty_{{ product.id }}">
+
+                                <span class="">
+                                    <i class="fas fa-minus"></i>
+                                </span>
+
+                            </button>
+                        </div>
+                        <input class="qty_input" type="number" 
+                            name="quantity" value="1" min="1" max="99" 
+                            data-item_id="{{ product.id }}" 
+                            id="id_qty_{{ product.id }}">
+
+                        <div class="">
+                            <button class="increment-qty" 
+                                data-item_id="{{ product.id }}" 
+                                id="increment-qty_{{ product.id }}">
+
+                                <span class="">
+                                    <i class="fas fa-plus"></i>
+                                </span>
+
+                            </button>
                         </div>
                     </div>
+
                 </div>
 
                 <div class="">
@@ -88,7 +101,7 @@
                 </div>
 
                 <input type="hidden" name="redirect_url" value="{{ request.path }}">
-                
+
             </div>
         </form>
 
