@@ -55,9 +55,10 @@ body{
 
 .index-page{
     height: 100%; /* templates > home > index.html */
+    background-color: rgba(255, 255, 255, 0.664);
 }
 
-.products-page, .shopping-bag-page{
+.shopping-bag-page{
     height: auto;
     background-color: white;
 }
@@ -160,7 +161,7 @@ body{
 }
 
 .srch-bar, .acc-menu-drop{
-    background-color: rgb(4, 50, 109);
+    background-color: black;
     height: 50px;
     border-top: 1px solid white;
 }
@@ -263,7 +264,7 @@ body{
     position: fixed;
     width: 100%;
     margin-top: 150px;
-    background-color: rgb(4, 50, 109);
+    background-color: black;
     height: auto;
     border-top: 1px solid white;
     display: none;
@@ -299,6 +300,8 @@ body{
 /* Footer */
 
 footer{
+    position: relative;
+    bottom: 0;
     height: auto;
     background-color: rgb(4, 50, 109);
     color: white;
@@ -361,8 +364,6 @@ footer{
 .social-networks a:hover{
     color: white;
 }
-
-/* Products */
 
 /* Smart Device Layout */
 

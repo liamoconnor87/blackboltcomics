@@ -49,20 +49,24 @@
                     <img src="{{ product.image.url }}" alt="{{ product.name }}">
                 </a>
 
-                {% if product.publisher %}
-                    <div class="product-title">
-                        <p>{{ product.publisher }}</p>
-                    </div>
-                {% endif %}
+                <div class="product-info">
 
-                {% if product.manufacturer %}
-                    <div class="product-title">
-                        <p>{{ product.manufacturer }}</p>
-                    </div>
-                {% endif %}
+                    {% if product.publisher %}
+                        <div class="product-title publisher">
+                            <p>{{ product.publisher }}</p>
+                        </div>
+                    {% endif %}
 
-                <div class="product-title">
-                    <p>{{ product.name }}</p>
+                    {% if product.manufacturer %}
+                        <div class="product-title manufacturer">
+                            <p>{{ product.manufacturer }}</p>
+                        </div>
+                    {% endif %}
+
+                    <div class="product-title product-name">
+                        <p>{{ product.name }}</p>
+                    </div>
+
                 </div>
 
                 <div class="product-price">
