@@ -4,6 +4,77 @@
     background-color: rgba(255, 255, 255, 0.664);
 }
 
+.products-page h1{
+    width: 100%;
+    text-align: center;
+    margin-top: 10px;
+    margin-bottom: 5px;
+}
+
+.prod-ctgry-cont{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    margin-left: auto;
+    margin-right: auto;
+    width: 200px;
+    text-align: center;
+    height: auto;
+    max-height: 30px;
+}
+
+.prod-ctgry-cont a{
+    text-decoration: none;
+    margin: 5px auto;
+}
+
+.prod-ctgry-cont a span{
+    background-color: black;
+    color: white;
+    padding: 5px 7px;
+    margin: inherit;
+    height: inherit;
+}
+
+.prod-ctgry-cont a span:hover{
+    background-color: rgb(4, 50, 109);
+    color: white;
+    padding: 5px 7px;
+}
+
+/* Sorting Products */
+
+.sorting-container{
+    display: inline-block;
+    width: 100%;
+    margin-top: 10px;
+}
+
+.query-container{
+    float: left;
+    margin: 5px 15px;
+    font-size: 13px;
+}
+
+.query-container span{
+    padding: 2px;
+}
+
+.query-container a{
+    text-decoration: underline;
+    color: black;
+    font-weight: 900;
+}
+
+.sorting-selector{
+    padding: 12px;
+    float: left;
+    margin: 5px 0 5px 15px;
+    background-color: black;
+}
+
+/* Products Layout */
+
 .products-container{
     display: flex;
     flex-wrap: wrap;
@@ -19,7 +90,7 @@
     justify-content: center;
     align-items: center;
     width: 250px;
-    height: 465px;
+    height: 480px;
     background-color: rgb(255, 255, 255);
     margin: 5px auto;
     border: solid rgb(4, 50, 109) 6px;

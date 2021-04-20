@@ -158,6 +158,7 @@ body{
     display: none;
     margin: 150px auto 0 auto;
     z-index: 998;
+    border-bottom: 1px solid white;
 }
 
 .srch-bar, .acc-menu-drop{
@@ -269,6 +270,7 @@ body{
     border-top: 1px solid white;
     display: none;
     z-index: 998;
+    border-bottom: 1px solid white;
 }
 
 .all-prod-menu a, .comic-menu a, .access-menu a, .spec-off-menu a{
@@ -374,7 +376,7 @@ footer{
     }
 
     .prod-menu-col p{
-        font-size: 13px;
+        font-size: 14px;
     }
 }
 

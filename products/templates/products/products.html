@@ -5,10 +5,11 @@
 
     <div class="main-container products-page">
 
+        <h1>Products</h1>
+
         <div class="prod-ctgry-cont">
-            <h3>Products</h3>
             {% for cat in current_categories %}
-                <a href="{% url 'products' %}?category={{ categories.name }}">
+                <a href="{% url 'products' %}?category={{ cat.name }}">
                     <span>{{ cat.friendly_name }}</span><br>
                 </a>
             {% endfor %}
@@ -19,7 +20,7 @@
                 <p>
                     {% if search_term or current_categories or current_sorting != 'None_None' %}
                         <span>
-                            <a href="{% url 'products' %}">Products Home</a>
+                            <a href="{% url 'products' %}">< Products Home</a>
                         </span>
                     {% endif %}
 
