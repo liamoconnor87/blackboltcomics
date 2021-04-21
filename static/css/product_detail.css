@@ -54,14 +54,13 @@
 /* Product Quantity Form */
 
 .product-quantity-form{
-    margin: 5px auto;
     width: inherit;
 }
 
 .qunt-tool-cont{
     display: flex;
     flex-direction: row;
-    padding: 5px;
+    padding: 5px 5px 5px 0;
 }
 
 .quantity-tool{
@@ -96,6 +95,47 @@
     color: inherit;
 }
 
-.keep-shopping-button:hover{
-    background-color: rgb(4, 50, 109);
+/* Smart Device Layout */
+@media screen and (min-width: 700px){
+
+    .product-detail-container{
+        max-width: 95%;
+        flex-direction: row;
+    }
+
+    .product-details{
+        margin-bottom: 20px;
+        margin-right: 20px;
+        margin-top: 20px;
+    }
+
+    .product-quantity-form{
+        margin-top: 15px;
+    }
+}
+
+@media screen and (min-width: 1000px){
+
+    .product-detail-container{
+        max-width: 850px;
+    }
+
+    .product-detail-img img{
+        max-width: 350px;
+        max-height: 450px;
+    }
+
+}
+
+@media screen and (min-height: 1100px){
+
+    .product-detail-container{
+        flex-direction: column;
+        max-width: 600px;
+    }
+
+    .product-detail-img img{
+        max-width: 450px;
+        max-height: 550px;
+    }
 }
