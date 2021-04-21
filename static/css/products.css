@@ -47,7 +47,7 @@
 
 .sorting-container{
     display: block;
-    width: 90%;
+    width: 80%;
     margin: 0 auto;
     height: auto;
 }
@@ -77,6 +77,14 @@
     display: flex;
     flex-wrap: wrap;
     flex-direction: row;
+    margin: 0 auto;
+    width: 100%;
+}
+
+.product-container{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
     margin-left: auto;
     margin-right: auto;
     width: 90%;
@@ -88,6 +96,7 @@
     justify-content: center;
     align-items: center;
     width: 100%;
+    max-width: 360px;
     height: 480px;
     background-color: rgb(255, 255, 255);
     margin: 5px 0;
@@ -142,10 +151,54 @@
 }
 
 /* Smart Device Layout */
-@media screen and (max-width: 360px){
+@media screen and (min-width: 360px){
 
     .query-container{
-        margin-right: 15px;
+        width: 60%;
     }
 
+}
+
+@media screen and (min-width: 415px){
+
+    .product{
+        margin: 5px auto;
+    }
+
+    .query-container p{
+        padding-top: 10px;
+        font-size: 16px;
+    }
+
+}
+
+@media screen and (min-width: 700px){
+
+    .sorting-selector{
+        float: right;
+    }
+
+    
+    .product{
+        width: 48%;
+        margin: 5px;
+    }
+}
+
+@media screen and (min-width: 1000px){
+
+    .product{
+        width: 30%;
+    }
+}
+
+@media screen and (min-width: 1024px){
+
+    .sorting-container{
+        width: 60%;
+    }
+
+    .product-container{
+        padding-left: 8%;
+    }
 }

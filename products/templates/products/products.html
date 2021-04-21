@@ -40,42 +40,45 @@
 
         <div class="all-products-container">
 
-            {% for product in products %}
+            <div class="product-container">
 
-            <div class="product">
+                {% for product in products %}
 
-                <a href="{% url 'product_detail' product.id %}">
-                    <img src="{{ product.image.url }}" alt="{{ product.name }}">
-                </a>
+                <div class="product">
 
-                <div class="product-info">
+                    <a href="{% url 'product_detail' product.id %}">
+                        <img src="{{ product.image.url }}" alt="{{ product.name }}">
+                    </a>
 
-                    {% if product.publisher %}
-                        <div class="product-title publisher">
-                            <p>{{ product.publisher }}</p>
+                    <div class="product-info">
+
+                        {% if product.publisher %}
+                            <div class="product-title publisher">
+                                <p>{{ product.publisher }}</p>
+                            </div>
+                        {% endif %}
+
+                        {% if product.manufacturer %}
+                            <div class="product-title manufacturer">
+                                <p>{{ product.manufacturer }}</p>
+                            </div>
+                        {% endif %}
+
+                        <div class="product-title product-name">
+                            <p>{{ product.name }}</p>
                         </div>
-                    {% endif %}
 
-                    {% if product.manufacturer %}
-                        <div class="product-title manufacturer">
-                            <p>{{ product.manufacturer }}</p>
-                        </div>
-                    {% endif %}
+                    </div>
 
-                    <div class="product-title product-name">
-                        <p>{{ product.name }}</p>
+                    <div class="product-price">
+                        <p>£{{ product.price }}</p>
                     </div>
 
                 </div>
 
-                <div class="product-price">
-                    <p>£{{ product.price }}</p>
-                </div>
+                {% endfor %}
 
             </div>
-
-            {% endfor %}
-
 
         </div>
 
