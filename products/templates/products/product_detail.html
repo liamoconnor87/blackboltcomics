@@ -3,53 +3,64 @@
 
 {% block content %}
 
-<div class="main-container products-page">
-    <div class="products-container">
+<div class="main-container product-detail-page">
 
-        <div class="product">
+    <div class="product-detail-container">
+
+        <div class="product-detail-img">
+            
             <a href="{{ product.image.url }}" target="_blank">
                 <img src="{{ product.image.url }}" alt="{{ product.name }}">
             </a>
 
+        </div>
+
+        <div class="product-details">
+
             {% if product.manufacturer %}
-                <div class="product-manufacturer">
-                    <p>{{ product.manufacturer }}</p>
+                <div class="product-detail-manufacturer">
+                    <h3>{{ product.manufacturer }}</h3>
                 </div>
             {% endif %}
 
             {% if product.publisher %}
-                <div class="product-publisher">
-                    <p>{{ product.publisher }}</p>
+                <div class="product-detail-publisher">
+                    <h3>{{ product.publisher }}</h3>
                 </div>
             {% endif %}
 
-            <div class="product-title">
-                <p>{{ product.name }}</p>
+            <div class="product-detail-title">
+                <h2>{{ product.name }}</h2>
             </div>
 
-            <div class="product-price">
-                <p>£{{ product.price }}</p>
+            <div class="product-detail-price">
+                <h1>£{{ product.price }}</h1>
             </div>
 
             {% if product.writer %}
-                <div class="product-writer">
-                    <p>{{ product.writer }}</p>
+                <div class="product-detail-writer">
+                    <span>Writer.</span>
+                    <h5>{{ product.writer }}</h5>
                 </div>
             {% endif %}
 
             {% if product.artist %}
-                <div class="product-artist">
-                    <p>{{ product.artist }}</p>
+                <div class="product-detail-artist">
+                    <span>Artist.</span>
+                    <h5>{{ product.artist }}</h5>
                 </div>
             {% endif %}
 
-            <div class="product-description">
-                <p>{{ product.description }}</p>
+            <br>
+
+            <div class="product-detail-description">
+                <span>Description.</span>
+                <h6>{{ product.description }}</h6>
             </div>
 
         </div>
 
-        <form class="form" action="{% url 'add_to_bag' product.id %}" method="POST">
+        <form class="product-quantity-form" action="{% url 'add_to_bag' product.id %}" method="POST">
 
             {% csrf_token %}
             <div class="">
@@ -91,12 +102,6 @@
                 </div>
 
                 <div class="">
-                    <a href="{% url 'products' %}" class="">
-                        <span class="">
-                            <i class="fas fa-chevron-left"></i>
-                        </span>
-                        <span class="text-uppercase">Keep Shopping</span>
-                    </a>
                     <input type="submit" class="" value="Add to Bag">
                 </div>
 
@@ -106,6 +111,18 @@
         </form>
 
     </div>
+
+    <div class="">
+        <a href="{% url 'products' %}" class="">
+            <span class="">
+                <i class="fas fa-chevron-left"></i>
+            </span>
+            <span class="text-uppercase">Keep Shopping</span>
+        </a>
+    </div>
+
+    <br>
+
 </div>
 
 {% endblock %}

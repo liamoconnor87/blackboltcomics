@@ -1,10 +1,10 @@
-.products-page{
+.all-products-page{
     height: auto;
     min-height: 100vh;
     background-color: rgba(255, 255, 255, 0.664);
 }
 
-.products-page h1{
+.all-products-page h1{
     width: 100%;
     text-align: center;
     margin-top: 10px;
@@ -98,7 +98,7 @@
     width: 100%;
     max-width: 360px;
     height: 480px;
-    background-color: rgb(255, 255, 255);
+    background-color: white;
     margin: 5px 0;
     border: solid rgb(4, 50, 109) 6px;
     box-shadow: 2px 2px 12px black;
