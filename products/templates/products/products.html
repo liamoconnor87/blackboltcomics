@@ -19,9 +19,7 @@
             <div class="query-container">
                 <p>
                     {% if search_term or current_categories or current_sorting != 'None_None' %}
-                        <span>
-                            <a href="{% url 'products' %}">< Products Home</a>
-                        </span>
+                        <a href="{% url 'products' %}">< Products Home</a>
                     {% endif %}
 
                     {{ products|length }} Products{% if search_term %} found for <strong>"{{ search_term }}"</strong>{% endif %}
@@ -40,7 +38,7 @@
             </div>
         </div>
 
-        <div class="products-container">
+        <div class="all-products-container">
 
             {% for product in products %}
 
@@ -78,8 +76,12 @@
 
             {% endfor %}
 
+
         </div>
 
+        <br>
+
     </div>
+
     
 {% endblock %}
