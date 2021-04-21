@@ -6,14 +6,18 @@
     background-color: rgba(255, 255, 255, 0.664);
 }
 
+/* Product Details */
+
 .product-detail-container{
     display: flex;
     flex-direction: column;
     width: 90%;
+    max-width: 312px;
     height: auto;
     background-color: white;
     border: solid black 6px;
-    margin: 5px auto 0 auto;
+    margin: 0 auto;
+    box-shadow: 2px 2px 12px black;
 }
 
 .product-detail-img{
@@ -47,6 +51,51 @@
     color: rgb(4, 50, 109);
 }
 
+/* Product Quantity Form */
+
 .product-quantity-form{
+    margin: 5px auto;
     width: inherit;
+}
+
+.qunt-tool-cont{
+    display: flex;
+    flex-direction: row;
+    padding: 5px;
+}
+
+.quantity-tool{
+    margin-left: 5px;
+}
+
+.add-to-bag input{
+    background-color: rgb(4, 50, 109);
+    color: white;
+    padding: 5px;
+    margin: 10px 0;
+}
+
+.add-to-bag input:hover{
+    background-color: black;
+    color: white;
+    padding: 5px;
+    margin: 10px 0;
+}
+
+.keep-shopping-button{
+    width: 150px;
+    height: auto;
+    margin: 5px auto 0 0;
+    color: white;
+    background-color: black;
+    padding: 5px;
+}
+
+.keep-shopping-button a{
+    text-decoration: none;
+    color: inherit;
+}
+
+.keep-shopping-button:hover{
+    background-color: rgb(4, 50, 109);
 }
