@@ -19,7 +19,7 @@ $(document).ready(function() {
 
     })
 
-    $(".acc-btn").click(function () {
+    $(".acc-btn").click(function() {
 
         $(this).toggleClass("acc-btn-click");
 
@@ -37,7 +37,7 @@ $(document).ready(function() {
 
     })
 
-    $(".all-prod-click").click(function () {
+    $(".all-prod-click").click(function() {
 
         if ($(".acc-btn").hasClass("acc-btn-click")) {
             $(".acc-btn").removeClass("acc-btn-click");
@@ -57,7 +57,7 @@ $(document).ready(function() {
 
     })
 
-    $(".comic-book-click").click(function () {
+    $(".comic-book-click").click(function() {
 
         if ($(".acc-btn").hasClass("acc-btn-click")) {
             $(".acc-btn").removeClass("acc-btn-click");
@@ -77,7 +77,7 @@ $(document).ready(function() {
 
     })
 
-    $(".access-click").click(function () {
+    $(".access-click").click(function() {
 
         if ($(".acc-btn").hasClass("acc-btn-click")) {
             $(".acc-btn").removeClass("acc-btn-click");
@@ -97,7 +97,7 @@ $(document).ready(function() {
 
     })
 
-    $(".offer-click").click(function () {
+    $(".offer-click").click(function() {
 
         if ($(".acc-btn").hasClass("acc-btn-click")) {
             $(".acc-btn").toggleClass("acc-btn-click");
@@ -188,7 +188,9 @@ $(document).ready(function() {
         form.submit();
     })
 
-    // Toast Message.
-    $(".toast").toast("show");
+    // Messages.
+    $(".exit-x").click(function() {
+        $('.message-container').hide();
+    })
 
 });

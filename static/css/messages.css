@@ -1,0 +1,121 @@
+.message-container{
+    display: flex;
+    flex-direction: column;
+    position: fixed;
+    top: 100px;
+    width: 100%;
+    z-index: 9999999999;
+    height: auto;
+}
+
+
+.message{
+    position: absolute;
+    right: 0px;
+    color: black;
+    width: 280px;
+    background-color: white;
+    border: solid black 6px;
+    height: auto;
+}
+
+.msg-title{
+    display: block;
+    width: 100%;
+    height: auto;
+    padding: 3px;
+    font-size: 20px;
+}
+
+.msg-title-msg{
+    float: left;
+}
+
+.exit-x{
+    float: right;
+}
+
+.message-body{
+    display: block;
+    width: 100%;
+}
+
+.message-success{
+    display: inline-block;
+    background-color: rgb(4, 50, 109);
+    color: rgb(0, 174, 255);
+    padding: 3px;
+    border: solid white 2px;
+}
+
+.message-error{
+    display: inline-block;
+    background-color: red;
+    color: white;
+    padding: 3px;
+    border: solid white 2px;
+}
+
+.bag-content{
+    padding: 0 2px;
+    color: rgb(4, 50, 109);
+    margin-bottom: 8px;
+}
+
+.bag-content p{
+    color: black;
+    padding: 3px 0;
+}
+
+.bag-notification-wrapper{
+    display: flex;
+    flex-direction: column;
+    height: 150px;
+    overflow-y: auto;
+    overflow-x: hidden;
+    margin: 2px 0;
+    color: white;
+    background-color: black;
+}
+
+.bag-notification-wrapper img{
+    height: 80px;
+}
+
+.each-content{
+    display: flex;
+    flex-direction: row;
+    border-bottom: solid rgb(150, 194, 255) 1px;
+}
+
+.items-details{
+    position: relative;
+    margin: auto 0;
+    height: inherit;
+    font-size: auto;
+}
+
+.total-sum{
+    font-weight: 800;
+    font-size: 18px;
+}
+
+.free-delv-msg{
+    color: black;
+    font-weight: 600;
+}
+
+.bag-sum a{
+    margin-top: 3px;
+    text-decoration: none;
+    padding: 3px 5px;
+    background-color: orange;
+    color: black;
+    font-weight: 700;
+    font-size: 18px;
+}
+
+.bag-sum a:hover{
+    background-color: black;
+    color: rgb(0, 174, 255);
+}

@@ -61,7 +61,7 @@ def all_products(request):
             query = request.GET['search-query']
 
             if not query:
-                messages.error(request, "You didnt enter any search criteria, silly!")
+                messages.error(request, "You didnt enter any search criteria!")
                 return redirect(reverse('products'))
 
             queries = Q(name__icontains=query) | Q(description__icontains=query) | Q(publisher__icontains=query) | Q(writer__icontains=query) | Q(artist__icontains=query) | Q(manufacturer__icontains=query)

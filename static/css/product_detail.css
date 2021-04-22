@@ -74,11 +74,9 @@
     margin: 10px 0;
 }
 
-.add-to-bag input:hover{
-    background-color: black;
-    color: white;
-    padding: 5px;
-    margin: 10px 0;
+.add-to-bag input:hover, .keep-shopping-button:hover{
+    background-color: orange;
+    color: black;
 }
 
 .keep-shopping-button{

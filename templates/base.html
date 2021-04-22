@@ -17,6 +17,7 @@
             <link rel="stylesheet" href="{% static 'css/base.css' %}">
             <link rel="stylesheet" href="{% static 'css/products.css' %}">
             <link rel="stylesheet" href="{% static 'css/product_detail.css' %}">
+            <link rel="stylesheet" href="{% static 'css/messages.css' %}">
         {% endblock %}
 
         {% block js %}
@@ -77,6 +78,27 @@
                 </div>
                 
             </div>
+
+            {% if messages %}
+                <div class="message-container">
+                    {% for message in messages %}
+                        {% with message.level as level %}
+                            {% if level == 40 %}
+                            <!-- Error -->
+                                {% include 'includes/messages/message_error.html' %}
+                            {% elif level == 30 %}
+                            <!-- Warning -->
+                                {% include 'includes/messages/message_warning.html' %}
+                            {% elif level == 25 %}
+                            <!-- Success -->
+                                {% include 'includes/messages/message_success.html' %}
+                            {% else %}
+                                {% include 'includes/messages/message_info.html' %}
+                            {% endif %}
+                        {% endwith %}
+                    {% endfor %}
+                </div>
+            {% endif %}
             
             <!-- Product Navigation -->
             <div class="prod-menu-cont">
@@ -94,10 +116,6 @@
                     <div class="prod-menu-col access-click">
                         <p>Accessories</p>
                     </div>
-
-                    <!-- <div class="prod-menu-col offer-click">
-                        <p>Special Offers</p>
-                    </div>> -->
 
                 </div>
 
@@ -173,19 +191,6 @@
                 </a>
                 
             </div>
-
-            <!-- Special Offers Menu 
-            <div class="spec-off-menu">
-
-                <a href="">
-                    <p>Deals</p>
-                </a>
-
-                <a href="">
-                    <p>Clearance</p>
-                </a>
-                
-            </div> -->
             
             <!-- Search Tool -->
             <form class="search-tool" action="{% url 'products' %}" method="GET">
@@ -218,27 +223,6 @@
             </div>
 
         </header>
-
-        {% if messages %}
-            <div class="message-container">
-                {% for message in messages %}
-                    {% with message.level as level %}
-                        {% if level == 40 %}
-                        <!-- Error -->
-                            {% include 'includes/toasts/toast_error.html' %}
-                        {% elif level == 30 %}
-                        <!-- Warning -->
-                            {% include 'includes/toasts/toast_warning.html' %}
-                        {% elif level == 25 %}
-                        <!-- Success -->
-                            {% include 'includes/toasts/toast_success.html' %}
-                        {% else %}
-                            {% include 'includes/toasts/toast_info.html' %}
-                        {% endif %}
-                    {% endwith %}
-                {% endfor %}
-            </div>
-        {% endif %}
 
         {% block content %}
         {% endblock %}
