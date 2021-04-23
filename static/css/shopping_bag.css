@@ -1,0 +1,50 @@
+.shopping-bag-page{
+    display: block;
+    width: 100%;
+    height: auto;
+    min-height: 100vh;
+    background-color: rgba(255, 255, 255, 0.664);
+}
+
+.bag-items-container{
+    height: auto;
+    width: 100%;
+}
+
+.bag-item{
+    display: flex;
+    flex-direction: column;
+    width: 90%;
+    max-width: 312px;
+    height: auto;
+    background-color: white;
+    border: solid black 6px;
+    margin: 0 auto;
+    box-shadow: 2px 2px 12px black; 
+}
+
+.bag-item-img{
+    display: flex;
+    margin: 0 auto;
+    width: 100%;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.bag-item-img img{
+    position: relative;
+    max-width: 200px;
+    max-height: 300px;
+    margin: 20px auto;
+    box-shadow: 2px 2px 4px black; 
+}
+
+.bag-item-details{
+    margin: 5px auto;
+    width: inherit;
+}
+
+.item-detail-title, .item-detail-sku, .item-detail-price, .item-sub-total, .update-link, .remove-item{
+    color: rgb(4, 50, 109);
+}

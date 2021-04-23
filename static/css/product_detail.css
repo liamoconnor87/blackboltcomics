@@ -51,7 +51,7 @@
     color: rgb(4, 50, 109);
 }
 
-/* Product Quantity Form */
+/* Product Quantity Form - also applies to shopping bag quantity form */
 
 .product-quantity-form{
     width: inherit;
