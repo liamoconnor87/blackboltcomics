@@ -13,7 +13,13 @@ body{
     height: 100vh;
 }
 
+.update-link, .remove-item, .decrement-qty, .increment-qty, .add-to-bag input, .exit-x{
+    cursor: pointer;
+}
 
+.preview{
+    cursor: zoom-in;
+}
 
 
 
@@ -21,9 +27,7 @@ body{
 
 /* --------------- Temporary Stylings. --------------- */
 
-.update-link, .remove-item, .decrement-qty, .increment-qty, .add-to-bag input, .exit-x{
-    cursor: pointer;
-}
+
 
 .main-container{
     padding-top: 150px;

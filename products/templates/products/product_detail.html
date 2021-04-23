@@ -11,7 +11,7 @@
 
         <div class="product-detail-img">
             
-            <a href="{{ product.image.url }}" target="_blank">
+            <a class="preview" href="{{ product.image.url }}" target="_blank">
                 <img src="{{ product.image.url }}" alt="{{ product.name }}">
             </a>
 
@@ -63,7 +63,7 @@
                 {% csrf_token %}
                     <div class="qunt-tool-cont">
 
-                        <p class=""><strong>Quantity: </strong></p>
+                        <p><strong>Quantity: </strong></p>
 
                         <div class="quantity-tool">
 

@@ -74,8 +74,8 @@
     overflow-y: auto;
     overflow-x: hidden;
     margin: 2px 0;
-    color: white;
-    background-color: black;
+    color: rgb(4, 50, 109);
+    background-color: white;
 }
 
 .bag-notification-wrapper img{
@@ -105,7 +105,9 @@
     font-weight: 600;
 }
 
-.bag-sum a{
+/* Secure Checkout also affects Shopping bag page */
+
+.secure-checkout{
     margin-top: 3px;
     text-decoration: none;
     padding: 3px 5px;
@@ -115,7 +117,7 @@
     font-size: 18px;
 }
 
-.bag-sum a:hover{
+.secure-checkout:hover{
     background-color: black;
     color: rgb(0, 174, 255);
 }

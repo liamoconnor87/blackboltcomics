@@ -6,12 +6,19 @@
     background-color: rgba(255, 255, 255, 0.664);
 }
 
+.shopping-bag-page h1{
+    width: 100%;
+    text-align: center;
+    margin-top: 10px;
+    margin-bottom: 25px;
+}
+
 .bag-items-container{
     height: auto;
     width: 100%;
 }
 
-.bag-item{
+.bag-items, .shopping-bag-total{
     display: flex;
     flex-direction: column;
     width: 90%;
@@ -23,10 +30,17 @@
     box-shadow: 2px 2px 12px black; 
 }
 
+.each-item{
+    display: flex;
+    flex-direction: column;
+    border-bottom: solid rgb(110, 110, 110) 1px;
+    border-top: solid rgb(110, 110, 110) 1px;
+}
+
 .bag-item-img{
     display: flex;
     margin: 0 auto;
-    width: 100%;
+    width: 50%;
     flex-direction: column;
     justify-content: center;
     align-items: center;
@@ -34,17 +48,96 @@
 
 .bag-item-img img{
     position: relative;
-    max-width: 200px;
-    max-height: 300px;
+    max-width: 150px;
+    max-height: 250px;
     margin: 20px auto;
     box-shadow: 2px 2px 4px black; 
 }
 
 .bag-item-details{
-    margin: 5px auto;
-    width: inherit;
+    margin: auto 10px auto 10px;
+    padding-bottom: 10px;
 }
 
-.item-detail-title, .item-detail-sku, .item-detail-price, .item-sub-total, .update-link, .remove-item{
+.item-detail-title, .item-detail-sku, .item-detail-price, .item-sub-total{
     color: rgb(4, 50, 109);
+}
+
+.item-detail-quantity{
+    display: inline-block;
+}
+
+.update-link{
+    color: seagreen;
+}
+
+.remove-item{
+    float: right;
+    text-decoration: none;
+    color: red;
+}
+
+.remove-item:hover, .update-link:hover{
+    text-decoration: underline;
+}
+
+.shopping-bag-total{
+    margin-top: 15px;
+    padding: 5px;
+}
+
+.shop-bag-sum{
+    margin-bottom: 10px;
+}
+
+.empty-bag-cont{
+    display: flex;
+    flex-direction: column;
+    width: 80%;
+    max-width: 650px;
+    height: auto;
+    background-color: white;
+    border: solid rgb(4, 50, 109) 6px;
+    margin: 0 auto;
+    box-shadow: 2px 2px 12px black;
+}
+
+.empty-bag{
+    padding: 5px;
+}
+
+.empty-bag p{
+    margin-bottom: 15px;
+}
+
+/* Smart Device Layout */
+@media screen and (min-width: 700px){
+
+    .each-item{
+        flex-direction: row;
+    }
+
+    .bag-items, .shopping-bag-total{
+        width: 95%;
+        max-width: 600px;
+    }
+
+    .shopping-bag-total{
+        flex-direction: row;
+    }
+
+    .bag-item-details{
+        padding-left: 0;
+        width: 50%
+    }
+
+    .shop-bag-sum, .check-out{
+        margin: auto;
+        width: 50%;
+    }
+
+    .check-out a{
+        float: right;
+    }
+
 }

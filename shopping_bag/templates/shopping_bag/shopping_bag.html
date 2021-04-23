@@ -6,126 +6,149 @@
 
 <div class="main-container shopping-bag-page">
 
-    <br>
+    <h1>Your Shopping Bag</h1>
         
     <div class="bag-items-container">
 
         {% if bag_items %}
 
-            <div class="bag-item">
+            <div class="bag-items">
                 
                 {% for item in bag_items %}
+                    <div class="each-item">
 
-                    <div class="bag-item-img">
+                        <div class="bag-item-img">
 
-                        <img src="{{ item.product.image.url }}" alt="{{ item.product.name }}">
+                            <img src="{{ item.product.image.url }}" alt="{{ item.product.name }}">
 
-                    </div>
-
-                    <div class="bag-item-details">
-
-                        <div class="item-detail-title">
-                            <h3>Product: {{ item.product.name }}</h3>
                         </div>
 
-                        <div class="item-detail-sku">
-                            <h5>SKU: {{ item.product.sku|upper }}</h5>
-                        </div>
+                        <div class="bag-item-details">
 
-                        <div class="item-detail-price">
-                            <h3>£{{ item.product.price }}</h3>
-                        </div>
+                            <div class="item-detail-title">
+                                <h3>{{ item.product.name }}</h3>
+                                <br>
+                            </div>
 
-                        <div class="item-detail-quantity">
+                            <div class="item-detail-sku">
+                                <h5>SKU: {{ item.product.sku|upper }}</h5>
+                            </div>
 
-                            <form class="update-form product-quantity-form" 
-                            action="{% url 'adjust_quantity' item.item_id %}" 
-                            method="POST">
+                            <div class="item-detail-price">
+                                <h3>Price: £{{ item.product.price }}</h3>
+                            </div>
 
-                                {% csrf_token %}
-                                    <div class="qunt-tool-cont">
+                            <div class="item-detail-quantity">
 
-                                        <p class=""><strong>Quantity: </strong></p>
+                                <form class="update-form product-quantity-form" 
+                                action="{% url 'adjust_quantity' item.item_id %}" 
+                                method="POST">
 
-                                        <div class="quantity-tool">
+                                    {% csrf_token %}
+                                        <div class="qunt-tool-cont">
 
-                                            <button class="decrement-qty" 
-                                            data-item_id="{{ item.item_id }}" 
-                                            id="decrement-qty_{{ item.item_id }}">
+                                            <p><strong>Quantity: </strong></p>
 
-                                                <span class="">
-                                                    <i class="fas fa-minus"></i>
-                                                </span>
+                                            <div class="quantity-tool">
 
-                                            </button>
+                                                <button class="decrement-qty" 
+                                                data-item_id="{{ item.item_id }}" 
+                                                id="decrement-qty_{{ item.item_id }}">
 
-                                            <input class="qty_input" type="number" 
-                                            name="quantity" value="{{ item.quantity }}" min="1" max="99" 
-                                            data-item_id="{{ item.item_id }}" id="id_qty_{{ item.item_id }}">
+                                                    <span class="">
+                                                        <i class="fas fa-minus"></i>
+                                                    </span>
 
-                                            <button class="increment-qty" 
-                                            data-item_id="{{ item.item_id }}" 
-                                            id="increment-qty_{{ item.item_id }}">
+                                                </button>
 
-                                                <span class="">
-                                                    <i class="fas fa-plus"></i>
-                                                </span>
+                                                <input class="qty_input" type="number" 
+                                                name="quantity" value="{{ item.quantity }}" min="1" max="99" 
+                                                data-item_id="{{ item.item_id }}" id="id_qty_{{ item.item_id }}">
 
-                                            </button>
+                                                <button class="increment-qty" 
+                                                data-item_id="{{ item.item_id }}" 
+                                                id="increment-qty_{{ item.item_id }}">
+
+                                                    <span class="">
+                                                        <i class="fas fa-plus"></i>
+                                                    </span>
+
+                                                </button>
+
+                                            </div>
 
                                         </div>
 
-                                    </div>
+                                </form>
 
-                            </form>
+                                <a class="update-link">
+                                    <small>Update</small>
+                                </a>
 
-                            <a class="update-link">
-                                <small>Update</small>
-                            </a>
+                                <a href="{% url 'remove_from_bag' item.item_id %}" 
+                                class="remove-item">
+                                    <small>Remove</small>
+                                </a>
+                            </div>
 
-                            <a href="{% url 'remove_from_bag' item.item_id %}" 
-                            class="remove-item">
-                                <small>Remove</small>
-                            </a>
+                            <div class="item-sub-total">
+                                <br>
+                                <h3>Subtotal: £{{ item.product.price | calc_subtotal:item.quantity }}</h3>
+                            </div>
+
                         </div>
-
-                        <div class="item-sub-total">
-                            <h2>£{{ item.product.price | calc_subtotal:item.quantity }}</h2>
-                        </div>
-
                     </div>
-
                 {% endfor %}
 
             </div>
 
-            <div class="shop-bag-total">
+            <div class="shopping-bag-total">
 
-                <h6><strong>Bag Total: £{{ total|floatformat:2 }}</strong></h6>
+                <div class="shop-bag-sum">
 
-                <h6>Delivery: £{{ delivery|floatformat:2 }}</h6>
+                    <h6><strong>Bag Total: £{{ total|floatformat:2 }}</strong></h6>
 
-                <h4><strong>Grand Total: £{{ grand_total|floatformat:2 }}</strong></h4>
+                    <h6>Delivery: £{{ delivery|floatformat:2 }}</h6>
 
-                {% if for_free_delivery > 0 %}
-                    <p>
-                        If you spend <strong>£{{ for_free_delivery }}</strong>, you can get free delivery!
-                    </p>
-                {% endif %}
+                    <h4><strong>Grand Total: £{{ grand_total|floatformat:2 }}</strong></h4>
+
+                    {% if for_free_delivery > 0 %}
+                        <p>
+                            If you spend <strong>£{{ for_free_delivery }}</strong>, you can get free delivery!
+                        </p>
+                    {% endif %}
+
+                </div>
+
+                <div class="check-out">
+
+                    <a class="secure-checkout sec-check-bag-btn" href="">
+                        Go To Secure Checkout   <i class="fas fa-lock"></i>
+                    </a>
+
+                </div>
 
             </div>
             
         {% else %}
 
-            <p>Your Shopping Bag is empty.</p>
+        <div class="empty-bag-cont">
 
-            <div class="keep-shopping-button">
+            <div class="empty-bag">
 
-                <a href="{% url 'products' %}">
-                    <i class="fas fa-chevron-left"></i> Keep Shopping
-                </a>
+                <p>Your Shopping Bag is empty.</p>
+
+                <div class="keep-shopping-button">
+
+                    <a href="{% url 'products' %}">
+                        <i class="fas fa-chevron-left"></i> Keep Shopping
+                    </a>
+
+                </div>
                 
             </div>
+
+        </div>
 
         {% endif %}
 
