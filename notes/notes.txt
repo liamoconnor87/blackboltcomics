@@ -38,6 +38,7 @@ python3 manage.py migrate
 pip3 freeze > requirements.txt
 mkdir templates
 mkdir templates/allauth
+python3 manage.py startapp <name>
 
 
 
