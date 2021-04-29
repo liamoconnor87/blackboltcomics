@@ -14,19 +14,18 @@
 
                 {% for item in bag_items %}
 
-                    <div class="each-item">
+                    <div class="each-item checkout">
 
-                        <div class="bag-item-img">
+                        <div class="bag-item-img checkout">
 
                             <img src="{{ item.product.image.url }}" alt="{{ item.product.name }}">
 
                         </div>
 
-                        <div class="bag-item-details">
+                        <div class="bag-item-details checkout">
 
                             <div class="item-detail-title">
                                 <h3>{{ item.product.name }}</h3>
-                                <br>
                             </div>
 
                             <div class="item-quantity">
@@ -34,7 +33,6 @@
                             </div>
 
                             <div class="item-sub-total">
-                                <br>
                                 <h3>Subtotal: £{{ item.product.price | calc_subtotal:item.quantity }}</h3>
                             </div>
 
@@ -48,11 +46,11 @@
 
             <div class="shopping-bag-total">
 
-                <div class="shop-bag-sum">
+                <div class="shop-bag-sum-2">
 
-                    <h6><strong>Bag Total: £{{ total|floatformat:2 }}</strong></h6>
+                    <h5><strong>Bag Total: £{{ total|floatformat:2 }}</strong></h5>
 
-                    <h6>Delivery: £{{ delivery|floatformat:2 }}</h6>
+                    <h5>Delivery: £{{ delivery|floatformat:2 }}</h5>
 
                     <h4><strong>Grand Total: £{{ grand_total|floatformat:2 }}</strong></h4>
 
@@ -60,102 +58,94 @@
 
             </div>
 
-            <h6>Please fill out the form to complete your order.</h6>
+            <div class="checkout-form">
 
-            <form action="{% url 'checkout' %}" id="payment-form" method="POST">
-                {% csrf_token %}
+                <h5>Please fill out the form to complete your order.</h5>
+                <br>
 
-                <fieldset class="">
+                <form action="{% url 'checkout' %}" id="payment-form" method="POST">
+                    {% csrf_token %}
 
-                    <legend class="fieldset-label">Details</legend>
+                    <fieldset class="checkout-fieldset">
 
-                    {{ order_form.full_name | as_crispy_field }}
-                    {{ order_form.email | as_crispy_field }}
+                        <legend>Details</legend>
 
-                </fieldset>
+                        {{ order_form.full_name | as_crispy_field }}
+                        {{ order_form.email | as_crispy_field }}
 
-                <fieldset class="">
+                    </fieldset>
 
-                    <legend class="">Delivery</legend>
+                    <fieldset class="checkout-fieldset">
 
-                    {{ order_form.phone_number | as_crispy_field }}
-                    {{ order_form.street_address1 | as_crispy_field }}
-                    {{ order_form.street_address2 | as_crispy_field }}
-                    {{ order_form.town_or_city | as_crispy_field }}
-                    {{ order_form.county | as_crispy_field }}
-                    {{ order_form.postcode | as_crispy_field }}
-                    {{ order_form.country | as_crispy_field }}
+                        <legend>Delivery</legend>
 
-                    <div class="">
+                        {{ order_form.phone_number | as_crispy_field }}
+                        {{ order_form.street_address1 | as_crispy_field }}
+                        {{ order_form.street_address2 | as_crispy_field }}
+                        {{ order_form.town_or_city | as_crispy_field }}
+                        {{ order_form.county | as_crispy_field }}
+                        {{ order_form.postcode | as_crispy_field }}
+                        {{ order_form.country | as_crispy_field }}
 
-                        {% if user.is_authenticated %}
+                        <div class="checkout-user-options">
 
-                        <label class="form-check-label" for="id-save-info">Save this delivery information to my
-                            profile</label>
+                            {% if user.is_authenticated %}
 
-                        <input class="" type="checkbox" id="id-save-info" name="save-info"
-                            checked>
+                            <label class="checkout-new-user" for="id-save-info">Save this delivery information to my profile</label>
 
-                        {% else %}
+                            <input type="checkbox" id="id-save-info" name="save-info"
+                                checked>
 
-                        <label class="" for="id-save-info">
-                            <a class="text-info" href="{% url 'account_signup' %}">Create an account</a> or
-                            <a class="text-info" href="{% url 'account_login' %}">login</a> to save this information
-                        </label>
+                            {% else %}
 
-                        {% endif %}
+                            <label class="checkout-new-user" for="id-save-info">
+                                <a href="{% url 'account_signup' %}">Create an account</a> or
+                                <a href="{% url 'account_login' %}">login</a> to save this information
+                            </label>
+
+                            {% endif %}
+
+                        </div>
+
+                    </fieldset>
+
+                    <fieldset class="checkout-fieldset">
+
+                        <legend>Payment</legend>
+
+                        <!-- A Stripe card element will go here -->
+                        <div id="card-element"></div>
+
+                        <!-- Used to display form errors -->
+                        <div id="card-errors" role="alert"></div>
+
+                        <!-- Pass the client secret to the view so we can get the payment intent id -->
+                        <input type="hidden" value="{{ client_secret }}" name="client_secret">
+
+                    </fieldset>
+                    <br>
+
+                    <div class="checkout-user-options">
+
+                        <a class="adjustbag-chck adjust" href="{% url 'view_bag' %}">
+                            <i class="fas fa-chevron-left"></i>Adjust Bag
+                        </a>
+                        <br>
+
+                        <button class="adjustbag-chck complete" id="submit-button">
+                            Complete Order <i class="fas fa-lock"></i>
+                        </button>
+
+                        <br>
+                        <p>
+                            <i class="fas fa-exclamation-circle"></i> Your card will be charged <strong>${{ grand_total|floatformat:2 }}</strong>
+                        </p>
 
                     </div>
 
-                </fieldset>
+                </form>
 
-                <fieldset class="">
-
-                    <legend class="fieldset-label">Payment</legend>
-
-                    <!-- A Stripe card element will go here -->
-                    <div class="" id="card-element"></div>
-
-                    <!-- Used to display form errors -->
-                    <div class="" id="card-errors" role="alert"></div>
-
-                    <!-- Pass the client secret to the view so we can get the payment intent id -->
-                    <input type="hidden" value="{{ client_secret }}" name="client_secret">
-
-                </fieldset>
-
-                <div class="submit-button text-right mt-5 mb-2">
-
-                    <a href="{% url 'view_bag' %}" class="btn btn-outline-black rounded-0">
-
-                        <span class="icon">
-                            <i class="fas fa-chevron-left"></i>
-                        </span>
-
-                        <span class="font-weight-bold">Adjust Bag</span>
-                    </a>
-
-                    <button id="submit-button" class="btn btn-black rounded-0">
-
-                        <span class="font-weight-bold">Complete Order</span>
-
-                        <span class="icon">
-                            <i class="fas fa-lock"></i>
-                        </span>
-
-                    </button>
-
-                    <p class="small text-danger my-0">
-                        <span class="icon">
-                            <i class="fas fa-exclamation-circle"></i>
-                        </span>
-
-                        <span>Your card will be charged <strong>${{ grand_total|floatformat:2 }}</strong></span>
-                    </p>
-
-                </div>
-
-            </form>
+            </div>
 
         </div>
 

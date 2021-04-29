@@ -12,3 +12,79 @@
     margin-top: 10px;
     margin-bottom: 25px;
 }
+
+.each-item.checkout{
+    flex-direction: row;
+}
+
+.bag-item-img.checkout img{
+    max-width: 80px;
+    margin: 20px 5px;
+}
+
+.bag-item-details.checkout{
+    margin: 10px;
+    padding: 0;
+}
+
+.bag-item-details.checkout h3{
+    font-size: 15px;
+}
+
+.checkout-form{
+    display: flex;
+    flex-direction: column;
+    width: 90%;
+    max-width: 312px;
+    height: auto;
+    padding: 5px;
+    color: white;
+    background-color: rgb(4, 50, 109);
+    border: solid white 6px;
+    margin: 10px auto 0 auto;
+    box-shadow: 2px 2px 12px black;
+}
+
+.checkout-fieldset, .checkout-fieldset legend{
+    padding-bottom: 5px;
+}
+
+#payment-form input{
+    height: 20px;
+    margin-bottom: 3px;
+    width: 90%;
+}
+
+.checkout-user-options{
+    font-size: 13px;
+}
+
+.checkout-user-options p{
+    text-decoration: underline;
+}
+
+.checkout-new-user a{
+    color: white;
+    text-decoration: underline;
+}
+
+.adjustbag-chck{
+    margin: 9px 0;
+    font: inherit;
+    text-decoration: none;
+    color: black;
+    background-color: white;
+    border: solid black 4px;
+    padding: 1px 3px;
+    font-size: 14px;
+    font-weight: 600;
+    box-shadow: 2px 2px 12px rgba(0, 0, 0, 0.418);
+}
+
+.adjustbag-chck.adjust:hover{
+    background-color: rgb(0, 174, 255);
+}
+
+.adjustbag-chck.complete:hover{
+    background-color: orange;
+}

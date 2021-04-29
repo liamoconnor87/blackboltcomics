@@ -61,7 +61,7 @@ MIDDLEWARE = [
 
 ROOT_URLCONF = 'blackbolt_comics.urls'
 
-CRISPY_TEMPLATE_PACK = 'bootstrap4'
+# CRISPY_TEMPLATE_PACK = 'bootstrap4'
 
 TEMPLATES = [
     {
