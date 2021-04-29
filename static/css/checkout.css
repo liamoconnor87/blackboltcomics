@@ -34,6 +34,7 @@
 .checkout-form{
     display: flex;
     flex-direction: column;
+    flex-wrap: wrap;
     width: 90%;
     max-width: 312px;
     height: auto;
@@ -49,9 +50,13 @@
     padding-bottom: 5px;
 }
 
+.checkout-fieldset legend{
+    text-decoration: underline;
+}
+
 #payment-form input{
     height: 20px;
-    margin-bottom: 3px;
+    margin-bottom: 8px;
     width: 90%;
 }
 
@@ -69,7 +74,7 @@
 }
 
 .adjustbag-chck{
-    margin: 9px 0;
+    margin: 15px 0;
     font: inherit;
     text-decoration: none;
     color: black;
@@ -78,7 +83,6 @@
     padding: 1px 3px;
     font-size: 14px;
     font-weight: 600;
-    box-shadow: 2px 2px 12px rgba(0, 0, 0, 0.418);
 }
 
 .adjustbag-chck.adjust:hover{
@@ -87,4 +91,55 @@
 
 .adjustbag-chck.complete:hover{
     background-color: orange;
+}
+
+/* Responsive Layout */
+@media screen and (min-width: 700px){
+
+    .checkout-form {
+        width: 95%;
+        max-width: 600px;
+    }
+
+    .checkout-form h5{
+        font-size: 15px;
+    }
+
+    .checkout-fieldset legend{
+        font-size: 18px;
+    }
+
+    .checkout-user-options{
+        font-size: 15px;
+    }
+
+    .adjustbag-chck{
+        font-size: 16px;
+    }
+
+}
+
+@media screen and (min-width: 1000px){
+
+    .checkout-container{
+        display: flex;
+        flex-direction: row-reverse;
+        max-width: 1200px;
+        margin-right: auto;
+        margin-left: auto;
+    }
+
+    .checkout-bag-items, .checkout-form-container{
+        display: inline-block;
+        width: 45%;
+        margin: 0 auto;
+    }
+
+    .bag-items.checkout, .shopping-bag-total.checkout{
+        max-width: 500px;
+    }
+
+    .checkout-form{
+        margin: 0 auto;
+    }
 }
