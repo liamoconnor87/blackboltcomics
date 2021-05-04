@@ -6,6 +6,7 @@ pip3 install django
 pip3 install django-allauth
 pip3 install pillow
 pip3 install django-crispy-forms
+pip3 install stripe
 python3 manage.py migrate
 python3 manage.py loaddata categories
 python3 manage.py loaddata products

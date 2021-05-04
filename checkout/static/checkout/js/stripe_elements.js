@@ -20,13 +20,12 @@ var style = {
 var card = elements.create('card', {style: style});
 card.mount('#card-element');
 
-/*
-// Handle realtime validation errors on the card element
+// Card payment validation errors on the card element
 card.addEventListener('change', function (event) {
     var errorDiv = document.getElementById('card-errors');
     if (event.error) {
         var html = `
-            <span class="icon" role="alert">
+            <span role="alert">
                 <i class="fas fa-times"></i>
             </span>
             <span>${event.error.message}</span>
@@ -36,7 +35,7 @@ card.addEventListener('change', function (event) {
         errorDiv.textContent = '';
     }
 });
-
+/*
 // Handle form submit
 var form = document.getElementById('payment-form');
 

@@ -12,6 +12,7 @@ https://docs.djangoproject.com/en/3.1/ref/settings/
 
 from pathlib import Path
 import os
+from os import path
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
@@ -172,5 +173,13 @@ STATICFILES_DIRS = (os.path.join(BASE_DIR, 'static'),)
 MEDIA_URL = '/media/'
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 
+# Stripe
 FREE_DELIVERY_THRESHOLD = 30
-STANDARD_DELIVERY_PERCENT = 10
+STANDARD_DELIVERY_PERCENT = 15
+STRIPE_CURRENCY = 'gbp'
+STRIPE_PUBLIC_KEY = 'pk_test_51ImyONJVamNXdHot0tWHxFCdtticHDo2ptp1xh7PBcvHFHygdddE0rHfVlfftbCDazwqMOBJCQPDyuQh1JwlI8pd007n9tXWbH'
+
+if path.exists('env.py'):
+    import env
+    
+STRIPE_SECRET_KEY = os.environ.get('STRIPE_SECRET_KEY', '')

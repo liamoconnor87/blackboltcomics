@@ -17,16 +17,6 @@
     flex-direction: row;
 }
 
-.bag-item-img.checkout img{
-    max-width: 80px;
-    margin: 20px 5px;
-}
-
-.bag-item-details.checkout{
-    margin: 10px;
-    padding: 0;
-}
-
 .bag-item-details.checkout h3{
     font-size: 15px;
 }
@@ -110,15 +100,15 @@
 .StripeElement--focus,
 .stripe-style-input:focus,
 .stripe-style-input:active {
-  box-shadow: 0 1px 3px 0 #cfd7df;
+  box-shadow: 0 1px 3px 0 #000000;
 }
 
 .StripeElement--webkit-autofill {
-  background-color: #fefde5 !important;
+  background-color: #000000 !important;
 }
 
 .stripe-style-input::placeholder {
-    color: #aab7c4;
+    color: #000000;
 }
 
 .fieldset-label {
@@ -139,7 +129,7 @@ select option {
 
 select:invalid,
 select option[value=""] {
-    color: #aab7c4 !important;
+    color: red !important;
 }
 
 #loading-overlay {
@@ -161,7 +151,20 @@ select option[value=""] {
     height: 100%;
 }
 
+#card-errors{
+    margin-top: 5px;
+    color: rgb(255, 124, 124);
+}
+
 /* Responsive Layout */
+@media screen and (max-width: 280px){
+
+    .bag-item-img.checkout img{
+        max-width: 80px;
+        margin: 20px 5px;
+    }
+}
+
 @media screen and (min-width: 700px){
 
     .checkout-form {
