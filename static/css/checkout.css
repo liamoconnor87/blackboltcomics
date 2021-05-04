@@ -17,6 +17,16 @@
     flex-direction: row;
 }
 
+
+.bag-item-img.checkout img{
+    width: 90%;
+}
+
+.bag-item-details.checkout{
+    width: 50%;
+}
+
+
 .bag-item-details.checkout h3{
     font-size: 15px;
 }

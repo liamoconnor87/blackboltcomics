@@ -9,7 +9,8 @@ pip3 install django-crispy-forms
 pip3 install stripe
 python3 manage.py migrate
 python3 manage.py loaddata categories
-python3 manage.py loaddata products
+python3 manage.py loaddata products <----- *** UPLOAD ENV.PY FILE ***
+
 
 python3 manage.py createsuperuser
 
