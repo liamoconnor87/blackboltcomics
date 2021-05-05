@@ -1,0 +1,17 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block content %}
+
+    <div class="main-container checkout-page">
+
+        <h1>Purchase Successful, Thank You!</h1>
+        <p>
+            Your order information is below and a confirmation email will be sent to <strong>{{ order.email }}</strong>
+        </p>
+
+        <br>
+
+    </div>
+
+{% endblock %}
