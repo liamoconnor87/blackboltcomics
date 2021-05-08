@@ -15,6 +15,16 @@ python3 manage.py loaddata products <----- *** UPLOAD ENV.PY FILE ALSO ***
 python3 manage.py createsuperuser
 
 
+
+-------------------------------------------------------
+*** DEPENDING ON HOW YOU ARE SETTING 
+ENVIRONMENT VARIBALES - ie env.py you wont need these.  ***
+-------------------------------------------------------
+
+export STRIPE_PUBLIC_KEY=pk_test_51I...
+export STRIPE_SECRET_KEY=sk_test_51I...
+
+
 -------------------------------------------------------
 *** MIGRATION COMMANDS - IN ORDER OF USING THEM ***
 -------------------------------------------------------

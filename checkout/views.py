@@ -3,6 +3,7 @@ from django.shortcuts import (
 )
 from django.contrib import messages
 from django.conf import settings
+
 from .forms import OrderForm
 from .models import Order, OrderLineItem
 from products.models import Product
@@ -45,7 +46,7 @@ def checkout(request):
                             product=product,
                             quantity=quantity,
                         )
-                    order_line_item.save()
+                        order_line_item.save()
                 except Product.DoesNotExist:
                     messages.error(request, (
                         "One of the products in your bag wasn't found in our database."
@@ -94,11 +95,11 @@ def checkout(request):
 
 def checkout_success(request, order_number):
 
-    save_info = request.ession.get('save_info')
+    save_info = request.session.get('save_info')
     order = get_object_or_404(Order, order_number=order_number)
-    messages.success(request, f'Your Oder was successful! \
-        Your order number is {order_number}. A confirmation \
-            email will be sent to {order.email}.')
+    messages.success(request, f'Order successful! \
+        Order number is {order_number}. Email confirmation \
+            will be sent to {order.email}.')
 
     if 'bag' in request.session:
         del request.session['bag']
