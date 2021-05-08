@@ -89,6 +89,7 @@
     margin-bottom: 10px;
 }
 
+/* Styles also used on checkout_success.html*/
 .empty-bag-cont{
     display: flex;
     flex-direction: column;

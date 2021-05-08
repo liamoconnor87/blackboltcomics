@@ -40,13 +40,13 @@ def checkout(request):
             for item_id, quantity in bag.items():
                 try:
                     product = Product.objects.get(id=item_id)
-                    if isinstance(item_id, int):
-                        order_line_item = OrderLineItem(
-                            order=order,
-                            product=product,
-                            quantity=quantity,
-                        )
-                        order_line_item.save()
+                    
+                    order_line_item = OrderLineItem(
+                        order=order,
+                        product=product,
+                        quantity=quantity,
+                    )
+                    order_line_item.save()
                 except Product.DoesNotExist:
                     messages.error(request, (
                         "One of the products in your bag wasn't found in our database."
@@ -97,9 +97,7 @@ def checkout_success(request, order_number):
 
     save_info = request.session.get('save_info')
     order = get_object_or_404(Order, order_number=order_number)
-    messages.success(request, f'Order successful! \
-        Order number is {order_number}. Email confirmation \
-            will be sent to {order.email}.')
+    messages.success(request, f'Your order was successful!')
 
     if 'bag' in request.session:
         del request.session['bag']
