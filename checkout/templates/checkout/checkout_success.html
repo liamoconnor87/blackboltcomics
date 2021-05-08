@@ -10,12 +10,80 @@
 
                 <div class="empty-bag">
 
-                    <p>Your order number is: <strong>{{ order }}</strong> and a confirmation email will be sent to <strong>{{ order.email }}</strong></p>
+                    <p>Your Order information is below. A confirmation of your Order will be sent by email to <strong>{{ order.email }}</strong></p>
+
+                    <div class="product-details">
+
+                        <div class="product-detail-description">
+                            <h5>Order Information.</h5>
+                            <h3>{{ order.order_number }}</h3>
+                        </div>
+                        <br>
+
+                        <div class="product-detail-description">
+                            <h5>Order Date.</h5>
+                            <h3>{{ order.date }}</h3>
+                        </div>
+                        <br>
+
+                        <div class="product-detail-description">
+                            <h5>Order Details.</h5>
+                            {% for item in order.lineitems.all %}
+                                <h3>{{ item.product.name }} <span>{{ item.quantity }} @ £{{ item.product.price }} each.</span></h3> 
+                            {% endfor %}
+                        </div>
+                        <br>
+
+                        <div class="product-detail-description">
+                            <h3>Delivery Address.</h3>
+
+                            <span>Full Name.</span>
+                            <h5>{{ order.full_name }}</h5>
+
+                            <span>Address 1.</span>
+                            <h5>{{ order.street_address1 }}</h5>
+
+                            {% if order.street_address2 %}
+                                <span>Address 2.</span>
+                                <h5>{{ order.street_address2 }}</h5>
+                            {% endif %}
+
+                            {% if order.county %}
+                                <span>County.</span>
+                                <h5>{{ order.county }}</h5>
+                            {% endif %}
+
+                            <span>Town or City.</span>
+                            <h5>{{ order.town_or_city }}</h5>
+
+                            {% if order.postcode %}
+                                <span>Postcode.</span>
+                                <h5>{{ order.postcode }}</h5>
+                            {% endif %}
+
+                            <span>Country</span>
+                            <h5>{{ order.country }}</h5>
+
+                            <span>Phone Number.</span>
+                            <h5>{{ order.phone_number }}</h5>
+
+                        </div>
+                        <br>
+
+                        <div class="product-detail-description">
+                            <h5>Billing Information.</h5>
+                            <h3>Order Total. {{ order.order_total }}</h3>
+                            <h3>Delivery Cost. {{ order.delivery_cost }}</h3>
+                            <h2>Grand Total. {{ order.grand_total }}</h2>
+                        </div>
+                    
+                    </div>
+
 
                     <div class="keep-shopping-button">
 
-                        <a href="{% url 'products' %}">
-                            <i class="fas fa-chevron-left"></i> Keep Shopping
+                        <a href="{% url 'home' %}">
+                            <i class="fas fa-chevron-left"></i> Home.
                         </a>
 
                     </div>
