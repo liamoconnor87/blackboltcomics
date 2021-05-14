@@ -45,6 +45,7 @@ CREATING BLACKBOLT PROJECT
 -----------------------------------------------------------
 pip3 install django
 django-admin startproject blackbolt_comics . 
+python3 manage.py startapp <the_name_of_app> (creates app within django project ie - checkout, home, shopping_bag)
 touch .gitignore (add what needs to be ignored)
 python3 manage.py migrate (do this after setting up new apps or changed models)
 pip3 install django-allauth (set up)

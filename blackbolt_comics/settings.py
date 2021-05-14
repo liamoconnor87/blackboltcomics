@@ -48,6 +48,7 @@ INSTALLED_APPS = [
     'shopping_bag',
     'checkout',
     'crispy_forms',
+    'profiles',
 ]
 
 MIDDLEWARE = [
@@ -174,7 +175,7 @@ MEDIA_URL = '/media/'
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 
 # Stripe
-FREE_DELIVERY_THRESHOLD = 30
+FREE_DELIVERY_THRESHOLD = 20
 STANDARD_DELIVERY_PERCENT = 15
 STRIPE_CURRENCY = 'gbp'
 STRIPE_PUBLIC_KEY = 'pk_test_51ImyONJVamNXdHot0tWHxFCdtticHDo2ptp1xh7PBcvHFHygdddE0rHfVlfftbCDazwqMOBJCQPDyuQh1JwlI8pd007n9tXWbH'
