@@ -1,0 +1,42 @@
+.allauth-pages{
+    display: block;
+    width: 100%;
+    height: auto;
+    min-height: 100vh;
+    background-color: rgba(255, 255, 255, 0.664);
+}
+
+.allauth-pages h1{
+    width: 100%;
+    text-align: center;
+    margin-top: 10px;
+    margin-bottom: 25px;
+    color: black;
+}
+
+#allauth-form label{
+    margin-bottom: 3px;
+}
+
+#div_id_login input, #div_id_password input{
+    height: 40px;
+    padding: 10px 12px;
+    margin-top: 8px;
+    margin-bottom: 8px;
+    width: 90%;
+}
+
+#div_id_login label, #div_id_password label{
+    text-decoration: underline;
+}
+
+#div_id_remember input{
+    margin-bottom: 8px;
+}
+
+/* Responsive Layout */
+@media screen and (min-width: 1000px){
+    .allauth-container{
+        display: block !important;
+    }
+}
