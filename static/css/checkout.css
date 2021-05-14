@@ -55,7 +55,6 @@
 }
 
 #payment-form input{
-    height: 20px;
     margin-bottom: 8px;
     width: 90%;
 }
@@ -139,7 +138,7 @@ select option {
 
 select:invalid,
 select option[value=""] {
-    color: red !important;
+    color: #000000;
 }
 
 #loading-overlay {
