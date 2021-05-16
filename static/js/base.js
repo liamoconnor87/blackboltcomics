@@ -1,6 +1,8 @@
 $(document).ready(function() {
 
     // Navigation Animations. 
+    $(".msg-cont-bg-msg").hide();
+
     $(".srch-btn").click(function() {
 
         $(this).toggleClass("srch-btn-click");
@@ -188,9 +190,16 @@ $(document).ready(function() {
         form.submit();
     })
 
-    // Messages.
-    $(".exit-x").click(function() {
-        $('.message-container').hide();
+    // Messages & Shopping Bag.
+    $('.shop-btn').click(function(){
+        $('.message').toggle();
+        $('.msg-title').hide();
+        $('.message-success').hide();
+        $('.message-error').hide();
+    })
+
+    $('.exit-x').click(function() {
+        $('.message').hide();
     })
 
 });

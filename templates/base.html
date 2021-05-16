@@ -63,21 +63,13 @@
                                 <i class="nav-icon fas fa-user"></i>
                             </span>
                         </li>
-
-                        <a href="{% url 'view_bag' %}">   
-                            <li class="nav-button shop-btn">
-                                <span>
-                                    <i class="nav-icon fas fa-shopping-bag{% if grand_total %} items-in-bag{% endif %}"></i>
-                                    <p class="nav-name">
-                                        {% if grand_total %}
-                                            ${{ grand_total|floatformat:2 }}
-                                        {% else %}
-                                            $0.00
-                                        {% endif %}
-                                    </p>
-                                </span>
-                            </li>
-                        </a>
+  
+                        <li class="nav-button shop-btn">
+                            <span>
+                                <i class="nav-icon fas fa-shopping-bag {% if grand_total %} items-in-bag {% endif %}"></i>
+                            </span>
+                        </li>
+                        
 
                     </ul>
                     
@@ -85,25 +77,50 @@
                 
             </div>
 
-            {% if messages %}
+            <!-- Messages and Shopping Bag -->
+            {% if messages or grand_total %}
+
+                {% if messages %}
+
+                    <div class="message-container">
+
+                        {% for message in messages %}
+
+                            {% with message.level as level %}
+
+                                {% if level == 40 %}
+                                <!-- Error -->
+                                    {% include 'includes/messages/message_error.html' %}
+                                {% elif level == 30 %}
+                                <!-- Warning -->
+                                    {% include 'includes/messages/message_warning.html' %}
+                                {% elif level == 25 %}
+                                <!-- Success -->
+                                    {% include 'includes/messages/message_success.html' %}
+                                {% else %}
+                                    {% include 'includes/messages/message_info.html' %}
+                                {% endif %}
+
+                            {% endwith %}
+
+                        {% endfor %}
+
+                    </div>
+
+                {% else %}
+                    
+                    <div class="message-container">
+                        {% include 'includes/messages/message_bag.html' %}
+                    </div>
+                
+                {% endif %}
+
+            {% else %}
+                    
                 <div class="message-container">
-                    {% for message in messages %}
-                        {% with message.level as level %}
-                            {% if level == 40 %}
-                            <!-- Error -->
-                                {% include 'includes/messages/message_error.html' %}
-                            {% elif level == 30 %}
-                            <!-- Warning -->
-                                {% include 'includes/messages/message_warning.html' %}
-                            {% elif level == 25 %}
-                            <!-- Success -->
-                                {% include 'includes/messages/message_success.html' %}
-                            {% else %}
-                                {% include 'includes/messages/message_info.html' %}
-                            {% endif %}
-                        {% endwith %}
-                    {% endfor %}
+                    {% include 'includes/messages/message_bag.html' %}
                 </div>
+                
             {% endif %}
             
             <!-- Product Navigation -->

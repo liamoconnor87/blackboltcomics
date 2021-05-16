@@ -97,10 +97,6 @@ body{
     color: white;
 }
 
-.nav-name{
-    display: none;
-}
-
 /* toggleClass for JS */
 .srch-btn-click, .acc-btn-click{
     background-color: rgb(4, 50, 109);

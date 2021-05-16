@@ -18,6 +18,68 @@
 
         <div class="message-error">
             <span>{{ message }}</span>
+            <br>
+        </div>
+
+        <div class="bag-content">
+
+            {% if grand_total and not on_profile_page %}
+
+                <p>You have <strong>{{ product_count }}</strong> items in your <strong>bag.</strong></p>
+
+                <div class="bag-notification-wrapper">
+
+                    {% for item in bag_items %}
+
+                        <div class="each-content">
+
+                            <img alt="{{ item.product.name }}" src="{{ item.product.image.url }}" >
+                                
+                            <div class="item-details">
+                                <strong>{{ item.product.name }}</strong>
+                                <br>
+                                Qty: {{ item.quantity }}
+                            </div>
+
+                        </div>
+                        
+                    {% endfor %}
+                </div>
+
+                <div class="bag-sum">
+
+                    <span class="total-sum">
+                        <strong>Total{% if for_free_delivery > 0 %} (Exc. delivery){% endif %}: £{{ total|floatformat:2 }}</strong>
+                    </span>
+                        
+                    {% if for_free_delivery > 0 %}
+
+                        <br>
+                        <br>
+
+                        <span class="free-delv-msg">
+                            Spend £{{ for_free_delivery }} more to get free next day delivery!
+                        </span>
+                        <br>
+                        
+                    {% endif %}
+
+                        <br>
+                        <br>
+
+                        <a class="secure-checkout" href="{% url 'view_bag' %}">
+                            Go To Secure Checkout   <i class="fas fa-lock"></i>
+                        </a>
+
+                </div>
+
+            {% else %}
+
+                <span class="total-sum">
+                    <strong>Your Bag is empty! :(</strong>
+                </span>
+
+            {% endif %}
         </div>
   
     </div>
