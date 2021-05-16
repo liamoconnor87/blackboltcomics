@@ -18,7 +18,7 @@
     margin-bottom: 3px;
 }
 
-#div_id_login input, #div_id_password input{
+#div_id_login input, #div_id_password input, #div_id_email input, #div_id_email2 input, #div_id_username input, #div_id_password1 input,#div_id_password2 input{
     height: 40px;
     padding: 10px 12px;
     margin-top: 8px;
@@ -26,7 +26,7 @@
     width: 90%;
 }
 
-#div_id_login label, #div_id_password label{
+#div_id_login label, #div_id_password label, #div_id_email label, #div_id_email2 label, #div_id_username label, #div_id_password1 label,#div_id_password2 label{
     text-decoration: underline;
 }
 
