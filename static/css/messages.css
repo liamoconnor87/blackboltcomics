@@ -25,6 +25,7 @@
     height: auto;
     padding: 3px;
     font-size: 20px;
+    border-bottom: solid black 1px;
 }
 
 .msg-title-msg{
