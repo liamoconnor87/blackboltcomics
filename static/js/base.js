@@ -193,7 +193,7 @@ $(document).ready(function() {
     // Messages & Shopping Bag.
     $('.shop-btn').click(function(){
         $('.message').toggle();
-        $('.msg-title').hide();
+        $('.msg-title-msg').hide();
         $('.message-success').hide();
         $('.message-error').hide();
     })
