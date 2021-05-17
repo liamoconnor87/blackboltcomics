@@ -100,17 +100,20 @@
 
                                 {% if user.is_authenticated %}
 
-                                <label class="checkout-new-user" for="id-save-info">Save this delivery information to my profile.</label>
+                                    <div class="user-info-save">
 
-                                <input type="checkbox" id="id-save-info" name="save-info"
-                                    checked>
+                                        <label class="checkout-new-user" for="id-save-info">Save this delivery information to my profile.</label>
+
+                                        <input class="checkout-new-user" type="checkbox" id="id-save-info" name="save-info" checked>
+
+                                    </div>
 
                                 {% else %}
 
-                                <label class="checkout-new-user" for="id-save-info">
-                                    <a href="{% url 'account_signup' %}">Create an account</a> or
-                                    <a href="{% url 'account_login' %}">login</a> to save this information.
-                                </label>
+                                    <label class="checkout-new-user" for="id-save-info">
+                                        <a href="{% url 'account_signup' %}">Create an account</a> or
+                                        <a href="{% url 'account_login' %}">login</a> to save this information.
+                                    </label>
 
                                 {% endif %}
 

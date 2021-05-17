@@ -13,7 +13,7 @@ body{
     height: 100vh;
 }
 
-.update-link, .remove-item, .decrement-qty, .increment-qty, .add-to-bag input, .exit-x{
+.update-link, .remove-item, .decrement-qty, .increment-qty, .add-to-bag input, .exit-x, .allauth-btn{
     cursor: pointer;
 }
 

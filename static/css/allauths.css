@@ -34,6 +34,25 @@
     margin-bottom: 8px;
 }
 
+.allauth-lnk{
+    text-decoration: underline;
+    color: inherit;
+}
+
+.allauth-btn{
+    padding: 5px;
+    color: black;
+    background-color: orange;
+    font-family: 'Cabin', sans-serif;
+    font-weight: bold;
+    font-size: 15px;
+}
+
+.allauth-btn:hover{
+    color: white;
+    background-color: black;
+}
+
 /* Responsive Layout */
 @media screen and (min-width: 1000px){
     .allauth-container{

@@ -72,6 +72,24 @@
     text-decoration: underline;
 }
 
+.user-info-save{
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    flex-wrap: wrap;
+    margin-left: 0;
+}
+
+.user-info-save input{
+    width: auto !important;
+    margin-left: 10px !important;
+}
+
+.user-info-save label{
+    width: auto !important;
+    font-size: 13px;
+}
+
 .adjustbag-chck{
     margin: 15px 0;
     font: inherit;
@@ -172,6 +190,10 @@ select option[value=""] {
     .bag-item-img.checkout img{
         max-width: 80px;
         margin: 20px 5px;
+    }
+
+    .user-info-save label{
+        font-size: 11px;
     }
 }
 
