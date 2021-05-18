@@ -234,7 +234,7 @@
                 <div class="acc-menu-drop">
                     {% if request.user.is_authenticated %}
                         {% if request.user.is_superuser %}
-                            <a href="" class="acc-btn"><!-- href="{% url 'add_product' %}" --> Product Management</a>
+                            <a href="" class="acc-btn"><!-- add_product -  goes in href --> Product Management</a>
                         {% endif %}
                         <a href="{% url 'profile' %}" class="acc-btn">My Profile</a>
                         <a href="{% url 'account_logout' %}" class="acc-btn">Logout</a>
