@@ -193,9 +193,9 @@ $(document).ready(function() {
     // Messages & Shopping Bag.
     $('.shop-btn').click(function(){
         $('.message').toggle();
-        $('.msg-title-msg').hide();
-        $('.message-success').hide();
-        $('.message-error').hide();
+        $('.msg-title-msg').remove();
+        $('.message-success').remove();
+        $('.message-error').remove();
     })
 
     $('.exit-x').click(function() {

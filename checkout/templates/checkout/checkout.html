@@ -70,7 +70,7 @@
                     <h5>Please fill out the form to complete your order.</h5>
                     <br>
 
-                    <form action="{% url 'checkout' %}" id="payment-form" method="POST">
+                    <form class="payment-form" action="{% url 'checkout' %}" id="payment-form" method="POST">
                         {% csrf_token %}
 
                         <fieldset class="checkout-fieldset">

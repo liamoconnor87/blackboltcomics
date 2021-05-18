@@ -54,7 +54,7 @@
     text-decoration: underline;
 }
 
-#payment-form input{
+.payment-form input{
     margin-bottom: 8px;
     width: 90%;
 }
@@ -143,10 +143,14 @@
     right: .5rem;
 }
 
-#payment-form .form-control,
+.payment-form .form-control,
 #card-element {
     color: #000;
     border: 1px solid #000;
+}
+
+#id_country, #id_default_country{
+    padding-left: 8px;
 }
 
 select,
@@ -184,6 +188,11 @@ select option[value=""] {
     color: rgb(255, 124, 124);
 }
 
+.product-order-number{
+    font-size: 10px;
+    font-weight: bold;
+}
+
 /* Responsive Layout */
 @media screen and (max-width: 280px){
 
@@ -195,6 +204,14 @@ select option[value=""] {
     .user-info-save label{
         font-size: 11px;
     }
+}
+
+@media screen and (min-width: 400px){
+
+    .product-order-number{
+        font-size: 14px;
+    }
+    
 }
 
 @media screen and (min-width: 700px){

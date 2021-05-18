@@ -7,11 +7,37 @@
 
         <h1>My Profile</h1>
 
-        <br>
+        <div class="checkout-container profile-container">
+            <div class="checkout-bag-items order-history">
+                <div class="bag-items">
+                    {{ orders }}
+                </div>
+            </div>
+            <div class="checkout-form-container">
+                <div class="checkout-form">
+                   <br>
+                    <p class="profile-delivery-info">Default Delivery Information.</p>
 
-        {{ profile }}
-        {{ form }}
-        {{ orders }}
+                    <br>
+
+                    <form class="payment-form" method="POST" action="{% url 'profile' %}" id="profile-update-form">
+                        {% csrf_token %}
+                        {{ form|crispy }}
+
+                        <br>
+                        <br>
+
+                        <button class="allauth-btn" type="submit">Update Information</button>
+
+                        <br>
+                        <br>
+
+                    </form>
+                </div>
+            </div>
+        </div>
+
+        <br>
 
     </div>
 

@@ -1,3 +1,5 @@
+/* Some styles coem from checkout.css */
+
 .profiles-page{
     display: block;
     width: 100%;
@@ -11,4 +13,38 @@
     text-align: center;
     margin-top: 10px;
     margin-bottom: 25px;
+}
+
+.profile-container{
+    display: flex;
+    flex-direction: column-reverse;
+    max-width: 1200px;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+.profile-delivery-info{
+    text-decoration: underline;
+    font-size: 16px;
+    padding-bottom: 5px;
+}
+
+.order-history{
+    margin-top: 10px;
+}
+
+/* Responsive Layout */
+@media screen and (min-width: 700px){
+
+    .profile-delivery-info{
+        font-size: 18px;
+    }
+}
+
+@media screen and (min-width: 1000px){
+
+    .profile-container{
+        flex-direction: row-reverse;
+    }
+
 }

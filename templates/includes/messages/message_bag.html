@@ -1,6 +1,7 @@
 <div class="message msg-cont-bg-msg" data-autohide="false">
 
     <div class="msg-title">
+        <!-- Message Shopping Bag -->
 
         <span class="exit-x">
             X
@@ -14,7 +15,7 @@
 
         <div class="bag-content">
 
-            {% if grand_total and not on_profile_page %}
+            {% if grand_total %}
 
                 <p>You have <strong>{{ product_count }}</strong> items in your <strong>bag.</strong></p>
 

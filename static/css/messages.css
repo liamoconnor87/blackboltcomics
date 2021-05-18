@@ -61,6 +61,7 @@
     padding: 0 2px;
     color: rgb(4, 50, 109);
     margin-bottom: 8px;
+    border-top: solid black 1px;
 }
 
 .bag-content p{
@@ -99,6 +100,7 @@
 .total-sum{
     font-weight: 800;
     font-size: 18px;
+    color: grey;
 }
 
 .free-delv-msg{

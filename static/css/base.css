@@ -181,6 +181,10 @@ body{
     padding-right: 15px;
 }
 
+.acc-btn{
+    font-size: 13px;
+}
+
 .acc-btn:hover{
     text-decoration: underline;
 }
@@ -376,7 +380,7 @@ footer{
         font-size: 16px;
     }
 
-    .all-prod-menu p, .comic-menu p, .access-menu p, .spec-off-menu p{
+    .all-prod-menu p, .comic-menu p, .access-menu p, .spec-off-menu p, .acc-btn{
         font-size: 15px;
     }
 }
@@ -392,7 +396,7 @@ footer{
         font-size: 20px;
     }
 
-    .all-prod-menu p, .comic-menu p, .access-menu p, .spec-off-menu p{
+    .all-prod-menu p, .comic-menu p, .access-menu p, .spec-off-menu p, .acc-btn{
         font-size: 20px;
     }
 
