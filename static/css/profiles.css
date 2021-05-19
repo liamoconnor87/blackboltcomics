@@ -29,8 +29,23 @@
     padding-bottom: 5px;
 }
 
-.order-history{
+.order-history-container{
     margin-top: 10px;
+}
+
+.order-history{
+    height: 502px;
+    padding: 5px;
+    overflow-y: auto;
+}
+
+.order-history-details{
+    border-bottom: solid orange 1px;
+}
+
+.order-history-number{
+    text-decoration: underline;
+    color: orange;
 }
 
 /* Responsive Layout */
@@ -45,6 +60,10 @@
 
     .profile-container{
         flex-direction: row-reverse;
+    }
+
+    .order-history-container {
+        margin-top: 0;
     }
 
 }

@@ -8,10 +8,69 @@
         <h1>My Profile</h1>
 
         <div class="checkout-container profile-container">
-            <div class="checkout-bag-items order-history">
-                <div class="bag-items">
-                    {{ orders }}
+
+            <div class="checkout-bag-items order-history-container">
+
+                <div class="bag-items order-history">
+
+                    <br>
+
+                    <p class="profile-delivery-info">Order History.</p>
+
+                    {% if orders %}
+
+                        {% for order in orders %}
+
+                            <div class="product-details order-history-details">
+
+                                <div class="product-detail-description">
+                                    <h5>Order Number.</h5>
+                                    <a href="{% url 'order_history' order.order_number %}" title="{{ order.order_number }}" class="product-order-number order-history-number">
+                                        {{ order.order_number }}
+                                    </a>
+                                </div>
+
+                                <br>
+
+                                <div class="product-detail-description">
+                                    <h5>Order Date.</h5>
+                                    <h3>{{ order.date }}</h3>
+                                </div>
+
+                                <br>
+
+                                <div class="product-detail-description">
+                                    <h5>Order Details.</h5>
+                                    {% for item in order.lineitems.all %}
+                                        <h3>{{ item.product.name }} <span>{{ item.quantity }} @ £{{ item.product.price }} each.</span></h3> 
+                                    {% endfor %}
+                                </div>
+
+                                <br>
+
+                                <div class="product-detail-description">
+                                    <h5>Grand Total.</h5>
+                                    <h2>£{{ order.grand_total }}</h2>
+                                </div>
+
+                            </div>
+
+                        {% endfor %}
+
+                    {% else %}
+
+                        <div class="product-details">
+
+                            <span class="product-detail-description">
+                                <strong>You have no order history.</strong>
+                            </span>
+
+                        </div>
+
+                    {% endif%}
+
                 </div>
+
             </div>
             <div class="checkout-form-container">
                 <div class="checkout-form">

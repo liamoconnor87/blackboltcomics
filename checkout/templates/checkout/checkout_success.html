@@ -5,12 +5,33 @@
 
     <div class="main-container checkout-page">
 
-        <h1>Purchase Successful, Thank You!</h1>
+        {% if from_profile %}
+
+            <h1>Order History</h1>
+
+        {% else %}
+
+            <h1>Purchase Successful, Thank You!</h1>
+
+        {% endif %}
+
         <div class="empty-bag-cont">
 
                 <div class="empty-bag">
 
-                    <p>Your Order information is below. A confirmation of your Order will be sent by email to <strong>{{ order.email }}</strong></p>
+                    {% if from_profile %}
+
+                        <p>
+                            Your Order information is below. A confirmation of your Order would have been sent to your email: <strong>{{ order.email }}</strong>
+                        </p>
+
+                    {% else %}
+
+                        <p>
+                            Your Order information is below. A confirmation of your Order will be sent by email to <strong>{{ order.email }}</strong>
+                        </p>
+
+                    {% endif %}
 
                     <div class="product-details">
 
@@ -72,9 +93,9 @@
 
                         <div class="product-detail-description">
                             <h5>Billing Information.</h5>
-                            <h3>Order Total. {{ order.order_total }}</h3>
-                            <h3>Delivery Cost. {{ order.delivery_cost }}</h3>
-                            <h2>Grand Total. {{ order.grand_total }}</h2>
+                            <h3>Order Total. £{{ order.order_total }}</h3>
+                            <h3>Delivery Cost. £{{ order.delivery_cost }}</h3>
+                            <h2>Grand Total. £{{ order.grand_total }}</h2>
                         </div>
                     
                     </div>
@@ -82,9 +103,19 @@
 
                     <div class="keep-shopping-button">
 
-                        <a href="{% url 'home' %}">
-                            <i class="fas fa-chevron-left"></i> Return Home?
-                        </a>
+                        {% if from_profile %}
+
+                            <a href="{% url 'profile' %}">
+                                <i class="fas fa-chevron-left"></i> Return to Profile
+                            </a>
+
+                        {% else %}
+
+                            <a href="{% url 'home' %}">
+                                <i class="fas fa-chevron-left"></i> Return Home
+                            </a>
+
+                        {% endif %}
 
                     </div>
                     
