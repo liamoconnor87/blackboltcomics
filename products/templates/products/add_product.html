@@ -1,0 +1,57 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block content %}
+
+    <div class="main-container prod-manage-page">
+
+        <h1>Product Management</h1>
+        <h4>Add Products</h4>
+
+        <div class="checkout-form-container allauth-container">
+
+            <div class="checkout-form">
+
+                <br>
+
+                <form id="allauth-form prod-manage-form" class="login" method="POST" action="{% url 'add_product' %}" enctype="multipart/form-data">
+                    {% csrf_token %}
+                    {{ form|crispy }}
+
+                    <br>
+
+                    <button id="add-prod-btn" class="allauth-btn primaryAction" type="submit">Add Product</button>
+
+                    <br>
+                    <br>
+                    
+                    <div class="keep-shopping-button">
+
+                        <a href="{% url 'products' %}">
+                            <i class="fas fa-chevron-left"></i> Cancel
+                        </a>
+
+                    </div>
+
+                    <br>
+
+                </form>
+
+            </div>
+
+            <br>
+
+        </div>
+
+        <br>
+
+    </div>
+
+{% endblock %}
+
+{% block postloadjs %}
+    {{ block.super }}
+    {{ stripe_public_key|json_script:"id_stripe_public_key" }}
+    {{ client_secret|json_script:"id_client_secret" }}
+    <script src="{% static 'checkout/js/stripe_elements.js' %}"></script>
+{% endblock %}

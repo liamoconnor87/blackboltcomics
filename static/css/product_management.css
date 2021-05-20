@@ -1,0 +1,46 @@
+/* Some styles come from checkout.css and allauths.css */
+
+.prod-manage-page{
+    display: block;
+    width: 100%;
+    height: auto;
+    min-height: 100vh;
+    background-color: rgba(255, 255, 255, 0.664);
+}
+
+.prod-manage-page h1{
+    width: 100%;
+    text-align: center;
+    margin-top: 10px;
+    margin-bottom: 25px;
+    color: black;
+}
+
+.prod-manage-page h4{
+    width: 100%;
+    text-align: center;
+    margin-top: 10px;
+    margin-bottom: 25px;
+    color: rgb(4, 50, 109);
+}
+
+#id_description{
+    height: 200px;
+}
+
+.prod-manage-page label{
+    text-decoration: underline;
+}
+
+.admin-input-field{
+    margin: 8px 0;
+}
+
+#add-prod-btn{
+    background-color: black;
+    color: white;
+}
+
+#add-prod-btn:hover{
+    background-color: rgb(0, 174, 255);
+}

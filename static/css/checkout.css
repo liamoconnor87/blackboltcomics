@@ -112,7 +112,7 @@
 
 /* Stripe */
 .StripeElement,
-.stripe-style-input {
+.stripe-style-input, .admin-input-field{
   box-sizing: border-box;
   height: 40px;
   padding: 10px 12px;
@@ -126,7 +126,7 @@
 
 .StripeElement--focus,
 .stripe-style-input:focus,
-.stripe-style-input:active {
+.stripe-style-input:active, .admin-input-field:focus, .admin-input-field:active{
   box-shadow: 0 1px 3px 0 #000000;
 }
 
@@ -134,7 +134,7 @@
   background-color: #000000 !important;
 }
 
-.stripe-style-input::placeholder {
+.stripe-style-input::placeholder, .admin-input-field::placeholder {
     color: #000000;
 }
 
@@ -149,7 +149,7 @@
     border: 1px solid #000;
 }
 
-#id_country, #id_default_country{
+#id_country, #id_default_country, #id_category{
     padding-left: 8px;
 }
 
