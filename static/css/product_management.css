@@ -43,8 +43,22 @@
 
 #add-prod-btn:hover{
     background-color: rgb(0, 174, 255);
+    color: black;
 }
 
 .controls p {
+    color: orange;
+}
+
+input#image-clear_id, label[for=image-clear_id]{
+    display: none;
+}
+
+#div_id_image .controls{
+    margin-top: 8px;
+}
+
+#div_id_image a{
+    text-decoration: underline;
     color: orange;
 }
