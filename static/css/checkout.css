@@ -122,6 +122,7 @@
   width: 90%;
   -webkit-transition: box-shadow 150ms ease;
   transition: box-shadow 150ms ease;
+  font-family: 'Cabin';
 }
 
 .StripeElement--focus,
