@@ -44,3 +44,7 @@
 #add-prod-btn:hover{
     background-color: rgb(0, 174, 255);
 }
+
+.controls p {
+    color: orange;
+}
