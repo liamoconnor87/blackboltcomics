@@ -52,21 +52,25 @@
 
                     <div class="product-info">
 
-                        {% if product.publisher %}
-                            <div class="product-title publisher">
-                                <p>{{ product.publisher }}</p>
-                            </div>
-                        {% endif %}
+                        <a href="{% url 'product_detail' product.id %}">
 
-                        {% if product.manufacturer %}
-                            <div class="product-title manufacturer">
-                                <p>{{ product.manufacturer }}</p>
-                            </div>
-                        {% endif %}
+                            {% if product.publisher %}
+                                <div class="product-title publisher">
+                                    <p>{{ product.publisher }}</p>
+                                </div>
+                            {% endif %}
 
-                        <div class="product-title product-name">
-                            <p>{{ product.name }}</p>
-                        </div>
+                            {% if product.manufacturer %}
+                                <div class="product-title manufacturer">
+                                    <p>{{ product.manufacturer }}</p>
+                                </div>
+                            {% endif %}
+
+                            <div class="product-title product-name">
+                                <p>{{ product.name }}</p>
+                            </div>
+
+                        </a>
 
                     </div>
 

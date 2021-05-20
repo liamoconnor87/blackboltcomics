@@ -121,6 +121,10 @@
     box-shadow: 2px 2px 4px black;
 }
 
+.product-info a{
+    text-decoration: none;
+}
+
 .product-title{
     color: white;
     width: 90%;
