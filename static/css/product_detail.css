@@ -93,6 +93,14 @@
     color: inherit;
 }
 
+.edit-link{
+    text-decoration: none;
+}
+
+.prod-admin-edit-btn{
+    width: 100px;
+}
+
 /* Smart Device Layout */
 @media screen and (min-width: 700px){
 

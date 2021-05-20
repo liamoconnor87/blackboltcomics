@@ -78,6 +78,22 @@
                         <p>£{{ product.price }}</p>
                     </div>
 
+                    {% if request.user.is_superuser%}
+
+                        <div class="item-detail-quantity prod-admin-edit-btn">
+
+                            <a href="{% url 'edit_product' product.id %}" class="update-link edit-link">
+                                <small>EDIT</small>
+                            </a>
+
+                            <a href="{% url 'delete_product' product.id %}" class="remove-item">
+                                <small>DELETE</small>
+                            </a>
+
+                        </div>
+
+                    {% endif %}
+
                 </div>
 
                 {% endfor %}
