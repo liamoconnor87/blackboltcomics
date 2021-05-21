@@ -18,6 +18,9 @@ python3 manage.py loaddata products <----- *** UPLOAD ENV.PY FILE - YOU MAY NEED
 
 python3 manage.py createsuperuser
 
+npm install -g heroku
+heroku login -i
+
 
 
 -------------------------------------------------------
