@@ -127,7 +127,7 @@ WSGI_APPLICATION = 'blackbolt_comics.wsgi.application'
 if 'DATABASE_URL' in os.environ:
     # Heroku App.
     DATABASES = {
-        'default': dj_database_url.parse('DATABASE_URL')
+        'default': dj_database_url.parse(os.environ.get('DATABASE_URL'))
     }
 else:
     DATABASES = {
