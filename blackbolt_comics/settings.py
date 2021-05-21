@@ -29,7 +29,7 @@ SECRET_KEY = '$h)eaxi9dow+g9!#1u0%k74##p#@+#9i#$9j36_ph8uxc3@xe3'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['blackbolt-comics.herokuapp.com', 'localhost']
 
 
 # Application definition
@@ -124,17 +124,18 @@ WSGI_APPLICATION = 'blackbolt_comics.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/3.1/ref/settings/#databases
 
-DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
+if 'DATABASE_URL' in os.environ:
+    # Heroku App.
+    DATABASES = {
+    'default': dj_database_url.parse('DATABASE_URL')
     }
-}
-
-# Heroku App.
-# DATABASES = {
-#     'default': dj_database_url.parse('postgres://zzmtbhkwwzggrq:5187ce9340c89b73e6bf86fea90db481ba0b6c1309cd79048d9455a42867a1db@ec2-176-34-105-15.eu-west-1.compute.amazonaws.com:5432/dcemec8g04rsf4')
-# }
+else:
+    DATABASES = {
+        'default': {
+            'ENGINE': 'django.db.backends.sqlite3',
+            'NAME': BASE_DIR / 'db.sqlite3',
+        }
+    }
 
 
 # Password validation
