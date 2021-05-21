@@ -11,8 +11,8 @@ https://docs.djangoproject.com/en/3.1/ref/settings/
 """
 
 from pathlib import Path
-from os import path
 import os
+from os import path
 import dj_database_url
 
 
@@ -127,7 +127,7 @@ WSGI_APPLICATION = 'blackbolt_comics.wsgi.application'
 if 'DATABASE_URL' in os.environ:
     # Heroku App.
     DATABASES = {
-    'default': dj_database_url.parse('DATABASE_URL')
+        'default': dj_database_url.parse('DATABASE_URL')
     }
 else:
     DATABASES = {

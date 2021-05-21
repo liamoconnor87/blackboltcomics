@@ -8,7 +8,7 @@ pip3 install pillow
 pip3 install django-crispy-forms
 pip3 install stripe
 pip3 install django-countries
-pip3 install dj_database_url
+pip3 install dj-database-url
 pip3 install psycopg2-binary
 pip3 install gunicorn
 python3 manage.py migrate
