@@ -15,6 +15,9 @@ import os
 from os import path
 import dj_database_url
 
+if path.exists('env.py'):
+    import env
+
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
@@ -27,9 +30,9 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = os.environ.get('SECRET_KEY', '')
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = 'DEVELOPMENT' in os.environ
+DEBUG = True # 'DEVELOPMENT' in os.environ
 
-ALLOWED_HOSTS = ['blackbolt-comics.herokuapp.com', 'localhost']
+ALLOWED_HOSTS = ['localhost'] # 'blackbolt-comics.herokuapp.com', 'localhost'
 
 
 # Application definition
@@ -64,8 +67,6 @@ MIDDLEWARE = [
 ]
 
 ROOT_URLCONF = 'blackbolt_comics.urls'
-
-# CRISPY_TEMPLATE_PACK = 'bootstrap4'
 
 TEMPLATES = [
     {
@@ -124,18 +125,18 @@ WSGI_APPLICATION = 'blackbolt_comics.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/3.1/ref/settings/#databases
 
-if 'DATABASE_URL' in os.environ:
+# if 'DATABASE_URL' in os.environ:
     # Heroku App.
-    DATABASES = {
-        'default': dj_database_url.parse(os.environ.get('DATABASE_URL'))
+    # DATABASES = {
+        # 'default': dj_database_url.parse(os.environ.get('DATABASE_URL'))
+    # }
+# else:
+DATABASES = {
+    'default': {
+        'ENGINE': 'django.db.backends.sqlite3',
+        'NAME': BASE_DIR / 'db.sqlite3',
     }
-else:
-    DATABASES = {
-        'default': {
-            'ENGINE': 'django.db.backends.sqlite3',
-            'NAME': BASE_DIR / 'db.sqlite3',
-        }
-    }
+}
 
 
 # Password validation
@@ -187,9 +188,6 @@ FREE_DELIVERY_THRESHOLD = 20
 STANDARD_DELIVERY_PERCENT = 15
 STRIPE_CURRENCY = 'gbp'
 STRIPE_PUBLIC_KEY = 'pk_test_51ImyONJVamNXdHot0tWHxFCdtticHDo2ptp1xh7PBcvHFHygdddE0rHfVlfftbCDazwqMOBJCQPDyuQh1JwlI8pd007n9tXWbH'
-
-if path.exists('env.py'):
-    import env
  
 STRIPE_SECRET_KEY = os.environ.get('STRIPE_SECRET_KEY', '')
 STRIPE_WH_SECRET = os.environ.get('STRIPE_WH_SECRET', '')
