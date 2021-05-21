@@ -15,9 +15,6 @@ import os
 from os import path
 import dj_database_url
 
-if path.exists('env.py'):
-    import env
-
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
@@ -67,6 +64,8 @@ MIDDLEWARE = [
 ]
 
 ROOT_URLCONF = 'blackbolt_comics.urls'
+
+# CRISPY_TEMPLATE_PACK = 'bootstrap4'
 
 TEMPLATES = [
     {
@@ -188,6 +187,9 @@ FREE_DELIVERY_THRESHOLD = 20
 STANDARD_DELIVERY_PERCENT = 15
 STRIPE_CURRENCY = 'gbp'
 STRIPE_PUBLIC_KEY = 'pk_test_51ImyONJVamNXdHot0tWHxFCdtticHDo2ptp1xh7PBcvHFHygdddE0rHfVlfftbCDazwqMOBJCQPDyuQh1JwlI8pd007n9tXWbH'
+
+if path.exists('env.py'):
+    import env
  
 STRIPE_SECRET_KEY = os.environ.get('STRIPE_SECRET_KEY', '')
 STRIPE_WH_SECRET = os.environ.get('STRIPE_WH_SECRET', '')
