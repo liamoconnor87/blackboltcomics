@@ -1,0 +1,1 @@
+web: gunicorn blackbolt_comics.wsgi:application
