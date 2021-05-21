@@ -11,8 +11,10 @@ https://docs.djangoproject.com/en/3.1/ref/settings/
 """
 
 from pathlib import Path
-import os
 from os import path
+import os
+import dj_database_url
+
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
@@ -128,6 +130,11 @@ DATABASES = {
         'NAME': BASE_DIR / 'db.sqlite3',
     }
 }
+
+# Heroku App.
+# DATABASES = {
+#     'default': dj_database_url.parse('postgres://zzmtbhkwwzggrq:5187ce9340c89b73e6bf86fea90db481ba0b6c1309cd79048d9455a42867a1db@ec2-176-34-105-15.eu-west-1.compute.amazonaws.com:5432/dcemec8g04rsf4')
+# }
 
 
 # Password validation
