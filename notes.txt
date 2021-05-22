@@ -11,6 +11,9 @@ pip3 install django-countries
 pip3 install dj_database_url
 pip3 install psycopg2-binary
 pip3 install gunicorn
+pip3 install boto3
+pip3 install django-storages
+
 python3 manage.py migrate
 python3 manage.py loaddata categories
 python3 manage.py loaddata products <----- *** UPLOAD ENV.PY FILE - YOU MAY NEED TO AMEND THE WEB ADDRESS FOR WEBHOOK IN STRIPE DASHBOARD ***
@@ -44,7 +47,9 @@ python3 manage.py migrate
 python3 manage.py loaddata categories
 python3 manage.py loaddata products
 
+-----------------------------------------------------------
 
+pip3 freeze > requirements.txt
 
 -----------------------------------------------------------
 CREATING BLACKBOLT PROJECT
@@ -56,7 +61,6 @@ touch .gitignore (add what needs to be ignored)
 python3 manage.py migrate (do this after setting up new apps or changed models)
 pip3 install django-allauth (set up)
 python3 manage.py migrate
-pip3 freeze > requirements.txt
 mkdir templates
 mkdir templates/allauth
 python3 manage.py startapp <name>
