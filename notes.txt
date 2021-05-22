@@ -10,6 +10,7 @@ pip3 install stripe
 pip3 install django-countries
 pip3 install dj_database_url
 pip3 install psycopg2-binary
+pip3 install gunicorn
 python3 manage.py migrate
 python3 manage.py loaddata categories
 python3 manage.py loaddata products <----- *** UPLOAD ENV.PY FILE - YOU MAY NEED TO AMEND THE WEB ADDRESS FOR WEBHOOK IN STRIPE DASHBOARD ***
