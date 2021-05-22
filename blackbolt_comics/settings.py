@@ -11,7 +11,10 @@ https://docs.djangoproject.com/en/3.1/ref/settings/
 """
 
 from pathlib import Path
+
 import os
+import dj_database_url
+
 from os import path
 
 
@@ -129,6 +132,9 @@ DATABASES = {
     }
 }
 
+#DATABASES = {
+#    'default': dj_database_url.parse('postgres://cbbqqjquihlcsa:388099545e9df3c4afd1374426ee34123dfd4c9c34c8ff0b8fd2a6f2c8d67449@ec2-54-228-174-49.eu-west-1.compute.amazonaws.com:5432/dcbggqgs7m8h4g')
+#}
 
 # Password validation
 # https://docs.djangoproject.com/en/3.1/ref/settings/#auth-password-validators
