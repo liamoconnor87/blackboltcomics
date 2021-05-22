@@ -18,6 +18,10 @@ import dj_database_url
 from os import path
 
 
+if path.exists('env.py'):
+    import env
+
+
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
 
@@ -184,6 +188,12 @@ MEDIA_URL = '/media/'
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 
 if 'USE_AWS' in os.environ:
+    # Cache control - Cache files for a long time. 
+    AWS_S3_OBJECT_PARAMETERS = {
+        'Expires': 'Thu, 31 Dec 2099 20:00:00 GMT',
+        'CacheControl': 'max-age=94608000',
+    }
+
     # S3 Bucket Config.
     AWS_STORAGE_BUCKET_NAME = 'blackbolt-comics'
     AWS_S3_REGION_NAME = 'eu-west-2'
@@ -202,13 +212,10 @@ if 'USE_AWS' in os.environ:
     MEDIA_URL = f'https://{AWS_S3_CUSTOM_DOMAIN}/{MEDIAFILES_LOCATION}/'
 
 # Stripe
-FREE_DELIVERY_THRESHOLD = 20
-STANDARD_DELIVERY_PERCENT = 15
+FREE_DELIVERY_THRESHOLD = 15
+STANDARD_DELIVERY_PERCENT = 20
 STRIPE_CURRENCY = 'gbp'
 STRIPE_PUBLIC_KEY = 'pk_test_51ImyONJVamNXdHot0tWHxFCdtticHDo2ptp1xh7PBcvHFHygdddE0rHfVlfftbCDazwqMOBJCQPDyuQh1JwlI8pd007n9tXWbH'
-
-if path.exists('env.py'):
-    import env
  
 STRIPE_SECRET_KEY = os.environ.get('STRIPE_SECRET_KEY', '')
 STRIPE_WH_SECRET = os.environ.get('STRIPE_WH_SECRET', '')
