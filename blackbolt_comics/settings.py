@@ -113,8 +113,6 @@ AUTHENTICATION_BACKENDS = [
 
 SITE_ID = 1
 
-# EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
-
 ACCOUNT_AUTHENTICATION_METHOD = 'username_email'
 ACCOUNT_EMAIL_REQUIRED = True
 ACCOUNT_EMAIL_VERIFICATION = 'mandatory'
@@ -131,12 +129,12 @@ WSGI_APPLICATION = 'blackbolt_comics.wsgi.application'
 # https://docs.djangoproject.com/en/3.1/ref/settings/#databases
 
 if 'DATABASE_URL' in os.environ:
-    print("Using POSTGRES -", 'DATABASE_URL')
+    print('USING POSTGRES DATABSE_URL')
     DATABASES = {
         'default': dj_database_url.parse(os.environ.get('DATABASE_URL'))
     }
 else:
-    print("NOT using POSTGRES -", 'DATABASE_URL')
+    print('USING DEFAULT DJANGO DB.')
     DATABASES = {
         'default': {
             'ENGINE': 'django.db.backends.sqlite3',
@@ -223,9 +221,11 @@ STRIPE_SECRET_KEY = os.environ.get('STRIPE_SECRET_KEY', '')
 STRIPE_WH_SECRET = os.environ.get('STRIPE_WH_SECRET', '')
 
 if 'DEVELOPMENT' in os.environ:
+    print('DEVELOPMENT EMAIL SETTINGS.')
     EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
     DEFAULT_FROM_EMAIL = 'info@blackboltcomics.com'
 else:
+    print('GMAIL SETTINGS APPLIED.')
     EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
     EMAIL_USER_TLS = True
     EMAIL_PORT = 587
