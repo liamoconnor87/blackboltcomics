@@ -49,19 +49,19 @@ body{
 
 .slide-1{
     background-color: red;
-    background: url('/media/avengers_44.jpg') no-repeat center center fixed;
+    background: url('/media/sen_wonder_woman_14.jpg') no-repeat center center fixed;
     background-size: cover;
 }
 
 .slide-2{
     background-color: green;
-    background: url('/media/walking_dead_dlx_12.jpg') no-repeat center center fixed;
+    background: url('/media/tmnt_urb_23.jpg') no-repeat center center fixed;
     background-size: cover;
 }
 
 .slide-3{
     background-color: blue;
-    background: url('/media/comics-495258_1920.jpg') no-repeat center center fixed;
+    background: url('/media/bat_wk_harleyq_6.jpg') no-repeat center center fixed;
     background-size: cover;
 }
 
@@ -73,16 +73,20 @@ body{
   animation-duration: 1s;
 }
 
-.banner-text{
-    background-color: white;
-    padding: 10px;
-    border: solid black 3px;
+.banner-container{
+    height: inherit;
+    width: inherit;
+    background-color: red;
 }
 
-.banner-text h2{
-    height: 30px;
-    padding: 8px;
-    color: black;
+.banner{
+    background-color: blue;
+    margin: 10px;
+    padding: 5px;
+}
+
+.banner p, .shop-now{
+    font-size: 20px;
 }
 
 .shop-now{

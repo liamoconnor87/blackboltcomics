@@ -10,11 +10,15 @@
 
             <div class="mySlides fade slide-1">
 
-                <div class="banner-text">
+                <div class="banner-container">
 
-                    <h2>
-                        Get FREE DELIVERY when you spend over, £{{ free_delivery_threshold }}
-                    </h2>
+                    <div class="banner">
+
+                        <p>
+                            Get FREE DELIVERY when you spend over, £{{ free_delivery_threshold }}!
+                        </p>
+                    
+                    </div>
 
                 </div>
                 
@@ -22,11 +26,18 @@
 
             <div class="mySlides fade slide-2">
 
-                <div class="banner-text">
+                <div class="banner-container">
 
-                    <h2>
-                        All latest comic books are here! <a class="shop-now" href="{% url 'products' %}?category=comic_book">SHOP NOW</a>
-                    </h2>
+                    <div class="banner">
+
+                        <p>
+                            Get all the latest comic books!
+                        </p>
+                        <br>
+
+                        <a class="shop-now" href="{% url 'products' %}?category=comic_book">SHOP NOW</a>
+
+                    </div>
 
                 </div>
                 
@@ -34,11 +45,18 @@
 
             <div class="mySlides fade slide-3">
 
-                <div class="banner-text">
+                <div class="banner-container">
 
-                    <h2>
-                        Need to protect your Stash? Click <a class="shop-now" href="{% url 'products' %}?category=accessory">Accessories</a>
-                    </h2>
+                    <div class="banner">
+
+                        <p>
+                            Need to protect your Stash?
+                        </p>
+                        <br>
+
+                        <a class="shop-now" href="{% url 'products' %}?category=accessory">Accessories</a>
+
+                    </div>
 
                 </div>
                 
