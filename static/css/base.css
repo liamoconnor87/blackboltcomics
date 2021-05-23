@@ -21,14 +21,6 @@ body{
     cursor: zoom-in;
 }
 
-
-
-
-
-/* --------------- Temporary Stylings. --------------- */
-
-
-
 .main-container{
     padding-top: 150px;
     width: 100%;
@@ -40,14 +32,12 @@ body{
     background-color: rgba(255, 255, 255, 0.664);
 }
 
-/* --------------- Temporary Stylings. --------------- */
-
-
-
-
-
-
-
+.index-page h1{
+    width: 100%;
+    text-align: center;
+    margin-top: 10px;
+    margin-bottom: 25px;
+}
 
 /* Header - Navigation / Search */
 
@@ -155,7 +145,6 @@ body{
     width: 100%;
     height: calc(30px - 4px);
     font: inherit;
-    /* font-size: 12px; */
     padding-left: 5px;
     margin: auto;
 }
@@ -271,6 +260,61 @@ body{
 .spec-off-menu p:hover{
     text-decoration: underline;
 }
+
+/* Auto Slideshow */
+
+.mySlides{
+    display: none;
+}
+
+img{
+    vertical-align: middle;
+}
+
+/* Slideshow container */
+.slideshow-container{
+  max-width: 1000px;
+  position: relative;
+  margin: auto;
+}
+
+/* Fading animation */
+.fade{
+  -webkit-animation-name: fade;
+  -webkit-animation-duration: 1.5s;
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+@-webkit-keyframes fade{
+
+  from{
+      opacity: .4
+    } 
+
+  to{
+      opacity: 1
+    }
+
+}
+
+@keyframes fade{
+
+  from{
+      opacity: .4
+    }
+
+  to{
+      opacity: 1
+    }
+
+}
+
+/* On smaller screens, decrease text size */
+@media only screen and (max-width: 300px) {
+  .text {font-size: 11px}
+}
+
 
 /* Footer */
 

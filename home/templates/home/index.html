@@ -4,7 +4,29 @@
 {% block content %}
 
     <div class="main-container index-page">
+
         <h1>£{{ free_delivery_threshold }}</h1>
+        
+        <div class="slideshow-container">
+
+            <div class="mySlides fade">
+                <img src="{% media '3_guns_1.jpg' %}" style="width:100%">
+            </div>
+
+            <div class="mySlides fade">
+                <img src="{% media 'batman_107.jpg' %}" style="width:100%">
+            </div>
+
+            <div class="mySlides fade">
+                <img src="{% media 'immortal_hulk_45.jpg' %}" style="width:100%">
+            </div>
+
+        </div>
     </div>
     
+{% endblock %}
+
+{% block postloadjs %}
+    {{ block.super }}
+    <script src="{% static 'home/js/auto_slideshow.js' %}"></script>
 {% endblock %}
