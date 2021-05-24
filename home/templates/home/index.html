@@ -5,69 +5,57 @@
 
     <div class="main-container index-page">
 
-        <!-- <h1> £free_delivery_threshold - double curly's </h1> -->
-        
-
-            <div class="mySlides fade slide-1">
-
-                <div class="banner-container">
-
-                    <div class="banner">
-
-                        <p>
-                            Get FREE DELIVERY when you spend over, £{{ free_delivery_threshold }}!
-                        </p>
-                    
-                    </div>
-
-                </div>
-                
-            </div>
-
             <div class="mySlides fade slide-2">
 
                 <div class="banner-container">
 
-                    <div class="banner">
+                    <p class="banner-msg banner-2">
+                        All the latest comic books are here!
+                    </p>
 
-                        <p>
-                            Get all the latest comic books!
-                        </p>
-                        <br>
+                    <br> 
 
-                        <a class="shop-now" href="{% url 'products' %}?category=comic_book">SHOP NOW</a>
-
-                    </div>
+                    <a class="shop-now shop-now-btn" href="{% url 'products' %}?category=comic_book">SHOP NOW</a>
 
                 </div>
-                
+
             </div>
 
             <div class="mySlides fade slide-3">
 
                 <div class="banner-container">
 
-                    <div class="banner">
-
-                        <p>
-                            Need to protect your Stash?
-                        </p>
+                    <p class="banner-msg banner-3">
+                        Got the cash? 
                         <br>
+                        <strong>Protect that stash!</strong> 
+                    </p>
 
-                        <a class="shop-now" href="{% url 'products' %}?category=accessory">Accessories</a>
+                    <br>
 
-                    </div>
+                    <a class="shop-now accessory-btn" href="{% url 'products' %}?category=accessory">Accessories</a>
 
                 </div>
-                
+
             </div>
 
-        </div>
+            <div class="mySlides fade slide-1">
+
+                <div class="banner-container">
+
+                    <p class="banner-msg banner-1">
+                        Get <strong>FREE DELIVERY</strong> when you spend over, <strong>£{{ free_delivery_threshold }}</strong>!
+                    </p>
+
+                </div>
+
+            </div>
+
     </div>
     
 {% endblock %}
 
 {% block postloadjs %}
     {{ block.super }}
-    <script src="{% static 'home/js/auto_slideshow.js' %}"></script>
+    <script src="{% static 'home/js/home.js' %}"></script>
 {% endblock %}
