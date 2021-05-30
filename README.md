@@ -81,7 +81,7 @@ Footer
 ----------
 Displayed at the bottom of all pages is the Online Comic Book Store's Contact details and social media links.
 
-Index Page
+Home Page
 ----------
 On the centre of the page are comic book images and promtional messages. 
 
@@ -225,6 +225,10 @@ Technologies Used
 
 [Fontawesome](https://fontawesome.com) - The project used this for icons in the app.
 
+[PostgreSQL](https://www.postgresql.org) - The project used this database provided by Heroku on deployment.
+
+[Stripe](https://stripe.com/en-gb) - The project uses this service to make and recieve payments.
+
 Testing
 ======
 
@@ -310,3 +314,5 @@ Acknowledgments
 --------------------------
 - I took design inspiration from Ebay and the Boutique Ado tutorial.
 - I received mentorship on this project from Antonio Rodriguez.
+- All the Tutors that helped me at Code Institute.
+- Stacey 'The Ox' Chamberlain. 
