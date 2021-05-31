@@ -168,6 +168,14 @@ Messages could appear for the User when;
 
 Other messages appear when inputting invalid information into the apps forms, beneath input boxes.
 
+Automated E-Mails
+------------
+Auto-generatred emails are sent out for resetting, confirming and verifying information. For example;
+
+- Purchase order confirmation 
+- Account verification 
+- Password reset 
+
 Style and Theme
 ------------
 The design of the app primarily uses a consistent colour theme of black, white and blue, with white sometimes being opaque to create separation from other features on the page. Red is used as a warning sign in message notifications.

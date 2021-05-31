@@ -7,6 +7,7 @@ from django.db.models.functions import Lower
 from .models import Product, Category
 from .forms import ProductForm
 
+
 def all_products(request):
     # This view renders products, sorting and searches.
 
@@ -52,7 +53,7 @@ def all_products(request):
             products = products.filter(queries)
 
         if 'accessory-query' in request.GET:
-            
+
             query = request.GET['accessory-query']
             queries = Q(name__icontains=query)
             products = products.filter(queries)
@@ -69,7 +70,7 @@ def all_products(request):
             queries = Q(name__icontains=query) | Q(description__icontains=query) | Q(publisher__icontains=query) | Q(writer__icontains=query) | Q(artist__icontains=query) | Q(manufacturer__icontains=query)
             products = products.filter(queries)
 
-    current_sorting = f'{sort}_{direction}'        
+    current_sorting = f'{sort}_{direction}'
 
     context = {
         'products': products,
@@ -136,7 +137,12 @@ def edit_product(request, product_id):
             messages.success(request, 'Successfully updated product!')
             return redirect(reverse('product_detail', args=[product.id]))
         else:
-            messages.error(request, ('Failed to update product. Please ensure the form is valid.'))
+            messages.error(
+                request, (
+                    'Failed to update product.' /
+                    'Please ensure the form is valid.'
+                    )
+                )
     else:
         form = ProductForm(instance=product)
         messages.info(request, f'You are editing {product.name}')

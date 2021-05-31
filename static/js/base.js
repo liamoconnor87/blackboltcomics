@@ -19,7 +19,7 @@ $(document).ready(function() {
             $(".acc-btn").removeClass("acc-btn-click");
         }
 
-    })
+    });
 
     $(".acc-btn").click(function() {
 
@@ -37,7 +37,7 @@ $(document).ready(function() {
             $(".srch-btn").removeClass("srch-btn-click");
         }
 
-    })
+    });
 
     $(".all-prod-click").click(function() {
 
@@ -57,7 +57,7 @@ $(document).ready(function() {
         $(".search-tool").hide();
         $(".account-menu").hide();
 
-    })
+    });
 
     $(".comic-book-click").click(function() {
 
@@ -77,7 +77,7 @@ $(document).ready(function() {
         $(".search-tool").hide();
         $(".account-menu").hide();
 
-    })
+    });
 
     $(".access-click").click(function() {
 
@@ -97,7 +97,7 @@ $(document).ready(function() {
         $(".search-tool").hide();
         $(".account-menu").hide();
 
-    })
+    });
 
     $(".offer-click").click(function() {
 
@@ -117,7 +117,7 @@ $(document).ready(function() {
         $(".search-tool").hide();
         $(".account-menu").hide();
 
-    })
+    });
 
     // Sort Selector.
     $('#sort-selector').change(function() {
@@ -139,7 +139,7 @@ $(document).ready(function() {
 
             window.location.replace(currentUrl);
         }
-    })
+    });
 
     // Product Quantity Tool.
     // Ensure proper Enabling/Disabling of all inputs on page load.
@@ -188,7 +188,7 @@ $(document).ready(function() {
     $('.update-link').click(function(e) {
         var form = $(this).prev('.update-form');
         form.submit();
-    })
+    });
 
     // Messages & Shopping Bag.
     $('.shop-btn').click(function(){
@@ -196,10 +196,10 @@ $(document).ready(function() {
         $('.msg-title-msg').remove();
         $('.message-success').remove();
         $('.message-error').remove();
-    })
+    });
 
     $('.exit-x').click(function() {
         $('.message').hide();
-    })
+    });
 
 });

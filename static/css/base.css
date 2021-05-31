@@ -327,7 +327,6 @@ body{
     text-decoration: underline;
     font-weight: 700;
     border-top: 1px solid rgb(4, 50, 109);
-    height: calc(inherit - 1px);
 }
 
 .all-prod-menu, .comic-menu, .access-menu, .spec-off-menu{

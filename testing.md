@@ -862,7 +862,7 @@ I used the W3C's Validators to check my HTML and CSS code. Here are the steps I 
 
 >2. Enter https://blackbolt-comics.herokuapp.com into the address bar and click **Check**.
 
->3. Confirm that no errors showing. 
+>3. Confirm that no errors show. 
 
 >4. Do the same for each page. 
 

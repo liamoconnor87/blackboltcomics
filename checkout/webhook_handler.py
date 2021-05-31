@@ -73,7 +73,10 @@ class StripeWH_Handler:
 
         order_exists = False
         attempt = 1
-        # Will give the webhook time (5 attempts) to find the order incase of a delay in syncing the order the first time.
+        """
+        Will give the webhook time (5 attempts) to find the
+        order incase of a delay in syncing the order the first time.
+        """
         while attempt <= 5:
             try:
                 order = Order.objects.get(
@@ -98,7 +101,8 @@ class StripeWH_Handler:
         if order_exists:
             self._send_confirmation_email(order)
             return HttpResponse(
-                content=f'Webhook recieved: {event["type"]} - Success! Verified order already in DB.',
+                content=f'Webhook recieved: ' /
+                '{event["type"]} - Success! Verified order Exists.',
                 status=200)
         else:
             order = None
@@ -134,7 +138,8 @@ class StripeWH_Handler:
                     status=500)
         self._send_confirmation_email(order)
         return HttpResponse(
-            content=f'Webhook recieved: {event["type"]} - SUCCESS! Created order in webhook.',
+            content=f'Webhook recieved: ' /
+            '{event["type"]} - Success! Created order in webhook.',
             status=200)
 
     def handle_payment_intent_payment_failed(self, event):
