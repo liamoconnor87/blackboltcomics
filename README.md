@@ -237,6 +237,73 @@ Is on a seperate document - [testing.md](testing.md)
 
 Deployment
 ==========
+**Create AWS S3 file host**
+-------------
+Amason Web Services S3 was used to host the app's Media and Static files. 
+
+>1. Go to the AWS website and log in/signup.
+>2. Go to AWS Service tab and locate the S3 link.
+>3. Click the Create Bucket button. Uncheck 'Block All Public Access' and click the check box that the 'bucket will be public'.
+>4. Click the Create Bucket button.
+>5. Click on the Bucket thats been created. 
+>6. Go to the Properties tab and Enable Static Website Hosting, this is so we can use the Bucket to host the website.
+>7. Fill in default values of index.html and error.html and click the 'Save Changes' button.
+>8. Go to the CORS configuration, in the Permissions tab and enter the following CORS configuration and click the 'Save Changes' button.
+![image](README_files/images/corsconfig.png) 
+>9. Got to the Bucket Policy, in the Permissions tab and and click the 'Policy Generator' button so you can create a policy for the bucket. 
+>10. Policy settings youll need to set will be the following.
+
+- Select Type of Policy is set to **S3 Bucket Policy**.
+- Principle is set to *.
+- Actions is set to **GetObject**.
+- The Amazon Resource Name (ARN) can be obtained from the Bucket ARN on the Bucket Policy tab. Example - **arn:aws:s3:::test-loc-test**
+
+>11. Once these settings are set click the 'Add Statement' button.
+>12. Click the 'Generate Policy' button. This will generate a policy.
+![image](README_files/images/genpolicy.png) 
+>13. Copy this policy and and paste it into the Bucket Policy Editor.
+>14. Add '/*' to the end of the ARN to allow access to all resources in this bucket.
+![image](README_files/images/genpolicyall.png)  
+>15. Click the 'Save Changes' button. 
+>16. Open the Access Control List (ACL), in the permissions tab and click on the check box for 'List' - 'Objects' in the **Everyone (public access)** section.
+>17. Check the box '**I understand the effects these changes on my objects and buckets**'.
+>18. Click the 'Save Changes' button.
+>19. Go to AWS Service tab and locate the IAM link.
+>20. Under the 'Access Management' menu select **User Groups**.
+>21. Create a new group by clicking the 'Create Group' button.
+>22. Give the Group a Name and click the 'Create Group' button again.
+>23. Under the 'Access Management' menu select **Policies**. 
+>24. Click **Create Policy**.
+>25. Go to the **JSON** tab and select the link 'Import managed policy'
+>26. Search for the policy '**AmazonS3FullAccess**', select and click the 'Import' button. This should import th policy.
+![image](README_files/images/s3allaccess.png)  
+>27. Copy and paste your Bucket ARN from the S3 bucket policy into 'Resource' as a list. We also want duplicate the ARN and add '/*' so all files can be accessed.
+![image](README_files/images/s3allaccessarn.png)
+>28. Click the 'Next Tag' button. 
+>29. Click the 'Next: Review" button. 
+>30. Give the Policy a name and desciption.
+>31. Click the 'Create Policy' button.
+>32. Under the 'Access Management' menu select **User Groups** and select the group you created.
+>33. Go to the Permissions tab and under the **Add Permissions** tab select '**Attach Policies**'.
+>34. Select the Policy we just created and click the 'Add Permissions' button. 
+>35. We now need to create a User. Under the 'Access Management' menu select **Users** and click the 'Add User' button. 
+>36. Create a User with **Progammatic access** and click the 'Next: Permissions' button. 
+>37. Select the Group you just created and click the 'Next: Tags' button. 
+>38. Then click the 'Next: Review' button. 
+>39. Then click the 'Create User' button. 
+>40. Download the **.csv** file. This contains the user we just created access key and secret access key. **PLEASE SAVE THIS FILE**
+>41. You will now need to connect django and install **django-storages** and **boto3** in the terminal window and add 'storages' to install apps.
+>43. You will need to set your environemtal variables from the **.csv** file and will be used with Heroku. 
+- AWS_ACCESS_KEY_ID - **Access Key - .csv**
+- AWS_SECRET_ACCESS_KEY - **Secret Access Key - .csv**
+- USE_AWS
+>44. To upload our static files will also use the custom_storage file to push to the S3 bucket. 
+>45. Any media files for the site, can be uploaded via the S3 link on AWS.
+![image](README_files/images/s3upload.png)
+
+
+
+
 
 Heroku was used to deploy this app, in order to do this you will need to take the following steps;
 
