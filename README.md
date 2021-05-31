@@ -390,6 +390,7 @@ Media
 
 Acknowledgments
 --------------------------
+- [W3Schools](https://www.w3schools.com) helpful tutorials. 
 - I took design inspiration from Ebay and the Boutique Ado tutorial.
 - I received mentorship on this project from Antonio Rodriguez.
 - All the Tutors that helped me at Code Institute.
