@@ -5,7 +5,7 @@
 
     <head>
         {% block meta %}
-            <meta http-equiv="X-UA-Compatible"  content="ie-edge">
+            <meta http-equiv="X-UA-Compatible" content="IE=edge" />
             <meta charset="utf-8">
             <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
             <meta name="Description" content="Online Comic Book Store">
@@ -170,15 +170,15 @@
                     <p>Marvel</p>
                 </a>
 
-                <a href="{% url 'products' %}?product-query=dc comics">
+                <a href="{% url 'products' %}?product-query=dc">
                     <p>DC Comics</p>
                 </a>
 
-                <a href="{% url 'products' %}?product-query=image comics">
+                <a href="{% url 'products' %}?product-query=image">
                     <p>Image Comics</p>
                 </a>
 
-                <a href="{% url 'products' %}?product-query=dark horse">
+                <a href="{% url 'products' %}?product-query=horse">
                     <p>Dark Horse</p>
                 </a>
 
@@ -190,7 +190,7 @@
                     <p>Valiant</p>
                 </a>
 
-                <a href="{% url 'products' %}?product-query=titan comics">
+                <a href="{% url 'products' %}?product-query=titan">
                     <p>Titan Comics</p>
                 </a>
 
@@ -203,15 +203,15 @@
             <!-- Accessories Menu -->
             <div class="access-menu">
 
-                <a href="{% url 'products' %}?accessory-query=storage box">
+                <a href="{% url 'products' %}?accessory-query=box">
                     <p>Boxes</p>
                 </a>
 
-                <a href="{% url 'products' %}?accessory-query=book bags">
+                <a href="{% url 'products' %}?accessory-query=bags">
                     <p>Book Bags</p>
                 </a>
 
-                <a href="{% url 'products' %}?accessory-query=backing boards">
+                <a href="{% url 'products' %}?accessory-query=boards">
                     <p>Backing Boards</p>
                 </a>
                 
@@ -221,8 +221,7 @@
             <form class="search-tool" action="{% url 'products' %}" method="GET">
                 <div class="srch-row srch-bar">
                     <div class="srch-column">
-                        <label for="" class=""></label>
-                        <input type="text" name="search-query" id="" class="srch-box" placeholder="Search our Online Store...">
+                        <input type="text" name="search-query" class="srch-box" placeholder="Search our Online Store...">
                     </div>
                     <!-- Search Button Hidden  -->
                     <div class="hide-btn">

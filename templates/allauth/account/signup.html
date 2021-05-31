@@ -27,7 +27,7 @@
             <p>{% blocktrans %}Already have an account? Then please <a class="allauth-lnk" href="{{ login_url }}">sign in</a>.{% endblocktrans %}</p>
             <br>
 
-            <form class="signup" id="allauth-form signup_form" method="post" action="{% url 'account_signup' %}">
+            <form class="signup" id="allauth-form" method="post" action="{% url 'account_signup' %}">
                 {% csrf_token %}
                 {{ form|crispy }}
                 {% if redirect_field_value %}

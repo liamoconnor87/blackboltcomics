@@ -19,14 +19,16 @@
             <div class="query-container">
                 <p>
                     {% if search_term or current_categories or current_sorting != 'None_None' %}
-                        <a href="{% url 'products' %}">< Products Home</a>
+                        <a href="{% url 'products' %}">
+                            <i class="fas fa-chevron-left"></i>Products Home
+                        </a>
                     {% endif %}
 
                     {{ products|length }} Products{% if search_term %} found for <strong>"{{ search_term }}"</strong>{% endif %}
                 </p>
             </div>
             <div class="sorting-selector">
-                <select name="" id="sort-selector" class="">
+                <select id="sort-selector">
                     <option value="reset" {% if current_sorting == 'None_None' %}selected{% endif %}>Sort by...</option>
                     <option value="price_asc" {% if current_sorting == 'price_asc' %}selected{% endif %}>Price (low to high)</option>
                     <option value="price_desc" {% if current_sorting == 'price_desc' %}selected{% endif %}>Price (high to low)</option>
