@@ -65,6 +65,9 @@ Wireframe
 I used Adobe Photoshop to create wireframes in desktop, tablet and phone view.
 [Link](mock_ups)
 
+Database Schema
+-------------
+![image](README_files/images/dataschema.png)
 
 Features
 ======
