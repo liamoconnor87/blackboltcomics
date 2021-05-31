@@ -118,6 +118,7 @@
     .product-quantity-form{
         margin-top: 15px;
     }
+
 }
 
 @media screen and (min-width: 1000px){
@@ -144,4 +145,5 @@
         max-width: 450px;
         max-height: 550px;
     }
+    
 }

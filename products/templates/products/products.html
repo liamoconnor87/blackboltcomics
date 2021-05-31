@@ -46,57 +46,57 @@
 
                 {% for product in products %}
 
-                <div class="product">
-
-                    <a href="{% url 'product_detail' product.id %}">
-                        <img src="{{ product.image.url }}" alt="{{ product.name }}">
-                    </a>
-
-                    <div class="product-info">
+                    <div class="product">
 
                         <a href="{% url 'product_detail' product.id %}">
-
-                            {% if product.publisher %}
-                                <div class="product-title publisher">
-                                    <p>{{ product.publisher }}</p>
-                                </div>
-                            {% endif %}
-
-                            {% if product.manufacturer %}
-                                <div class="product-title manufacturer">
-                                    <p>{{ product.manufacturer }}</p>
-                                </div>
-                            {% endif %}
-
-                            <div class="product-title product-name">
-                                <p>{{ product.name }}</p>
-                            </div>
-
+                            <img src="{{ product.image.url }}" alt="{{ product.name }}">
                         </a>
 
-                    </div>
+                        <div class="product-info">
 
-                    <div class="product-price">
-                        <p>£{{ product.price }}</p>
-                    </div>
+                            <a href="{% url 'product_detail' product.id %}">
 
-                    {% if request.user.is_superuser%}
+                                {% if product.publisher %}
+                                    <div class="product-title publisher">
+                                        <p>{{ product.publisher }}</p>
+                                    </div>
+                                {% endif %}
 
-                        <div class="item-detail-quantity prod-admin-edit-btn">
+                                {% if product.manufacturer %}
+                                    <div class="product-title manufacturer">
+                                        <p>{{ product.manufacturer }}</p>
+                                    </div>
+                                {% endif %}
 
-                            <a href="{% url 'edit_product' product.id %}" class="update-link edit-link">
-                                <small>EDIT</small>
-                            </a>
+                                <div class="product-title product-name">
+                                    <p>{{ product.name }}</p>
+                                </div>
 
-                            <a href="{% url 'delete_product' product.id %}" class="remove-item">
-                                <small>DELETE</small>
                             </a>
 
                         </div>
 
-                    {% endif %}
+                        <div class="product-price">
+                            <p>£{{ product.price }}</p>
+                        </div>
 
-                </div>
+                        {% if request.user.is_superuser%}
+
+                            <div class="item-detail-quantity prod-admin-edit-btn">
+
+                                <a href="{% url 'edit_product' product.id %}" class="update-link edit-link">
+                                    <small>EDIT</small>
+                                </a>
+
+                                <a href="{% url 'delete_product' product.id %}" class="remove-item">
+                                    <small>DELETE</small>
+                                </a>
+
+                            </div>
+
+                        {% endif %}
+
+                    </div>
 
                 {% endfor %}
 

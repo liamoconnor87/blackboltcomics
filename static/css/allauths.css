@@ -57,7 +57,9 @@
 
 /* Responsive Layout */
 @media screen and (min-width: 1000px){
+
     .allauth-container{
         display: block !important;
     }
+    
 }

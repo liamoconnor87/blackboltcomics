@@ -204,6 +204,7 @@ select option[value=""] {
     .user-info-save label{
         font-size: 11px;
     }
+
 }
 
 @media screen and (min-width: 400px){
@@ -262,4 +263,5 @@ select option[value=""] {
     .checkout-form{
         margin: 0 auto;
     }
+    
 }

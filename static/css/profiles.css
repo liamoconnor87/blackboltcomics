@@ -1,4 +1,4 @@
-/* Some styles coem from checkout.css */
+/* Some styles come from checkout.css */
 
 .profiles-page{
     display: block;
@@ -54,6 +54,7 @@
     .profile-delivery-info{
         font-size: 18px;
     }
+    
 }
 
 @media screen and (min-width: 1000px){
