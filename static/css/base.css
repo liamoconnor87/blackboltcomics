@@ -434,6 +434,27 @@ footer{
     color: white;
 }
 
+/* CREATED BY WEBDEVLIAM */
+.created-by{
+    display: flex;
+    color: inherit;
+    width: 100%;
+    padding-bottom: 10px;
+}
+
+.created-by p{
+    margin: auto auto auto 0;
+    font-size: 10px;
+}
+.created-by a{
+    text-decoration: none;
+    color: inherit;
+}
+
+.liam-link:hover{
+    text-decoration: underline;
+}
+
 /* Smart Device Layout */
 
 @media screen and (min-width: 280px){
